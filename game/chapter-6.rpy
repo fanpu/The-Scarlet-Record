@@ -257,7 +257,7 @@ label root
 
 label rootsuccess:
  scene rootsuccess.jpg
- p "(Good, I can now access all files without obstruction.)
+ p "(Good, I can now access all files without obstruction.)"
  p "(Should I...)"
  menu:
   "Check own source code":
