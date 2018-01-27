@@ -238,10 +238,3 @@ label chapter5end:
  scene wasteland.jpg
  
  p "(I would wish her all the best, but I feel that wish will be wasted)"
- 
-
-
-	      
-        
-       
-       
