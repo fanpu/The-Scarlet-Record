@@ -3,7 +3,14 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+
+define p = Character("Player")
+define o = Character("Owner")
+define po = Character("Poet")
+define w = Character("Waifubot2")
+define g = Character("Depressed girl")
+define m = Character("Man")
+
 
 
 # The game starts here.
