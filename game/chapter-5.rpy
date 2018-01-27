@@ -3,7 +3,7 @@ label Chapter5:
  play music "x.mp3"
  show farawaygirl.gif
 
- p "(Does she know the building where Shin lives?)
+ p "(Does she know the building where Shin lives?)"
  
  hide farawaygirl.gif
  show closegirl.gif
