@@ -141,7 +141,7 @@ label notcalm:
 label Chapter6mid2:
  m "...So, you go do your thing."
 
- image computerroom = "computerroom.jpg"
+ image computerroom = "computerroom.jpng"
  scene computerroom
  stop music "factorysounds.mp3"
  start music "computerroom.mp3"
@@ -330,7 +330,10 @@ label moneytransfer:
  m "...now scram, before I beat you to a pulp."
  p "..."
  
+ scene wastelandsquare
  
+ p "(Are humans usually that irrational and contradictory?)"
+ p "(No wonder the war even happend.)"
  
  
   
