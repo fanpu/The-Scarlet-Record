@@ -69,7 +69,7 @@ label Chapter6mid:
  p "...Ok"
  
  hide man
- image blurredroad = "blurredroad.jpg"
+ image blurredroad = "movingroad.jpg"
  scene blurredroad
  stop music "wastelandsqaure.mp3"
  play music "motorcyclesounds.mp3"
