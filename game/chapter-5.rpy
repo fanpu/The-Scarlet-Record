@@ -127,7 +127,9 @@ label Chapter5mid:
 	p "No"
 	g "It wasn't perfect, but it was real. It was warm. It was alive."
 	g "Nothing like what the world is now."
+	
         scene insidefolder.jpg
+	
 	g "What? It's empty? How is it possible?"
 	p "Not exactly." 
 	
@@ -184,7 +186,7 @@ label recovery:
 	p "I need to finish the file transfer."
 	g "So it will work?"
 	p "Almost garuanteed."
-	g "You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
+	g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
 	g "Everyday the hard drive is just there, taunting me with memories of a happier time."
 	g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
 	
@@ -209,12 +211,21 @@ label recovery:
 	p "Only humans 'shut down' in such great quantities because of their feelings. Other creatures, they usually want to survive. Why?"
 	g "Humans are the only creatures who question life. Ask whether it's worth living."
 
-
-	label copy:
 	    menu: 
 	    	"Copy files":
-			
+		   jump successcomputer5
 
+   label successcomputer5:
+   	
+	scene successcomputer5.jpg
+
+	p "It's done."
+	g "...Thank you.Thank you kindly."
+	g "So...the directions to Midtown Tower, am I right?"
+	p "Yes."
+	g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
+        p "Thank you."
+	p "...Those photos...will they make your life worth living."
 
 
 
