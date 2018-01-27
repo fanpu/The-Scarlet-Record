@@ -1,13 +1,13 @@
-Sat Jan 27 16:52:56 2018
+Sat Jan 27 17:23:19 2018
 Linux-4.14.14-1-zen-x86_64-with-glibc2.2.5
 Ren'Py 6.99.14.3135
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.07s
 Early init took 0.00s
-Loader init took 0.00s
+Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.11s
+Loading script took 0.12s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -21,7 +21,7 @@ Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.11s
+Creating interface object took 0.13s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
@@ -38,7 +38,7 @@ Interface start took 0.02s
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1479, 832) drawable=(1479, 832)
+Screen sizes: virtual=(1920, 1080) physical=(1440, 810) drawable=(1440, 810)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'GeForce GTX 1060/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 387.34'
@@ -431,43 +431,39 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.909413099289s
+Total time until interface ready: 1.11867308617s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 832) drawable=(1920, 832)
-- Frame drawn at 0.027741 seconds.
-- Frame drawn at 0.029542 seconds.
-- Frame drawn at 0.039170 seconds.
-- Frame drawn at 0.053381 seconds.
-- 0.053381 seconds to render 5 frames.
-The window was minimized.
-The window was restored.
-The window was minimized.
-The window was restored.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)
+- Frame drawn at 0.028247 seconds.
+- Frame drawn at 0.030458 seconds.
+- Frame drawn at 0.039409 seconds.
+- Frame drawn at 0.053558 seconds.
+- 0.053558 seconds to render 5 frames.
 The window was minimized.
 The window was restored.
 Cleaning stores took 0.00s
-Init translation took 0.14s
-Build styles took 0.01s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.15s
+Init translation took 0.13s
 Build styles took 0.01s
 Load screen analysis took 0.01s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
 The window was minimized.
-                                                                                                                                                                                                                                                                                                     
+terval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)
+                                                                                                                                                                                                                                                             
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 832) drawable=(1920, 832)
-The window was minimized.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)
+                                                                              
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)

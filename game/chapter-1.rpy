@@ -1,12 +1,22 @@
 label chapter_1:
-    "Hello!"
-    # Collect player name
-label test:
+    image bg_house_exterior = im.Scale("images/bg house exterior.png", 1920, 1080)
+    scene bg_house_exterior
 
+label scene_start
+    "It was a day just like any other"
+    "It is the year 2075, and we live"
+    # Collect player name
+python:
+    player = renpy.input("What is your name?")
+    player = player.strip()
+
+label test:
+    p "hello [player]"
+    
     p "Why don't you visit {a=https://renpy.org}Ren'Py's home page{/a}?"
 
     p "Or {a=jump:more_text}here for more info{/a}."
-
+    p "[botname]"
     return
 
 label more_text:
@@ -17,9 +27,7 @@ label more_text:
 
     return
 
-python:
-    povname = renpy.input("What is your name?")
-    povname = povname.strip()
+
 #renpy.input(prompt, default='', allow=None, exclude='{}', length=None, with_none=None, pixel_width=None) link
 "And so, we become a visual novel creating duo."
-pov "My name is [povname]!"
+pov "My name is [player]!"
