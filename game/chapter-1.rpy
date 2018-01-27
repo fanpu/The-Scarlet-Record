@@ -37,8 +37,14 @@ label home:
     o "It seems like I say this all the time, but I am really worried for you."
     p "W-why?"
     o "You are built with the treasures of this Earth - the exact ones that people would do anything to obtain."
-    o "I worry for you safety, [bot_name]"
-
+    o "I worry for your safety, [bot_name]."
+    o "Promise me..."
+    o "Promise me you will be safe."
+    p "Shin..."
+    "I notice a teardrop roll down Shin's cheeks"
+    p "Shin..."
+    "[owner_name] steps forward and embraces me."
+    
 
 python:
     player = renpy.input("What is your name?")
