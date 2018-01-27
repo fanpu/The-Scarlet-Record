@@ -11,12 +11,14 @@ label scene_start:
     "I was out running errands for my master, Takagi Shinichirou."
     "Doing the usual things - buying groceries, settling bills, and buying household items."
     "Now that all those are done, I'm finally back home!"
-    
+
 label home:
     image bg_livingroom = im.Scale("images/bg livingroom.jpg", 1920, 1080)
     scene bg_livingroom
     with dissolve
+    show waifu smiling
     p "Shin, I'm back!"
+
 python:
     player = renpy.input("What is your name?")
     player = player.strip()
