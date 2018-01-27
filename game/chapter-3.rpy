@@ -11,6 +11,7 @@ label chapter_3:
     
     image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
     scene wasteland
+    with Dissolve(.5)
     
     "After getting out, all I see a wasteland with nothing nearby apart from the facility."
     "That was not particularly surprising, due to the apparent war making Earth inhabitable. Shin has talked about it at length"
@@ -62,6 +63,7 @@ label chapter_3_scene_1:
 label chapter_3_fixing:
     image circuitboard = im.Scale("images/circuitboard.jpg", 1920, 1080)
     scene circuitboard
+    with Dissolve(.5)
     
     p "(The soundbytes are corrupted, but it should be easy to download new ones.)"
     w "<ERROR, SPEECH.MP3 NOT FOUND>"
