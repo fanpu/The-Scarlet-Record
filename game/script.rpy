@@ -1,33 +1,56 @@
-﻿# The script of the game goes in this file.
+﻿define s = Character('Sylvie', color="#c8ffc8")
+define m = Character('Me', color="#c8c8ff")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
-
+# True if the player has decided to compare a VN to a book.
+default book = False
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene bg meadow
+    with fade
+    "After a short while, we reach the meadows just outside the neighborhood where we both live."
 
-    scene bg room
+    "It's a scenic view I've grown used to. Autumn is especially beautiful here."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "When we were children, we played in these meadows a lot, so they're full of memories."
 
-    show eileen happy
+    m "Hey... Umm..."
 
-    # These display lines of dialogue.
+    show sylvie green smile at right
+    with dissolve
+    
+    "She turns to me and smiles. She looks so welcoming that I feel my nervousness melt away."
 
-    e "You've created a new Ren'Py game."
+    "I'll ask her...!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    m "Ummm... Will you..."
 
-    # This ends the game.
+    m "Will you be my artist for a visual novel?"
 
-    return
+    show sylvie green surprised
+
+    "Silence."
+
+
+    s "Sure, but what's a \"visual novel?\""
+
+menu:
+
+    "It's a videogame.":
+        jump game
+
+    "It's an interactive book.":
+        jump book
+
+label game:
+
+    m "It's a kind of videogame you can play on your computer or a console."
+
+    jump marry
+
+label book:
+
+    $ book = True
+    m "It's like an interactive book that you can read on a computer or a console."
+
+    jump marry
+
