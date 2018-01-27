@@ -53,11 +53,13 @@ menu:
         jump dont_know
 
 label promise:
+    p "I...I promise, [owner_name]."
     o "Thank you, [bot_name]."
     o "You don't know how much this means to me."
     jump chapter_1_end
 
 label dont_know:
+    p "I...I don't know, [owner_name]."
     o "I understand."
     p "Ex Machinas never make a promise they can't keep...it's just how we are engineered."
     jump chapter_1_end
