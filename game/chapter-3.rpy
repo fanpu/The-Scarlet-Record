@@ -5,21 +5,20 @@ label chapter_3:
     "A smile, the same smile that I would come to love."
     "A gentle voice that I would never grow tired of."
     "----- That was 6 years ago. Since then, I have never once wished for something else. As long as I was around Shin, there would be nothing else that I would ever need."
-    "His smile, his voice... it was all eprfect to me. I needed nothing else."
-    "I sometimes thought of my origin. Who made me? What was my purpose?"
-    "But that wasn't important to me, and I made no effort to find out."
+    "His smile, his voice... it was all perrfect to me. I needed nothing else."
+    "I sometimes wondered what was outside. What the world was like. But it was fleeting. That wasn't important to me, and I made no effort to find out."
     "But now..."
     
     image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
     scene wasteland
     
-    "After getting out, I found myself in a wasteland with nothing nearby apart from the facility."
-    "That was not particularly surprising, due to the nuclear war in 2020 making the Earth uninhabitable."
-    "The destruction caused was already apparent back at our town. However, it was only now, without Shin, that I truly felt the despair that humans still on Earth felt."
-    p "It is truly a miracle that there are still people surviving here."
-    "I had hoped that the surroundings would help me decide where to go next, but the empty wasteland did not provide anything meaningful. I did not have a plan of what to do next."
+    "After getting out, all I see a wasteland with nothing nearby apart from the facility."
+    "That was not particularly surprising, due to the apparent war making Earth inhabitable. Shin has talked about it at length"
+    "The destruction caused was already apparent back home through the grimy windows. But I never realized how bad it was, inside the house"
+    p "It is truly a miracle that there are still people surviving here, or any sign of life, machine or human."
+    "What should I do? What can I do?"
     p "Shin would miss me, I should go back quickly so that he will stop worrying."
-    "That was definitely the choice I would have made just a few days ago. However, after the kidnapping, I felt a need to truly find out who I am."
+    "That was definitely the choice I would have made just a few days ago."
     "What should I do now?"
     
 menu:
@@ -30,19 +29,19 @@ menu:
 
 label choice_3_1a:
     $ choice_3_1 = True
-    "Shin is still the most important to me. I should find clues of how to get back quickly. Hopefully I will find someone who knows where town is."
+    "Shin is still the most important to me. I should find clues of how to get back quickly. Hopefully I can find someone who knows where town is."
     jump choice_3_1done
 
 label choice_3_1b:
     $ choice_3_1 = False
-    "Maybe it is time for me to know more about myself. Shin can wait for awhile. Hopefully I will find someone who knows something about who I am."
+    "Maybe it is time for me to know more about myself. Shin can wait for awhile. Hopefully I can find someone or something who knows or says something about who I am."
     jump choice_3_1done
     
 label choice_3_1done:
     if choice_3_1:
         "It has been 3 hours, but there is not a single person to be found."
     else:
-        "It has been 3 hours, but there are still no clues to be found."
+        "It has been 3 hours, but there are still no clues to be found, not even a lead."
     jump chapter_3_scene_1
 
 label chapter_3_scene_1:
@@ -51,33 +50,46 @@ label chapter_3_scene_1:
     p "Hold on, what is that?"
     "It was very far away, but I can definitely see a person walking in my direction."
     if choice_3_1:
-        p "He might know where our home is, I should talk to him."
+        p "Could he know where I am?"
     else:
-        p "He might know something about me, I should talk to him."
-    "As the person got closer, it became clear that it was not human, just like me. However, I noticed something else..."
-    "The robot looked exactly like me. but as it got closer..."
+        p "Could he know what I am?"
+  
+    p "..Something is wrong."
     w "<ERROR COMMUNICATION SYSTEMS DOWN ERROR...>"
-    "Her communication module is spoilt, I will have to fix it if I want information from her."
+    p "Communication system error. Won't be too hard to fix"
     jump chapter_3_fixing
 
 label chapter_3_fixing:
-    "WIP"
+    p "(The soundbytes are corrupted, but it should be easy to download new ones.)"
+    w "<ERROR, SPEECH.MP3 NOT FOUND>"
+    p "(There are radiowaves here...)"
+    menu:
+     
     jump chapter_3_scene_2
     
 label chapter_3_scene_2:
-    p "Alright, it's done!"
-    "That was really hard, but I'm glad that I managed to fix it."
-    w "Thanks, now I can go back to finding my owner Rin. I have spent my whoel life with her, I must find her..."
-    "That's weird, it's exactly how I feel about Shin. Could that mean..."
-    "me and that robot are both programmed to love our owners?"
-    p "No, that cannot be..."
-    w "What are you talking ab - <ERROR PROGRAM CORRUPTED>"
-    "I must have missed something while fixing her, let me check..."
-    "I opened up her circuit box again, but this time I caught something that I missed"
-    "The mineral used to power robots, waifunium, was gone. Nothing can be done to fix her."
-    "The only thing I can do is shut off the robot, but that would mean her death."
-    "I could leave her like this, but she would never be able to function properly."
-    "What should I do?"
+    p "It's fixed. Or at least that's what I hope."
+    "...She still doesn't seem...right."
+    w "Kosuke, you're back!"
+    p "I'm not-"
+    w "I've missed you so much!"
+    p "Me? But"
+    w "Come with me, let's go home and watch the moon rise."
+    p "..."
+    w "Come on, why are you waiting? We do it all the time!"
+    p "..."
+    w "What's wrong. Do you have anyting on your mind? I'm here, don't worry, you can share."
+    P "(Her actions...are eerily similar to mine.)"
+    w "Come on, Kosuke. Let's spend some time together. Don't you miss me?"
+    p "..."
+    p "...I'm not Kosuke."
+    w "...<ERROR PROGRAM CORRUPTED>"
+    w "Kosuke! You're back!"
+    p "..."
+    w "Don't you miss me?"
+    p "(She's broken...beyond repair. Likely a motherboard malfunction.)"
+    w "Come on, Kosuke. Didn't you miss of the times we had?
+    p "(Should I...)"
     
 menu:
     "Shut her off.":
@@ -86,21 +98,17 @@ menu:
         jump choice_3_2b
 
 label choice_3_2a:
-    "I can't leave her like this, I have to shut off her power."
-    "I quickly opened the circuit and shut her off permanently."
-    "(Add some feelings here)"
+    "..."
     jump chapter_3_scene_3
            
 label choice_3_2b:
-    "I can't kill her, I will just leave her here and carry on."
-    "(Add some feelings here)"
+    "(...I can't do anything for her)"
     jump chapter_3_scene_3
 
-label chapter_3_scene_3:
-    if choice_3_1:
-        "After leaving the robot behind, I continued seraching for Shin, with many questions in my mind."
-    else:
-        "After leaving the robot behind, I decided to search for Shin instead. There are many questions which I have to ask him."
-
-    "What am I? Where did I come from? What is my purpose? And perhaps most importantly..."
-    "Do I really love Shin?"
+label chapter3_scene_3:
+    p "(Is Kosuke her Shin?)"
+    p "(Am I simply a clone of her?)"
+    p "(...)"
+    p "(My feelings for Shin, they are manufactured, aren't they?)"
+    p "(...)"
+    P "(I...I want to go back.)"
