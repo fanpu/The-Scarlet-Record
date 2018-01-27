@@ -1,5 +1,6 @@
 label Chapter 6:
- scene wastelandsqaure.jpg
+ image wastelandsquare = "wastelandsquare.jpg"
+ scene wastelandsqaure
  stop music "chapter5end.mp3"
  start music "nofountain.mp3"
  
@@ -8,24 +9,28 @@ label Chapter 6:
  p "(No, it doesn't make sense. I must be lost.)"
  p "(...what now?)"
  
- show manonbicycle.jpg
+ image man_bicycle = "manonbicycle.jpg"
+ show man_bicycle
  
  p "!"
  
- hide manonbicycle.jpg
- show manonbicycleclose.jpg
+ hide man_bicycle
+ image man = "man.jpg"
+ show man
  
  m "What's an android doing out here?"
  p "Do you know how to get to Midtown Tower from here?"
  
- hide manonbicycleclose.jpg
- show thinkingman.jpg
+ hide man
+ image man_thinking = "thinkingman.jpg"
+ show man_thinking
  
  m "I do...but you androids are good at computer stuff right?"
  p "...Yes."
  
- hide thinkingman.jpg
- show happyman.jpg
+ hide man_thinking
+ image man_happy = "happyman.jpg"
+ show man_happy
  
  m "Just what I was looking for! Can you do me a favour? In exchange for information?"
  
@@ -36,15 +41,14 @@ label Chapter 6:
    jump yes6
 
 label no6:
- hide happyman.jpg
- show raisedeyebrowman.jpg
- 
+ hide man_happy
+ show man
  m "You sure? I am the only sane man in this entire area, you won't get another chance."
  p "(He isn't lying, no sensors are going off.)"
  p "...Fine."
  
- hide raisedeyebrowman.jpg
- show happyman.jpg
+ hide man
+ show man_happy
  
  m "Great. So the company i work for, they didn't pay me nothing. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6mid
@@ -57,15 +61,16 @@ label yes6:
 label Chapter6mid:
  p "I can do that."
  
- hide happyamn.jpg
- show seriousman.jpg
+ hide man_happy
+ show man
  
  m "You better do that or you ain't gonna get nothin."
  m "Hop on my bike and we'll head there."
  p "...Ok"
  
- hide seriousman.jpg
- scene blurredroad.jpg
+ hide man
+ image blurredroad = "blurredroad.jpg"
+ scene blurredroad
  stop music "wastelandsqaure.mp3"
  play music "motorcyclesounds.mp3"
  
@@ -80,14 +85,16 @@ label Chapter6mid:
  stop music "motorcyclesounds.mp3"
  play music "factorysounds.mp3"
 
- scene factory.jpg
- show man.jpg
+ image factory2 = "factory.jpg"
+ scene factory2
+ show man
  
  m "This factory is the last of its kind. Producing androids like you, but with human labour instead of robots."
  p "But..."
  
- hide man.jpg
- show manangry.jpg
+ hide mam
+ image man_angry = "angryman.jpg"
+ show man_angry
  
  m "But what? But it will be less efficient? Make less money? So what? At least humans have a purpose and role again!"
  m "Humans used to do something. Be something. Contribute to our world. Lawmaking, Doctors, Factory workers."
@@ -103,19 +110,19 @@ label Chapter6mid:
 label calm:
  p "Please calm down, or I can't help you."
  
- hide manangry.jpg
- show man.jpg
+ hide man_angry
+ show man
  
  m "Help me, huh."
  
- hide man.jpg
- show mansmile.jpg
+ hide man
+ show man_happy
  
  m "I suppose I'm a dirty hypocrite, eh? Asking an adroid for help, just like all those backstabbers?"
  m "Heh."
  
- hide mansmile.jpg
- show sadman.jpg
+ hide man_happy
+ show man
  
  m "I guess we just can't help it."
  jump Chapter6mid2
@@ -124,8 +131,8 @@ label notcalm:
  p "(I better not say anything, or else he will get angrier.)"
  m "And we just watched, and even cheered, as we got slowly replaced."
  
- hide angryman.jpg
- show sadman.jpg
+ hide man_angry
+ show man
  
  m "And even now, after we got bombed to hell by those damn AI, we didn't learn a damn thing."
  p "..."
@@ -134,7 +141,8 @@ label notcalm:
 label Chapter6mid2:
  m "...So, you go do your thing."
 
- scene computerroom.jpg
+ image computerroom = "computerroom.jpg"
+ scene computerroom
  stop music "factorysounds.mp3"
  start music "computerroom.mp3"
  
@@ -142,7 +150,8 @@ label Chapter6mid2:
  m "Don't let me down, now. I need the cash."
  p "..."
  
- scene hackscreen.jpg
+ image hack = "hackscreen.jpg"
+ scene hack
  
  p "(Wow, this technology is really old.)"
  p "(They would likely be more vulnearable to oldschool hacking methods)"
@@ -157,14 +166,16 @@ label findingip:
    jump failip
  
 label successip:
- scene successip.jpg
+ image ip_ok = "successip.jpg"
+ scene ip_okay
  
  p "(Axiom? Didn't they...make me?)"
  p "(...Maybe...I can find out more about myself)"
  jump findingports
  
 label failip:
- scene failip.jpg
+ image ip_fail = "failip.jpg"
+ scene ip_fail
  p "(I must have forgotten. It was so long ago.)"
  p "(I can't afford to forget all of it.)"
  jump findingip
@@ -180,13 +191,15 @@ label findingports:
    jump failport
 
 label failport:
- scene failport.jpg
+ image port_fail = "failport.jpg"
+ scene port_fail
  
  p "(It's in my memory, how can I forget?)"
  jump findingports
 
 label successport:
- scene successport.jpg
+ image port_success = "successport.jpg"
+ scene port_success
  
  p "(Good, now time to prod the server)"
 
@@ -200,12 +213,14 @@ label vulnscan:
    jump failvuln
 
 label failvuln:
- scene failvuln.jpg
+ image vuln_failed = "failedvuln.jpg"
+ scene vuln_failed
  p "(No, I can't mess up now. I'm too close to fail)"
  jump vulnscan
 
 label successvuln:
- scene successvuln.jpg
+ image vuln_success = "successvuln.jpg"
+ scene vuln_succcess
  p "(Oh, a common vulnerabiltity. Should be easy)"
 label exploit:
  menu: 
@@ -217,12 +232,14 @@ label exploit:
    jump exploitfail
 
 label exploitfail:
- scene exploitfail.jpg
+ image exploit_fail = "exploitfail.jpg"
+ scene exploit_fail
  p "(No, this won't get me the information I want.)"
  jump exploit
  
 label exploitsuccess:
- scene exploitsuccess.jpg
+ image exploit_success = "exploitsuccess.jpg"
+ scene exploit_success
  p "(Meterpreter shell is set up. Time to obtain root.)"
 
 label kill:
@@ -235,17 +252,19 @@ label kill:
    jump rmrf
  
 label exploit2fail:
- scene exploit2fail.jpg
+ image exploit2_fail = "exploit2fail.jpg"
+ scene exploit2_fail
  p "No, they have barriers set up"
  jump kill
  
 label rmrf:
- scene exploitsuccess.jpg
+ scene exploit_succeess
  p "(Are my circuits haywire?)"
  jump kill
  
 label exploit2success:
- scene exploit2success.jpg
+ image exploit2_success = "exploit2success.jpg"
+ scene exploit2_success
  p "(Protection is disabled.)"
 
 label root:
@@ -258,7 +277,8 @@ label root:
    jump rootfail
 
 label rootsuccess:
- scene rootsuccess.jpg
+ image root_success = "rootsuccess.jpg"
+ scene root_success
  p "(Good, I can now access all files without obstruction.)"
  p "(Should I...)"
  menu:
@@ -268,12 +288,14 @@ label rootsuccess:
    jump nosourcecode
   
 label rootfail:
- scene rootfail.jpg
+ image root_fail = "rootfail.jpg"
+ scene root_fail
  p "(I know I have this stored somewhere...)"
  jump root
 
 label sourcecode:
- scene sourcecode.jpg
+ image sourcefolder = "sourcefolder.jpg"
+ scene sourcefolder
  p "(It's there. I am programmed to feel unconditional love towards my owner.)"
  p "(...)"
  p "(My feelings, they are fake...)"
@@ -284,22 +306,23 @@ label sourcecode:
  jump moneytransfer
 
 label nosourcecode:
- scene rootsuccess.jpg
+ scene root_success
  p "(No. My feelings are my feelings. They exist, programmed or not. I do not need to know.)"
  "Hey! Someone is messing with the servers!"
  jump moneytransfer
 
 label moneytransfer: 
  p "(I better fulfil my promise quick.)"
-  
- scene moneytransfer.jpg
+ 
+ image transfermoney = "moneytransfer.jpg"
+ scene transfermoney
   
  p "And done."
   
- scene factory.jpg
+ scene factory2
  stop music "computerroom.mp3"
  start music "factorysounds.mp3"
- show man.jpg
+ show man
   
  m "...So you succeeded, eh?"
  m "Knew it, you droids do everything better than us."
