@@ -18,13 +18,13 @@ label home:
     scene bg_livingroom
     with dissolve
     show waifu smiling at left
-    p "Shin, I'm back!"
+    p "[owner_name], I'm back!"
     show owner at right
     o "[bot_name], I've missed you!"
     p "Heheh... sorry for taking so long this time!"
     o "You always make me worry! But I'm more grateful than anything else..."
     p "You make me blush..."
-    "Shin and I have been close ever since he was born and I was created."
+    "[owner_name] and I have been close ever since he was born and I was created."
     "It was comforting to always have him by my side - he gave my existence purpose and filled my life with joy."
     o "Have you seen the news... precious metal prices are skyrocketing yet again!"
     o "The past few decades of unchecked mining has stripped the Earth to its core..."
@@ -40,9 +40,9 @@ label home:
     o "I worry for your safety, [bot_name]."
     o "Promise me..."
     o "Promise me you will be safe."
-    p "Shin..."
-    "I notice a teardrop roll down Shin's cheeks"
-    p "Shin..."
+    p "[owner_name]..."
+    "I notice a teardrop roll down [owner_name]'s cheeks"
+    p "[owner_name]..."
     "[owner_name] steps forward and embraces me."
     
 
