@@ -1,4 +1,5 @@
 label chapter_1:
+    #change to room interior
     image bg_house_exterior = im.Scale("images/bg house exterior.png", 1920, 1080)
     scene bg_house_exterior
 
