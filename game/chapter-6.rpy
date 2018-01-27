@@ -139,7 +139,7 @@ label notcalm:
  jump Chapter6mid2
  
 label Chapter6mid2:
- m "...So, you go do your thing."
+ m "...So, you go do your thing. My account number is 144, don't mess it up eh?"
 
  image computerroom = "computerroom.jpng"
  scene computerroom
