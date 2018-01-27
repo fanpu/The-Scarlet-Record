@@ -1,6 +1,9 @@
 label start:
     scene bg
     play music "music/ch7.flac"
+    
+    show sad_waifu
+    
     p "It's been really long since I went missing..."
     p "The last time I went out on my own without informing <insert owner name>, he was worried sick..."
     p "And that was less than a day..."
@@ -8,12 +11,18 @@ label start:
     p "..."
     p "I don't even want to imagine how distressed he is right now..."
     p "..."
+    
+    fade sad_waifu
+    show exhausted_waifu
 
     p "I’m so tired... I’ve been having a lot of trouble to sleep for the past few days."
     p "I’m worried that if I sleep, I’ll be wasting precious time which I can spend with you, and maybe I can find you more quickly."
     p "..."
     
     stop music
+    
+    fade exhausted_waifu
+    show sad_waifu
     p "I’m worried that if I don’t sleep, I’ll collapse from exhaustion and lose all my memory, and I wouldn’t be able to find you ever again."
     play sound "music/sobbing.mp3"
     p "No, I have to be strong, right? I definitely can find you, right?"
@@ -21,12 +30,18 @@ label start:
     
     play music "music/ch7repeat.mp3"
     #music.register_channel(music, tight=True)
+    
+    show waifu
+    
     p "Ok, <insert bot name>, calm down... You have to be brave, be strong, and find your way back..."
     p "I’ve read up what other humans have to say about feelings."
     p "They say pain diminishes with time – eventually people will learn to forget their past and focus on the present."
     stop music
     
     play music "music/sobbing.mp3"
+    
+    show sad_waifu
+    
     p "I don’t understand how humans can possibly do that... I don’t want to forget you..."
     p "How can humans be so cruel to cope with sadness by forgetting it?"
     stop music
@@ -35,6 +50,9 @@ label start:
     p "I want to find you as fast as possible. Hopefully this is the right way back – if it isn’t –"
     
     play sound "music/crying.mp3"
+    
+    show very_sad_waifu
+    
     p "<insert owner name>, I miss you..."
     p "I need a shoulder to lean on, a shirt to cry on, a way to help me carry on..."
     p "I’m already on the verge of giving up..."
