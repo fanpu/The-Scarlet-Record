@@ -1,4 +1,6 @@
 label chapter_3:
+    scene black
+    
     "\"You and I will live together from now on.\""
     "A smile, the same smile that I would come to love."
     "A gentle voice that I would never grow tired of."
@@ -7,6 +9,9 @@ label chapter_3:
     "I sometimes thought of my origin. Who made me? What was my purpose?"
     "But that wasn't important to me, and I made no effort to find out."
     "But now..."
+    
+    image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
+    scene wasteland
     
     "After getting out, I found myself in a wasteland with nothing nearby apart from the facility."
     "That was not particularly surprising, due to the nuclear war in 2020 making the Earth uninhabitable."
