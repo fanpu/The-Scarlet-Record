@@ -30,7 +30,14 @@ label home:
     o "The past few decades of unchecked mining has stripped the Earth to its core..."
     o "Gold, silver, platinum, palladium, rhodium, ruthenium, iridium and osmium - all these precious metals used in complex circuit chips are in severe short supply."
     o "I could only imagine how this would impact the future of our society that is so reliant on Ex Machinas."
-    p "
+    p "It will be ok - as long as we have each other, things will be fine."
+    p "We have already been through so many hardships together."
+    o "You don't understand..."
+    o "Things are not as simple as it seems."
+    o "It seems like I say this all the time, but I am really worried for you."
+    p "W-why?"
+    o "You are built with the treasures of this Earth - the exact ones that people would do anything to obtain."
+    o "I worry for you safety, [bot_name]"
 
 
 python:
