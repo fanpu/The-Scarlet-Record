@@ -452,3 +452,12 @@ Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
 The window was minimized.
+The window was restored.
+Cleaning stores took 0.00s
+Init translation took 0.13s
+Build styles took 0.01s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+The window was minimized.
