@@ -60,6 +60,9 @@ label chapter_3_scene_1:
     jump chapter_3_fixing
 
 label chapter_3_fixing:
+    image circuitboard = im.Scale("images/circuitboard.jpg", 1920, 1080)
+    scene circuitboard
+    
     p "(The soundbytes are corrupted, but it should be easy to download new ones.)"
     w "<ERROR, SPEECH.MP3 NOT FOUND>"
     p "(There are radiowaves here...)"
