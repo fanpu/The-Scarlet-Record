@@ -40,12 +40,15 @@ label owner5:
  jump Chapter5mid
   
 label lover5:
- hideboredgirl.gif
+ hide boredgirl.gif
  show laughinggirl.gif
+ 
  g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
- g "Hah, I haven't laughed in a long time."   
+ g "Hah, I haven't laughed in a long time."
+ 
  hide laughinggirl.gif
- show amusedgirl.gi
+ show amusedgirl.gif
+ 
  g "I suppose I should help you in return."
  g "Come with me, I have a task for you first."
  p "...Fine."
