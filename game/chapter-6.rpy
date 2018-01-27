@@ -150,7 +150,7 @@ label Chapter6mid2:
  m "Don't let me down, now. I need the cash."
  p "..."
  
- image hack = "hackscreen.jpg"
+ image hack = "hackscreen.png"
  scene hack
  
  p "(Wow, this technology is really old.)"
@@ -158,25 +158,32 @@ label Chapter6mid2:
  
 label findingip:
  menu:
-  "whois":
+  "host":
    jump successip
-  "nmap":
-   jump failip
-  "dig":
-   jump failip
+  "netcat":
+   jump netcatip
+  "whois":
+   jump whoisip
  
 label successip:
- image ip_ok = "successip.jpg"
+ image ip_ok = "successip.png"
  scene ip_okay
  
- p "(Axiom? Didn't they...make me?)"
+ p "(Wait it's Axiom? Didn't they...make me?)"
  p "(...Maybe...I can find out more about myself)"
  jump findingports
  
-label failip:
- image ip_fail = "failip.jpg"
+label whoisip:
+ image ip_fail = "whois.png"
  scene ip_fail
- p "(I must have forgotten. It was so long ago.)"
+ p "(This is not what I need. I must have forgotten. It was so long ago.)"
+ p "(I can't afford to forget all of it.)"
+ jump findingip
+
+label netcatip;
+ image ip_fail2 = "netcatip.png"
+ scene ip_fail2
+ p "(This is not what I need. I must have forgotten. It was so long ago.)"
  p "(I can't afford to forget all of it.)"
  jump findingip
  
@@ -198,7 +205,7 @@ label failport:
  jump findingports
 
 label successport:
- image port_success = "successport.jpg"
+ image port_success = "portsuccess.png"
  scene port_success
  
  p "(Good, now time to prod the server)"
@@ -213,13 +220,12 @@ label vulnscan:
    jump failvuln
 
 label failvuln:
- image vuln_failed = "failedvuln.jpg"
- scene vuln_failed
+ scene port_fail
  p "(No, I can't mess up now. I'm too close to fail)"
  jump vulnscan
 
 label successvuln:
- image vuln_success = "successvuln.jpg"
+ image vuln_success = "vulnsuccess.png"
  scene vuln_succcess
  p "(Oh, a common vulnerabiltity. Should be easy)"
 label exploit:
@@ -232,13 +238,11 @@ label exploit:
    jump exploitfail
 
 label exploitfail:
- image exploit_fail = "exploitfail.jpg"
- scene exploit_fail
- p "(No, this won't get me the information I want.)"
+ p "(Wait, this won't get me the information I want.)"
  jump exploit
  
 label exploitsuccess:
- image exploit_success = "exploitsuccess.jpg"
+ image exploit_success = "exploitsuccess.png"
  scene exploit_success
  p "(Meterpreter shell is set up. Time to obtain root.)"
 
@@ -252,7 +256,7 @@ label kill:
    jump rmrf
  
 label exploit2fail:
- image exploit2_fail = "exploit2fail.jpg"
+ image exploit2_fail = "killfail.png"
  scene exploit2_fail
  p "No, they have barriers set up"
  jump kill
@@ -263,7 +267,7 @@ label rmrf:
  jump kill
  
 label exploit2success:
- image exploit2_success = "exploit2success.jpg"
+ image exploit2_success = "kill.png"
  scene exploit2_success
  p "(Protection is disabled.)"
 
@@ -288,13 +292,11 @@ label rootsuccess:
    jump nosourcecode
   
 label rootfail:
- image root_fail = "rootfail.jpg"
- scene root_fail
- p "(I know I have this stored somewhere...)"
+ p "(This is obviously the wrong command. I know I have the correct one stored somewhere...)"
  jump root
 
 label sourcecode:
- image sourcefolder = "sourcefolder.jpg"
+ image sourcefolder = "sourcefolder.png"
  scene sourcefolder
  p "(It's there. I am programmed to feel unconditional love towards my owner.)"
  p "(...)"
@@ -314,7 +316,7 @@ label nosourcecode:
 label moneytransfer: 
  p "(I better fulfil my promise quick.)"
  
- image transfermoney = "moneytransfer.jpg"
+ image transfermoney = "moneytransfer.pmg"
  scene transfermoney
   
  p "And done."
