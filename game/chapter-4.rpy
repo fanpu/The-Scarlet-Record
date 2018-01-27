@@ -1,4 +1,6 @@
 label start:
+    image wasteland2 = im.Scale("images/wasteland2.png", 1920, 1080)
+    scene wasteland2
     jump ch4start
     
 label ch4start:
