@@ -2,9 +2,13 @@ label chapter_1:
     image bg_house_exterior = im.Scale("images/bg house exterior.png", 1920, 1080)
     scene bg_house_exterior
 
-label scene_start
-    "It was a day just like any other"
-    "It is the year 2075, and we live"
+label scene_start:
+    "It was a day just like any other."
+    "It is the year 2075, and sentient machines called Ex Machina live alongside humans."
+    "Well, not exactly alongside - we are still machines, after all."
+    "We are designed and programmed to serve the needs of our masters."
+    "Every Ex Machina is assigned to a human master from birth, and we stay faithful servants until their death."
+    
     # Collect player name
 python:
     player = renpy.input("What is your name?")
