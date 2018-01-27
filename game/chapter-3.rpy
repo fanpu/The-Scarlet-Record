@@ -13,6 +13,8 @@ label chapter_3:
     scene wasteland
     with Dissolve(.5)
     
+    show waifu
+    
     "After getting out, all I see a wasteland with nothing nearby apart from the facility."
     "That was not particularly surprising, due to the apparent war making Earth inhabitable. Shin has talked about it at length"
     "The destruction caused was already apparent back home through the grimy windows. But I never realized how bad it was, inside the house"
@@ -40,14 +42,26 @@ label choice_3_1b:
     
 label choice_3_1done:
     if choice_3_1:
+    
+    hide waifu
+    show sad_waifu
+    
         "It has been 3 hours, but there is not a single person to be found."
     else:
+    
+    hide waifu
+    show sad_waifu
+    
         "It has been 3 hours, but there are still no clues to be found, not even a lead."
     jump chapter_3_scene_1
 
 label chapter_3_scene_1:
     p "Maybe I should turn back, this might be the wrong direction."
     "The world is a wasteland, but I should have found something by now."
+    
+    hide sad_waifu
+    show waifu
+    
     p "Hold on, what is that?"
     "It was very far away, but I can definitely see a person walking in my direction."
     if choice_3_1:
@@ -73,9 +87,20 @@ label chapter_3_fixing:
     jump chapter_3_scene_2
     
 label chapter_3_scene_2:
+    hide waifu
+    show happy_waifu
+    
     p "It's fixed. Or at least that's what I hope."
+    
+    hide happy_waifu
+    show waifu
+    
     "...She still doesn't seem...right."
     w "Kosuke, you're back!"
+    
+    hide waifu
+    show confused_waifu
+    
     p "I'm not-"
     w "I've missed you so much!"
     p "Me? But"
@@ -94,6 +119,10 @@ label chapter_3_scene_2:
     w "Don't you miss me?"
     p "(She's broken...beyond repair. Likely a motherboard malfunction.)"
     w "Come on, Kosuke. Didn't you miss of the times we had?
+    
+    hide confused_waifu
+    show waifu
+    
     p "(Should I...)"
     
 menu:
@@ -103,10 +132,18 @@ menu:
         jump choice_3_2b
 
 label choice_3_2a:
+    
+    hide waifu
+    show sad_waifu
+    
     "..."
     jump chapter_3_scene_3
            
 label choice_3_2b:
+    
+    hide waifu
+    show sad_waifu
+    
     "(...I can't do anything for her)"
     jump chapter_3_scene_3
 
