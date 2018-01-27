@@ -27,7 +27,6 @@ label scene_start:
 
     o "Ah, good morning, Darling."
     p "Good morning to you too, Master. Also, I have a name, it’s [bot_name]. not \"Darling\". Such relationships are impossible, you are a Human, I am an Ex Machina. I am a mass produced machine created to serve you, my Master. You falling for me is equivalent to the weaboos of centuries past, going on and on with their imaginary \"waifus\". It is unsightly, please be careful not to do this again."
-    "I was nonplussed."
     o "Ehhhh~ [bot_name], why are you always this serious. Sheesh, I must’ve messed up somewhere when I tried to fix you back when I first found you. I heard that back before the Great War, Ex Machinas were your dream robot that is tailored to the owners wants and needs. They’d be your maid, your wife, your lover, whatever you want them to be!"
     o "Ah well, not that it matters. Your deadpanned responses are cute too~"
 
