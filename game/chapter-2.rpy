@@ -5,7 +5,7 @@ label chapter_2:
 
 label chapter_2_scene_1:
     "It is night time."
-    "[owner_name] has already went to bed."
+    "[owner_name] has already went to bed after a long day of collecting important supplies."
     "There are a few more things for me to tidy up, before heading to recharge my battery for the night."
     "..."
     "..."
