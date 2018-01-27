@@ -1,7 +1,9 @@
 label chapter_2:
     image bg_livingroom_night = im.Scale("images/bg livingroom night.jpg", 1920, 1080)
     scene bg_livingroom_night
+    jump chapter_2_scene_1
 
+label chapter_2_scene_1:
     "It is night time."
     "[owner_name] has already went to bed."
     "There are a few more things for me to tidy up, before heading to recharge my battery for the night."
@@ -21,9 +23,31 @@ label chapter_2:
     k "I hope you're ready."
     k "*{i}raises EMP gun{/i}*"
     p "Wh-what!"
+
+menu:
+    "Fight back":
+        jump fight
+
+    "Reason with intruder":
+        jump reason
+
+label fight:
+    "I decide to fight back."
+    p "*[[WEAPONS INITIATED]*"
+    p "You better think again about what you're trying to do!"
+    k "*{i}fires EMP gun{/i}*"
+    p "PKG-42 repeating gun, fire!"
+    "It was too late."
+    jump shot
+
+label reason:
+    "I decide to reason with the intruder."
     p "What are you doing??"
     p "What do you want?!"
     k "*{i}fires EMP gun{/i}*"
+    jump shot
+
+label shot:
     show waifu pain at left
     p "AHHHHH!!"
     p "*[[POWER SURGE DETECTED]*"
@@ -39,5 +63,7 @@ label chapter_2:
     k "Keep quiet, or there will be more for you to worry about."
     p "You will...*[[TERMINAL SEQUENCE REACHED]*...regret...*[[SYSTEM DOWN]*..."
     "[bot_name] collapses on the living room floor"
+    jump chapter_2_scene_2
 
-
+label chapter_2_scene_2:
+    "I open my eyes"
