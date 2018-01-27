@@ -4,7 +4,8 @@ label Chapter5:
  play music "x.mp3"
  image far_girl= "farawaygirl.gif"
  show far_girl
-
+ 
+ "After walking for a few more days, I came across a girl."
  p "(Does she know the building where Shin lives?)"
  
  image close_girl = "closegirl.gif"
