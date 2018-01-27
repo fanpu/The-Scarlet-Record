@@ -7,7 +7,7 @@ label scene_start:
     "It is the year 2037, and we live in a world where sentient machines live alongside humans."
     "Well, not exactly alongside - we are still machines, after all."
     "We are designed and programmed to serve the needs of our owners. Whatever it may be"
-    "For me, I am a wifebot. I provide companionship, and love."
+    "For me, I am a wifebot. I provide companionship and love to the lonely and abandoned."
     jump home
 
 label home:
