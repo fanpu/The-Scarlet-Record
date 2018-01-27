@@ -36,3 +36,8 @@ label chapter_2:
     k "There's nothing you can do now."
     p "Whatever you do...please don't hurt [owner_name]!!"
     p "[owner_name], I'm sorry..."
+    k "Keep quiet, or there will be more for you to worry about."
+    p "You will...*[[TERMINAL SEQUENCE REACHED]*...regret...*[[SYSTEM DOWN]*..."
+    "[bot_name] collapses on the living room floor"
+
+
