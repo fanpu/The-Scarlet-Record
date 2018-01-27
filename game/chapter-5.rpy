@@ -1,5 +1,5 @@
 label Chapter5:
- image wasteland = "wasteland.jpg"
+ image wasteland = "wasteland3.jpg"
  scene wasteland
  play music "x.mp3"
  image far_girl= "farawaygirl.gif"

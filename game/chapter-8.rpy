@@ -1,6 +1,6 @@
 label chapter_8:
-    image woodhouse = im.Scale("images/woodhouse.jpg", 1920, 1080)
-    scene woodhouse
+    image home_dusk = im.Scale("images/bg home dusk.jpg", 1920, 1080)
+    scene home_dusk
     with Dissolve(.5)
     
     p "How many weeks has it been..."
