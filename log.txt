@@ -1,11 +1,11 @@
-Sat Jan 27 17:39:16 2018
+Sat Jan 27 18:36:33 2018
 Linux-4.14.14-1-zen-x86_64-with-glibc2.2.5
 Ren'Py 6.99.14.3135
  
 
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.01s
+Loader init took 0.00s
 Loading error handling took 0.02s
 Loading script took 0.11s
 Loading save slot metadata. took 0.00s
@@ -21,9 +21,9 @@ Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.06s
+Creating interface object took 0.11s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
@@ -38,7 +38,7 @@ Interface start took 0.02s
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1518, 854) drawable=(1518, 854)
+Screen sizes: virtual=(1920, 1080) physical=(1362, 766) drawable=(1362, 766)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'GeForce GTX 1060/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 387.34'
@@ -431,42 +431,194 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.756587028503s
+Total time until interface ready: 1.11022114754s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 832) drawable=(1920, 832)
-- Frame drawn at 0.028038 seconds.
-- Frame drawn at 0.029965 seconds.
-- Frame drawn at 0.039560 seconds.
-- Frame drawn at 0.053650 seconds.
-- 0.053650 seconds to render 5 frames.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+- Frame drawn at 0.044453 seconds.
+- Frame drawn at 0.053547 seconds.
+- Frame drawn at 0.066305 seconds.
+- Frame drawn at 0.079819 seconds.
+- 0.079819 seconds to render 5 frames.
 The window was minimized.
 The window was restored.
 The window was minimized.
-The window was restored.
-The window was minimized.
-The window was restored.
-The window was minimized.
-The window was restored.
-The winThe window was restoThe window was restored.
-The win
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Wi
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-ScreeThe window was minimized.
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 832) drawable=(1920, 832)
-s minimized.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+The window was minimized.
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)
+The window was minimized.
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 810) drawable=(1920, 810)
+The window was minimized.
 The window was restored.
 The window was minimized.
 The window was restored.
+The window was minimized.
+The window was restored.
+The window was minimized.
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+The window was minimized.
+The window was restored.
+The window was minimized.
+The window was restored.
+The window was minimized.
+The window was restored.
+The window was minimized.
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 722) drawable=(1920, 722)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+The window was minimized.
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 744) drawable=(1920, 744)
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 766) drawable=(1920, 766)
+The window was minimized.
+The window was restored.
+The window was minimized.
+The window was restored.
+The window was minimized.
+
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 788) drawable=(1920, 788)
+The window was minimized.
+The window was restored.
+The window was minimized.
