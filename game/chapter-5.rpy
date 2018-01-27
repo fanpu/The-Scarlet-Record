@@ -4,8 +4,7 @@ label Chapter5:
  play music "x.mp3"
  image far_girl= "farawaygirl.gif"
  show far_girl
- 
- "After walking for a few more days, I came across a girl."
+
  p "(Does she know the building where Shin lives?)"
  
  image close_girl = "closegirl.gif"
@@ -81,15 +80,95 @@ label Chapter5mid:
  g "So you should know how to transfer these files to my computer right?"
  p "Yes"
  
- image screenstart = "computerscreenstart.jpg"
+ image screenstart = "computerstartscreen.png"
  scene screenstart
  
  g "Get to it, then."
  g "..."
+ g "..."
  g "I wonder how I lived through the bombs."
  g "Is it my curse to watch the world die around me as I waste away?"
  g "without the courage to just end it all?"
+ 
+label filetransfer:
+ menu:
+  "Perform scp transfer":
+   jump failcomputer3
+  "Find Hard drive name":
+   jump successcomputer3
+    
+label failcomputer3:
+ image computerfail3 = "failedfiles.png"
+ scene computerfail3
+ g "...I assume it didn't work."
+ p "Yes"
+ g "It's okay, I'm used to things not working."
+ p "(I really should be more careful, lest I am unable to make it back)"
+ jump filetransfer
+ 
+label successcomputer3:
+ image computersuccess3 = "nameofsystem.png"
+ scene successcomputer3
+
+label mount:
+ menu:
+  "Mount drive":
+   jump successcomputer4
+  "Copy files":
+   jump failcomputer4
    
+label failcomputer4:
+ image computerfail4 = "failedfiles.png"
+ scene computerfail4
+ g "No! Is it not working?"
+ p "I just did something in the wrong order."
+ p "(I better be more careful...)"
+ jump mount
+ 
+label successcomputer4:
+ image computersuccess4 = "mounted.png"
+ scene computersuccess4
+ image insidefolder = "insidefolder.png"
+ scene insidefolder
+ g "What? It's empty? How is it possible?"
+ p "Not exactly."
+ 
+label recovery:
+ menu: 
+  "Initiate file recovery":
+   jump successcomputer2
+  "Search for hidden files":
+   jump failcomputer2
+   
+label failcomputer2:
+ 
+ image computerfail2 = "filesfailed.png"
+ scene computerfail2
+ 
+ p "No, this must be a mistake."
+ g "It better be."
+ p "(My battery is limited, I cannot risk wasting it on dead ends)"
+ jump recovery
+ 
+label successcomputer2:
+ image computersuccess2 ="filesappeared.png"
+ scene computersuccess2
+ 
+ g "..Thank you. I still have a chance."
+ p "...Why don't you leave Earth, if you think this place offers nothing?"
+ g "You think I don't want to? Interplanetary travel isn't cheap, and I can never afford it even if I live to 80. You actually think anyone would voluntarily stay in this godforsaken land?"
+ p "..."
+ g "This land is dead. It's inhabitants are withering, abandoned. The population dwindles every year. Soon, there will be nothing left."
+ g "We will all return to dust as Earth dies."
+ g "..."
+ g "What now?"
+ p "I need to decrypt the files."
+ g "So it will work?"
+ p "Almost garuanteed."
+ g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
+ g "Everyday the hard drive is just there, taunting me with memories of a happier time."
+ g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
+
 label decryption:
  scene screenstart
  
@@ -102,7 +181,7 @@ label decryption:
    jump failcomputer
    
 label failcomputer: 
- image failedcom = "failedcomputer.jpg"
+ image failedcom = "computerfailed.png"
  scene failedcom
  
  g "Is it all lost?"
@@ -117,99 +196,9 @@ label retrycomputer:
  jump decryption
 
 label successcomputer:
- image successcom = "successcomputer.jpg"
+ image successcom = "computersuccess.png"
  scene successcom
- 
- g "Ah, my old photos."
- g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
- g "Have you ever tried so hard to feel something? Feel something real?"
- p "...No"
- g "...Of course, an android will not know."
- g "Do you even know what Earth was like?"
- p "No"
- g "It wasn't perfect, but it was real. It was warm. It was alive."
- g "Nothing like what the world is now."
- 
- image insidefolder = "insidefolder.jpg"
- scene insidefolder
- 
- g "What? It's empty? How is it possible?"
- p "Not exactly."
 
-label recovery:
- menu: 
-  "Initiate file recovery":
-   jump successcomputer2
-  "Search for hidden files":
-   jump failcomputer2
-   
-label failcomputer2:
- 
- image computerfail2 = "computerfail2.jpg"
- scene computerfail2
- 
- p "No, this must be a mistake."
- g "It better be."
- p "(My battery is limited, I cannot risk wasting it on dead ends)"
- jump recovery
- 
-label successcomputer2:
- image computersuccess2 = "computersuccess2.jpg"
- scene computersuccess2
- 
- g "..Thank you. I still have a chance."
- p "...Why don't you leave Earth, if you think this place offers nothing?"
- g "You think I don't want to? Interplanetary travel isn't cheap, and I can never afford it even if I live to 80. You actually think anyone would voluntarily stay in this godforsaken land?"
- p "..."
- g "This land is dead. It's inhabitants are withering, abandoned. The population dwindles every year. Soon, there will be nothing left."
- g "We will all return to dust as Earth dies."
- 
-label filetransfer:
- menu:
-  "Perform scp transfer":
-   jump failcomputer3
-  "Find Hard drive name":
-   jump successcomputer3
-    
-label failcomputer3:
- image computerfail3 = "computerfail3.jpg"
- scene computerfail3
- g "...I assume it didn't work."
- p "Yes"
- g "It's okay, I'm used to things not working."
- p "(I really should be more careful, lest I am unable to make it back)"
- jump filetransfer
- 
-label successcomputer3:
- image computersuccess3 = "computersuccess3.jpg"
- scene successcomputer3
- g "What now?"
- p "I need to finish the file transfer."
- g "So it will work?"
- p "Almost garuanteed."
- g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
- g "Everyday the hard drive is just there, taunting me with memories of a happier time."
- g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
-
-label mount:
- menu:
-  "Mount drive":
-   jump successcomputer4
-  "Copy files":
-   jump failcomputer4
-   
-label failcomputer4:
- image computerfail4 = "computerfail4.jpg"
- scene computerfail4
- g "No! Is it not working?"
- p "I'm trying. It should succeed the next time."
- p "(I better be more careful...)"
- jump mount
- 
-label successcomputer4:
- image computersuccess4 = "computersuccess4.jpg"
- scene computersuccess4
- 
  p "It's almost done."
  g "...I don't know what to feel."
  p "Happy? You get to experience your best memories again."
@@ -226,13 +215,24 @@ label successcomputer4:
 label successcomputer5: 
  stop music "filetransfer.mp3"
  start music "done.mp3"
- image computersuccess5 = "computersuccess5.jpg"
+ image computersuccess5 = "copied.png"
  scene computersuccess5
  image girl_relieved = "relievedgirl.gif"
  show girl_relieved
 
  p "It's done."
  g "...Thank you.Thank you kindly."
+ g "Ah, my old photos."
+ g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
+ g "Have you ever tried so hard to feel something? Feel something real?"
+ p "...No"
+ g "...Of course, an android will not know."
+ g "Do you even know what Earth was like?"
+ p "No"
+ g "It wasn't perfect, but it was real. It was warm. It was alive."
+ g "Nothing like what the world is now."
+ p "..."
+ g "..."
  g "So...the directions to Midtown Tower, am I right?"
  p "Yes."
  g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
