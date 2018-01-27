@@ -1,5 +1,5 @@
 label chapter_8:
-    image home_dusk = im.Scale("images/bg_home_day.jpg", 1920, 1080)
+    image home_dusk = im.Scale("images/bg home dusk.jpg", 1920, 1080)
     scene home_dusk
     with Dissolve(.5)
     
