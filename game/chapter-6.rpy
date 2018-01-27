@@ -148,12 +148,13 @@ label Chapter6mid2:
  p "(They would likely be more vulnearable to oldschool hacking methods)"
  
 label findingip:
- "whois":
-  jump successip
- "nmap":
-  jump failip
- "dig":
-  jump failip
+ menu:
+  "whois":
+   jump successip
+  "nmap":
+   jump failip
+  "dig":
+   jump failip
  
 label successip:
  scene successip.jpg
@@ -193,9 +194,9 @@ label vulnscan:
  menu:
   "nse --script vuln":
    jump successvuln
-  "netcat"
+  "netcat":
    jump failvuln
-  "Hydra"
+  "Hydra":
    jump failvuln
 
 label failvuln:
@@ -238,7 +239,7 @@ label exploit2fail:
  p "No, they have barriers set up"
  jump kill
  
-label rmrf
+label rmrf:
  scene exploitsuccess.jpg
  p "(Are my circuits haywire?)"
  jump kill
@@ -247,7 +248,7 @@ label exploit2success:
  scene exploit2success.jpg
  p "(Protection is disabled.)"
 
-label root
+label root:
  "Upload rootkit":
   jump rootsuccess
  "hashdump":
