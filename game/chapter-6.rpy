@@ -181,7 +181,7 @@ label findingports:
 label failport:
  scene failport.jpg
  
- p "(It's in my memory, how can I forget?)
+ p "(It's in my memory, how can I forget?)"
  jump findingports
 
 label successport:
