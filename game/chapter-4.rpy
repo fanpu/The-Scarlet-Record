@@ -4,11 +4,17 @@ label start:
     jump ch4start
     
 label ch4start:
+    
+    show sad_waifu
+
     p "That poor <insert waifubot name>... "
 
     p "Never mind, I should worry more about myself. Just where am I?"
 
     #Wandering
+    
+    hide sad_waifu
+    show waifu
 
     p "Is that someone in the distance? Hopefully he will know the way back to Shin’s place..."
 
@@ -25,6 +31,9 @@ label ch4start:
 
     po "No! You exist but do not exist! I am the Chosen One! I am the only one left on this world! There cannot be anyone else! The sensation that is you is just a false sensation!"
 
+    hide waifu
+    show confused_waifu
+    
     p "Umm.. Okay... But could you help me for a bit?"
 
     po "Such a situation is impossible! After all, I am the chosen talent residing in this gift of a planet! I am the representation of God and His will!"
@@ -94,6 +103,8 @@ label ch4mid:
     po "And I thought I was the one graced by the heavens, the one blessed with the gift of this very cursed world..."
     po "HOWEVER! You are but a robot! A being to mirror Humans! Show me that you deserve the help of the Chosen Human!"
 
+    hide confused_waifu
+    show waifu
     p "So he still believes that he is a \"chosen one\". Sigh.."
     po "Complete this quiz and show me that you are worthy of help from me."
     
@@ -179,12 +190,18 @@ label ch4end:
     p "Yes.. Then, do you know how to get to <insert address here>?"
     po "By my vast knowledge of the pre-crisis era, the location that you ask for is <insert something>"
 
+    hide waifu
+    show happy_waifu
+    
     p "Thank you so much!"
 
     po "No worries! For it is my duty as the Chosen Human! For that is my Noblesse Oblige!"
 
     #po disappear, out of scene
 
+    hide happy_waifu
+    show waifu
+    
     p "That wasn’t very useful.. But at the very least that’s the first lead I’ve gotten."
     p "I hope I can return back to Shin soon..."
 
