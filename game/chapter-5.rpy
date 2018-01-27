@@ -1,19 +1,23 @@
 label Chapter5:
- scene wasteland.jpg
+ image wasteland = "wasteland.jpg"
+ scene wasteland
  play music "x.mp3"
- show farawaygirl.gif
+ image far_girl= "farawaygirl.gif"
+ show far_girl
 
  p "(Does she know the building where Shin lives?)"
  
- hide farawaygirl.gif
- show closegirl.gif
+ image close_girl = "closegirl.gif"
+ hide far_girl
+ show close_girl
 
  p "Hello"    
  g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
  p "No"
  
- hide closegirl.gif
- show boredgirl.gif
+ hide close_girl
+ image bored_girl = "boredgirl.gif"
+ show bored_girl
 
  g "Good for you. Now what do you want from me?"
  "..."
@@ -29,8 +33,9 @@ menu:
    jump lover5
 
 label owner5:
- hide boredgirl.gif
- show amusedgirl.gif
+ hide bored_girl
+ image amused_girl = "amusedgirl.gif"
+ show amused_girl
 
  g "You androids, always programmed to go back."
  g "Well, at least you have a purpose"
@@ -40,14 +45,15 @@ label owner5:
  jump Chapter5mid
   
 label lover5:
- hide boredgirl.gif
- show laughinggirl.gif
+ image laugh_girl = "laughinggirl.gif"
+ hide bored_girl
+ show laugh_girl
  
  g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
  g "Hah, I haven't laughed in a long time."
  
- hide laughinggirl.gif
- show amusedgirl.gif
+ hide laugh_girl
+ show amused_girl
  
  g "I suppose I should help you in return."
  g "Come with me, I have a task for you first."
@@ -55,11 +61,13 @@ label lover5:
  jump Chapter5mid
  
 label Chapter5mid:
- scene messyroom.jpg
+ image messyroom = "messyroom.jpg"
+ scene messyroom
  stop music "wasteland.mp3"
  start music "messyroom.mp3"
- hide amusedgirl.gif
- show girl.gif
+ hide amused_girl
+ image girl = "girl.gif"
+ show girl
  
  g "I have not met another person, or anything moving for a long long time"
  g "It gets lonely sometimes"
@@ -67,13 +75,13 @@ label Chapter5mid:
  p "..."
  g "You androids are smart. Smarter than me, at least."
  
- hide girl.gif
- show girlwithdrive.gif
+ hide girl
  
  g "So you should know how to transfer these files to my computer right?"
  p "Yes"
  
- scene computerscreenstart.jpg
+ image screenstart = "computerscreenstart.jpg"
+ scene screenstart
  
  g "Get to it, then."
  g "..."
@@ -82,7 +90,7 @@ label Chapter5mid:
  g "without the courage to just end it all?"
    
 label decryption:
- scene computerscreenstart.jpg
+ scene screenstart
  
  menu: 
   "Decrypt base64":
@@ -93,7 +101,8 @@ label decryption:
    jump failcomputer
    
 label failcomputer: 
- scene failedcomputer.jpg
+ image failedcom = "failedcomputer.jpg"
+ scene failedcom
  
  g "Is it all lost?"
  p "I must have guessed wrong."
@@ -107,7 +116,9 @@ label retrycomputer:
  jump decryption
 
 label successcomputer:
- scene successcomputer.jpg
+ image successcom = "successcomputer.jpg"
+ scene successcom
+ 
  g "Ah, my old photos."
  g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
  g "Have you ever tried so hard to feel something? Feel something real?"
@@ -118,7 +129,8 @@ label successcomputer:
  g "It wasn't perfect, but it was real. It was warm. It was alive."
  g "Nothing like what the world is now."
  
- scene insidefolder.jpg
+ image insidefolder = "insidefolder.jpg"
+ scene insidefolder
  
  g "What? It's empty? How is it possible?"
  p "Not exactly."
@@ -131,7 +143,9 @@ label recovery:
    jump failcomputer2
    
 label failcomputer2:
- scene failcomputer2
+ 
+ image computerfail2 = "computerfail2.jpg"
+ scene computerfail2
  
  p "No, this must be a mistake."
  g "It better be."
@@ -139,7 +153,8 @@ label failcomputer2:
  jump recovery
  
 label successcomputer2:
- scene failcomputer2
+ image computersuccess2 = "computersuccess2.jpg"
+ scene computersuccess2
  
  g "..Thank you. I still have a chance."
  p "...Why don't you leave Earth, if you think this place offers nothing?"
@@ -156,7 +171,8 @@ label filetransfer:
    jump successcomputer3
     
 label failcomputer3:
- scene failcomputer3.jpg
+ image computerfail3 = "computerfail3.jpg"
+ scene computerfail3
  g "...I assume it didn't work."
  p "Yes"
  g "It's okay, I'm used to things not working."
@@ -164,7 +180,8 @@ label failcomputer3:
  jump filetransfer
  
 label successcomputer3:
- scene successcomputer3.jpg
+ image computersuccess3 = "computersuccess3.jpg"
+ scene successcomputer3
  g "What now?"
  p "I need to finish the file transfer."
  g "So it will work?"
@@ -181,14 +198,16 @@ label mount:
    jump failcomputer4
    
 label failcomputer4:
- scene failcomputer4
+ image computerfail4 = "computerfail4.jpg"
+ scene computerfail4
  g "No! Is it not working?"
  p "I'm trying. It should succeed the next time."
  p "(I better be more careful...)"
  jump mount
  
 label successcomputer4:
- scene successcomputer4.jpg
+ image computersuccess4 = "computersuccess4.jpg"
+ scene computersuccess4
  
  p "It's almost done."
  g "...I don't know what to feel."
@@ -206,8 +225,10 @@ label successcomputer4:
 label successcomputer5: 
  stop music "filetransfer.mp3"
  start music "done.mp3"
- scene successcomputer5.jpg
- show girlrelieved.gif
+ image computersuccess5 = "computersuccess5.jpg"
+ scene computersuccess5
+ image girl_relieved = "relievedgirl.gif"
+ show girl_relieved
 
  p "It's done."
  g "...Thank you.Thank you kindly."
@@ -227,8 +248,8 @@ label successcomputer5:
    jump nothing5
    
 label real5:
- hide girlrelieved.gif
- show girlamused.gif
+ hide girl_relieved 
+ show girl_amused
  
  g "Hah, never knew an android could think of that."
  g "Does it matter if the feelings are real or not?"
@@ -238,8 +259,8 @@ label real5:
  jump chapter5ending
  
 label nothing5:
- hide girlrelieved.gif
- show girl.gif
+ hide girl_relieved
+ show girl
  
  g "...Hold on to that care."
  g "Don't let it slip away like I did."
@@ -247,10 +268,10 @@ label nothing5:
  jump chapter5ending
  
 label chapter5ending:
- hide girlrelieved.jpg
+ hide girl_relieved
  stop music "end.mp3"
  start music "chap5end.mp3"
- scene wasteland.jpg
+ scene wasteland
  
  p "(I would wish her all the best, but I feel that wish will be wasted)"
                  
