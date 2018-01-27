@@ -99,11 +99,8 @@ label Chapter6mid:
     jump notcalm
    "Yes":
     jump calm
-
-label notcalm
- p "(No, there is no telling what he will do when I speak up. After all, I am the thing he hates.)"
  
-label calm
+label calm:
  p "Please calm down, or I can't help you."
  
  hide manangry.jpg
@@ -123,7 +120,7 @@ label calm
  m "I guess we just can't help it."
  jump Chapter6mid2
  
-label notcalm
+label notcalm:
  p "(I better not say anything, or else he will get angrier.)"
  m "And we just watched, and even cheered, as we got slowly replaced."
  
@@ -134,7 +131,7 @@ label notcalm
  p "..."
  jump Chapter6mid2
  
-label Chapter6mid2
+label Chapter6mid2:
  m "...So, you go do your thing."
 
  scene computerroom.jpg
