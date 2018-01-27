@@ -52,7 +52,7 @@ label no6:
 label yes6:
  p "Fine, I'll do it. What do you want?"
  m "Great. So the company I work for, they didn't pay me nothin. I need you to go there, hack into the servers, and transfer my pay to me."
- jump Chapter6tmid
+ jump Chapter6mid
  
 label Chapter6mid:
  p "I can do that."
@@ -94,11 +94,11 @@ label Chapter6mid:
  m "And then YOU came and took it away."
  m "And those slimeballs have the audacity to tell us to kick back and relax, to enjoy your aimless and purposeless lives?"
  p "(He's getting really riled up, should I calm him down?)"
-  menu:
-   "No":
-    jump notcalm
-   "Yes":
-    jump calm
+ menu:
+  "No":
+   jump notcalm
+  "Yes":
+   jump calm
  
 label calm:
  p "Please calm down, or I can't help you."
@@ -204,7 +204,7 @@ label failvuln:
  p "(No, I can't mess up now. I'm too close to fail)"
  jump vulnscan
 
-label suceedvuln:
+label successvuln:
  scene successvuln.jpg
  p "(Oh, a common vulnerabiltity. Should be easy)"
 label exploit:
@@ -213,7 +213,7 @@ label exploit:
    jump exploitfail
   "Set up reverse tcp shell":
    jump exploitsuccess
-  "Do a DDOS attack"
+  "Do a DDOS attack":
    jump exploitfail
 
 label exploitfail:
@@ -221,7 +221,7 @@ label exploitfail:
  p "(No, this won't get me the information I want.)"
  jump exploit
  
-label exploitsuccess
+label exploitsuccess:
  scene exploitsuccess.jpg
  p "(Meterpreter shell is set up. Time to obtain root.)"
 
@@ -249,12 +249,13 @@ label exploit2success:
  p "(Protection is disabled.)"
 
 label root:
- "Upload rootkit":
-  jump rootsuccess
- "hashdump":
-  jump rootfail
- "sysinfo":
-  jump rootfail
+ menu:
+  "Upload rootkit":
+   jump rootsuccess
+  "hashdump":
+   jump rootfail
+  "sysinfo":
+   jump rootfail
 
 label rootsuccess:
  scene rootsuccess.jpg
@@ -263,7 +264,7 @@ label rootsuccess:
  menu:
   "Check own source code":
    jump sourcecode
-  "Don't do it"
+  "Don't do it":
    jump nosourcecode
   
 label rootfail:
