@@ -34,7 +34,7 @@ label owner5:
  show amusedgirl.gif
  
  g "You androids, always programmed to go back."
- g "Well, at least you have a purpose"
+ g "Well, at least you have a purpose."
  g "..."
  g "You know what, I'll help you, if you help me. Something simple. What'd you say to that?"
  p "...I'll help."
@@ -62,9 +62,9 @@ label Chapter5mid:
  hide amusedgirl.gif
  show girl.gif
 	
- g "I have not met another person, or anything moving for a long long time"
- g "It gets lonely sometimes"
- g "But I'm used to it"
+ g "I have not met another person, or anything moving for a long long time."
+ g "It gets lonely sometimes."
+ g "But I'm used to it."
  p "..."
  g "You androids are smart. Smarter than me, at least."
        
@@ -104,7 +104,7 @@ label failcomputer:
 	
 label retrycomputer:
  scene computerscreenstart.jpg
- p "(That took some energy, I better not fail again)"
+ p "(That took some energy, I better not fail again.)"
  jump decryption
 	
 label successcomputer:
@@ -136,7 +136,7 @@ label failcomputer2:
  p "No, this must be a mistake."
  g "It better be."
  p "(My battery is limited, I cannot risk wasting it on dead ends)"
- jump recover
+ jump recovery
 
 label successcomputer2:
  scene successcomputer2.jpg
@@ -150,9 +150,9 @@ label successcomputer2:
 label filetransfer:
  menu:
   "Perform scp transfer":
-   jump failcomputer
+   jump failcomputer3
   "Find Hard drive name":
-   jump successcompuer3
+   jump successcomputer3
     
 label failcomputer3:
  scene failcomputer3.jpg
@@ -178,6 +178,12 @@ label mount:
    jump successcomputer4
   "Copy files":
    jump failcomputer4
+   
+label failcomputer4:
+ g "No! Is it not working?"
+ p "I'm trying. It should succeed the next time."
+ p "(I better be more careful...)"
+ jump mount
   
 label successcomputer4:
  scene successcomputer4.jpg
@@ -201,7 +207,7 @@ label successcomputer5:
  show girlrelieved.gif
  
  p "It's done."
- g "...Thank you.Thank you kindly."
+ g "...Thank you. Thank you kindly."
  g "So...the directions to Midtown Tower, am I right?"
  p "Yes."
  g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
@@ -213,9 +219,9 @@ label successcomputer5:
  p "But..."
  menu:
   "It might not be real":
-   jump to real5
+   jump real5
   "Nothing.":
-   jump to nothing5
+   jump nothing5
 
 label real5:
  g "Hah, never knew an android could think of that."
@@ -223,13 +229,13 @@ label real5:
  p "..."
  g "At least you do feel care, feel for something real and tangible."
  g "I wish I could do that"
- jump to chapter5end
+ jump chapter5end
  
 label nothing5:
   g "...Hold on to that care."
   g "Don't let it slip away like I did."
   g "It makes all the difference."
-  jump to chapter5end
+  jump chapter5end
  
 label chapter5end:
  hide girlrelieved.jpg
@@ -238,3 +244,10 @@ label chapter5end:
  scene wasteland.jpg
  
  p "(I would wish her all the best, but I feel that wish will be wasted)"
+ 
+
+
+	      
+        
+       
+       
