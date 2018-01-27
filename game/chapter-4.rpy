@@ -10,6 +10,7 @@ label ch4start:
     p "That poor <insert waifubot name>... "
 
     p "Never mind, I should worry more about myself. Just where am I?"
+    p "After the incident with <waifubot> I continued walking aimlessly, hoping to find something. However, it was futile."
 
     #Wandering
     
