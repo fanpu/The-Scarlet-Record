@@ -86,11 +86,11 @@ label Chapter5mid:
    
 label decryption:
  menu: 
-  "Decrypt base64"
+  "Decrypt base64":
    jump failcomputer
-  "Decrypt MD5"
+  "Decrypt MD5":
    jump successcomputer
-  "Decrypt SHA-384"
+  "Decrypt SHA-384":
    jump failcomputer
 	   
 label failcomputer: 
@@ -128,7 +128,7 @@ label recovery:
  menu: 
   "Initiate file recovery":
    jump successcomputer2
-  "Search for hidden files"
+  "Search for hidden files":
    jump failcomputer2
    
 label failcomputer2:
@@ -176,7 +176,7 @@ label mount:
  menu:
   "Mount drive":
    jump successcomputer4
-  "Copy files"
+  "Copy files":
    jump failcomputer4
   
 label successcomputer4:
@@ -212,12 +212,12 @@ label successcomputer5:
  g "Something real to care about. Like you, you care about your owner right?"
  p "But..."
  menu:
-  "It might not be real"
+  "It might not be real":
    jump to real5
-  "Nothing."
-   jumpt to nothing5
+  "Nothing.":
+   jump to nothing5
 
-label real5
+label real5:
  g "Hah, never knew an android could think of that."
  g "Does it matter if the feelings are real or not?"
  p "..."
@@ -225,13 +225,13 @@ label real5
  g "I wish I could do that"
  jump to chapter5end
  
-label nothing5
+label nothing5:
   g "...Hold on to that care."
   g "Don't let it slip away like I did."
   g "It makes all the difference."
   jump to chapter5end
  
-label chapter5end
+label chapter5end:
  hide girlrelieved.jpg
  stop music "end.mp3"
  start music "chap5end.mp3"
