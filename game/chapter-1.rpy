@@ -14,7 +14,7 @@ label scene_start:
     jump home
 
 label home:
-    image bg_livingroom = im.Scale("images/bg livingroom.jpg", 1920, 1080)
+    image bg_livingroom = im.Scale("images/bg livingroom day.jpg", 1920, 1080)
     scene bg_livingroom
     with dissolve
     show waifu smiling at left
@@ -40,11 +40,32 @@ label home:
     o "I worry for your safety, [bot_name]."
     o "Promise me..."
     o "Promise me you will be safe."
+
     p "[owner_name]..."
     "I notice a teardrop roll down [owner_name]'s cheeks"
     p "[owner_name]..."
     "[owner_name] steps forward and embraces me."
-    
+menu:
+    "I promise.":
+        jump promise
+
+    "I...I don't know.":
+        jump dont_know
+
+label promise:
+    o "Thank you, [bot_name]."
+    o "You don't know how much this means to me."
+    jump chapter_1_end
+
+label dont_know:
+    o "I understand."
+    p "Ex Machinas never make a promise they can't keep...it's just how we are engineered."
+    jump chapter_1_end
+
+label chapter_1_end:
+    "We break our embrace."
+    "I hope that our happy days together will continue on forever, just like this..."
+    jump chapter_2
 
 python:
     player = renpy.input("What is your name?")
