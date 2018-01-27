@@ -49,7 +49,7 @@ label no6:
  m "Great. So the company i work for, they didn't pay me nothing. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6mid
  
-label yes6
+label yes6:
  p "Fine, I'll do it. What do you want?"
  m "Great. So the company I work for, they didn't pay me nothin. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6tmid
@@ -66,6 +66,8 @@ label Chapter6mid:
  
  hide seriousman.jpg
  scene blurredroad.jpg
+ stop music "wastelandsqaure.mp3"
+ play music "motorcyclesounds.mp3"
  
  m "You never answered my first question, android. What are you doing in here of all places?"
  p "I'm lost."
@@ -75,6 +77,9 @@ label Chapter6mid:
  m "No android, we are desperate to stay. To live a life similar to that before the likes of you existed."
  m "Desperate to be truly human again."
  
+ stop music "motorcyclesounds.mp3"
+ play music "factorysounds.mp3"
+
  scene factory.jpg
  show man.jpg
  
@@ -111,6 +116,10 @@ label calm
  
  m "I suppose I'm a dirty hypocrite, eh? Asking an adroid for help, just like all those backstabbers?"
  m "Heh."
+ 
+ hide mansmile.jpg
+ show sadman.jpg
+ 
  m "I guess we just can't help it."
  jump Chapter6mid2
  
@@ -125,7 +134,55 @@ label notcalm
  p "..."
  jump Chapter6mid2
  
+label Chapter6mid2
+ m "...So, you go do your thing."
 
+ scene computerroom.jpg
+ 
+ m "Here are the computers, connected to the server or whatever they call it."
+ m "Don't let me down, now. I need the cash."
+ p "..."
+ 
+ scene hackscreen.jpg
+ 
+ p "(Wow, this technology is really old.)"
+ p "(They would likely be more vulnearable to oldschool hacking methods)"
+ 
+label findingip:
+ "whois":
+  jump successip
+ "nmap":
+  jump failip
+ "dig":
+  jump failip
+ 
+label successip:
+ p "(Axiom? Didn't they...make me?)"
+ p "(...Maybe...I can find out more about myself)"
+ jump findingports
+ 
+label failip:
+ p "(I must have forgotten. It was so long ago.)"
+ p "(I can't afford to forget all of it.)"
+ jump findingip
+ 
+label findingports:
+ p "(I got the ip address, now I need to find the open ports...)"
+ menu:
+  "dig":
+   jump failport
+  "nmap"
+   jump succeedport
+  "netcat"
+   jump failport
+
+label failport:
+ p "(It's in my memory, how can I forget?)
+ jump findingports
+
+label succeedport:
+ p "(Good, now 
+ 
  
  
  
