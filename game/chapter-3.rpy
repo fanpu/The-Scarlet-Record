@@ -30,12 +30,12 @@ menu:
 
 label choice_3_1a:
     $ choice_3_1 = True
-    "Shin is still the most important to me. I should find clues of how to get back quickly. Hopefully I can find someone who knows where town is."
+    "Shin is still the most important to me. I should find clues of how to get back quickly. Hopefully I will find someone who knows where town is."
     jump choice_3_1done
 
 label choice_3_1b:
     $ choice_3_1 = False
-    "Maybe it is time for me to know more about myself. Shin can wait for awhile. Hopefully I can find someone who knows something about who I am."
+    "Maybe it is time for me to know more about myself. Shin can wait for awhile. Hopefully I will find someone who knows something about who I am."
     jump choice_3_1done
     
 label choice_3_1done:
@@ -88,10 +88,12 @@ menu:
 label choice_3_2a:
     "I can't leave her like this, I have to shut off her power."
     "I quickly opened the circuit and shut her off permanently."
+    "(Add some feelings here)"
     jump chapter_3_scene_3
            
 label choice_3_2b:
     "I can't kill her, I will just leave her here and carry on."
+    "(Add some feelings here)"
     jump chapter_3_scene_3
 
 label chapter_3_scene_3:
