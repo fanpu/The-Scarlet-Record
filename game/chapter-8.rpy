@@ -1,4 +1,8 @@
-label start:
+label chapter_8:
+    image woodhouse = im.Scale("images/woodhouse.jpg", 1920, 1080)
+    scene woodhouse
+    with Dissolve(.5)
+    
     p "How many weeks has it been..."
     p "I finally see the familiar house which me and Shin spent our time in."
     p "The time I first met him... the many times we slept together... many of these precious moments were all spent together in the house."
