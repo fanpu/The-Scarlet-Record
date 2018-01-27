@@ -135,6 +135,8 @@ label Chapter6mid2:
  m "...So, you go do your thing."
 
  scene computerroom.jpg
+ stop music "factorysounds.mp3"
+ start music "computerroom.mp3"
  
  m "Here are the computers, connected to the server or whatever they call it."
  m "Don't let me down, now. I need the cash."
@@ -154,11 +156,14 @@ label findingip:
   jump failip
  
 label successip:
+ scene successip.jpg
+ 
  p "(Axiom? Didn't they...make me?)"
  p "(...Maybe...I can find out more about myself)"
  jump findingports
  
 label failip:
+ scene failip.jpg
  p "(I must have forgotten. It was so long ago.)"
  p "(I can't afford to forget all of it.)"
  jump findingip
@@ -169,18 +174,139 @@ label findingports:
   "dig":
    jump failport
   "nmap"
-   jump succeedport
+   jump successport
   "netcat"
    jump failport
 
 label failport:
+ scene failport.jpg
+ 
  p "(It's in my memory, how can I forget?)
  jump findingports
 
-label succeedport:
- p "(Good, now 
+label successport:
+ scene successport.jpg
+ 
+ p "(Good, now time to prod the server)"
+
+label vulnscan:
+ menu:
+  "nse --script vuln":
+   jump successvuln
+  "netcat"
+   jump failvuln
+  "Hydra"
+   jump failvuln
+
+label failvuln:
+ scene failvuln.jpg
+ p "(No, I can't mess up now. I'm too close to fail)"
+ jump vulnscan
+
+label suceedvuln:
+ scene successvuln.jpg
+ p "(Oh, a common vulnerabiltity. Should be easy)"
+label exploit:
+ menu: 
+  "Upload malicious code":
+   jump exploitfail
+  "Set up reverse tcp shell":
+   jump exploitsuccess
+  "Do a DDOS attack"
+   jump exploitfail
+
+label exploitfail:
+ scene exploitfail.jpg
+ p "(No, this won't get me the information I want.)"
+ jump exploit
+ 
+label exploitsuccess
+ scene exploitsuccess.jpg
+ p "(Meterpreter shell is set up. Time to obtain root.)"
+
+label kill:
+ menu:
+  "Kill":
+   jump exploit2success
+  "Upload rootkit":
+   jump exploit2fail
+  "rm -rf":
+   jump rmrf
+ 
+label exploit2fail:
+ scene exploit2fail.jpg
+ p "No, they have barriers set up"
+ jump kill
+ 
+label rmrf
+ scene exploitsuccess.jpg
+ p "(Are my circuits haywire?)"
+ jump kill
+ 
+label exploit2success:
+ scene exploit2success.jpg
+ p "(Protection is disabled.)"
+
+label root
+ "Upload rootkit":
+  jump rootsuccess
+ "hashdump":
+  jump rootfail
+ "sysinfo":
+  jump rootfail
+
+label rootsuccess:
+ scene rootsuccess.jpg
+ p "(Good, I can now access all files without obstruction.)
+ p "(Should I...)"
+ menu:
+  "Check own source code":
+   jump sourcecode
+  "Don't do it"
+   jump nosourcecode
+  
+label rootfail:
+ scene rootfail.jpg
+ p "(I know I have this stored somewhere...)"
+ jump root
+
+label sourcecode:
+ scene sourcecode.jpg
+ p "(It's there. I am programmed to feel unconditional love towards my owner.)"
+ p "(...)"
+ p "(My feelings, they are fake...)"
+ p "(...Does Shin know?)"
+ p "(...Does Shin care?)"
+ p "(....Do I care?)"
+ "Hey! Someone is messing with the servers!"
+ jump moneytransfer
+
+label nosourcecode:
+ scene rootsuccess.jpg
+ p "(No. My feelings are my feelings. They exist, programmed or not. I do not need to know.)"
+ "Hey! Someone is messing with the servers!"
+ jump moneytransfer
+
+label moneytransfer: 
+ p "(I better fulfil my promise quick.)"
+  
+ scene moneytransfer.jpg
+  
+ p "And done."
+  
+ scene factory.jpg
+ stop music "computerroom.mp3"
+ start music "factorysounds.mp3"
+ show man.jpg
+  
+ m "...So you succeeded, eh?"
+ m "Knew it, you droids do everything better than us."
+ m "Midtown Tower is straight South. You should reach within a day, at most two."
+ m "...now scram, before I beat you to a pulp."
+ p "..."
  
  
  
  
+  
  
