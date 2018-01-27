@@ -76,6 +76,7 @@ label Chapter5mid:
  scene computerscreenstart.jpg
  
  g "Get to it, then."
+ g "..."
  g "I wonder how I lived through the bombs."
  g "Is it my curse to watch the world die around me as I waste away?"
  g "without the courage to just end it all?"
