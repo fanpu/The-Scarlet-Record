@@ -1,36 +1,30 @@
 label chapter_5:
-    image wasteland = "wasteland3.jpg"
+    image wasteland = im.Scale("wasteland3.jpg", 1920, 1080)
     scene wasteland
-    play music "x.mp3"
-    image depressed_girl_default= "depressed default.png"
-    show depressed_girl_default at right
+#    play music "x.mp3"
+    show depressed default at right
 
     p "(Does she know the building where Shin lives?)"
 
     p "Hello"
 
-    image depressed_girl_shock1 = "depressed shock1.png"
-    hide depressed_girl_default
+#    image depressed_girl_shock1 = "depressed girl/depressed shock1.png"
+    hide depressed  default
     show waifu at left
-    show depressed_girl_shock1 at right
+    show depressed shock1 at right
 
-    g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
+    g "Oh, a [bot_model]. Were you abandoned? Thrown away for the latest model?"
     p "No"
-
-    hide close_girl
-    image bored_girl = "boredgirl.gif"
-    show bored_girl at left
 
     g "Good for you. Now what do you want from me?"
 
     hide waifu
-    image confused_waifu = "confusedwaifu.gif"
-    show waifu_confused
+    show waifu confused
 
     "..."
     g "No one just approaches for a friendly chat these days. Go on."
 
-    hide waifu_confused
+    hide waifu confused
     show waifu at left
 
     p "...Do you know how to get to the Midtown Tower to from here?"
@@ -45,9 +39,8 @@ menu:
        jump lover5
 
 label owner5:
-    hide bored_girl
-    image amused_girl = "amusedgirl.gif"
-    show amused_girl at right
+    hide depressed shock1
+    show depressed huh1 at right
 
     g "You androids, always programmed to go back."
     g "Well, at least you have a purpose"
@@ -58,14 +51,11 @@ label owner5:
 
 label lover5:
     image laugh_girl = "laughinggirl.gif"
-    hide bored_girl
-    show laugh_girl at right
+    hide depressed huh1
+    show depressed smile2 at right
 
     g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
     g "Hah, I haven't laughed in a long time."
-
-    hide laugh_girl
-    show amused_girl
 
     g "I suppose I should help you in return."
     g "Come with me, I have a task for you first."
@@ -77,9 +67,8 @@ label Chapter5mid:
     scene messyroom
     #stop music "wasteland.mp3"
     #start music "messyroom.mp3"
-    hide amused_girl
-    image girl = "girl.gif"
-    show girl at right
+    hide depressed smile2
+    show depressed default at right
     show waifu at left
 
     g "I have not met another person, or anything moving for a long long time"
@@ -93,7 +82,7 @@ label Chapter5mid:
     image screen start = "computer startscreen.png"
     scene screen start
     hide waifu
-    hide girl
+    hide depressed default
 
     g "Get to it, then."
     g "..."
