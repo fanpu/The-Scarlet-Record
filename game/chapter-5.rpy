@@ -1,42 +1,43 @@
 label chapter_5:
- image wasteland = "wasteland3.jpg"
- scene wasteland
- play music "x.mp3"
- image far_girl= "farawaygirl.gif"
- show far_girl at right
+    image wasteland = "wasteland3.jpg"
+    scene wasteland
+    play music "x.mp3"
+    image far_girl= "farawaygirl.gif"
+    show far_girl at right
 
- p "(Does she know the building where Shin lives?)"
- 
- image close_girl = "closegirl.gif"
- hide far_girl
- show close_girl at right
- show waifu at left
+    p "(Does she know the building where Shin lives?)"
 
- p "Hello"
- g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
- p "No"
- 
- hide close_girl
- image bored_girl = "boredgirl.gif"
- show bored_girl at left
- 
- g "Good for you. Now what do you want from me?"
- 
- hide waifu
- image confused_waifu = "confusedwaifu.gif"
- show waifu_confused
- 
- "..."
- g "No one just approaches for a friendly chat these days. Go on."
- 
- hide waifu_confused
- show waifu at left
- 
- p "...Do you know how to get to the Midtown Tower to from here?"
- g "What for? It's the same everywhere. Same crumbling buildings, same desolate land." 
- p "I need to get back to someone."
- g "An android, going back to someone. Who do you have?"
-menu: 
+    image close_girl = "closegirl.gif"
+    hide far_girl
+    show close_girl at right
+    show waifu at left
+
+    p "Hello"
+    g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
+    p "No"
+
+    hide close_girl
+    image bored_girl = "boredgirl.gif"
+    show bored_girl at left
+
+    g "Good for you. Now what do you want from me?"
+
+    hide waifu
+    image confused_waifu = "confusedwaifu.gif"
+    show waifu_confused
+
+    "..."
+    g "No one just approaches for a friendly chat these days. Go on."
+
+    hide waifu_confused
+    show waifu at left
+
+    p "...Do you know how to get to the Midtown Tower to from here?"
+    g "What for? It's the same everywhere. Same crumbling buildings, same desolate land."
+    p "I need to get back to someone."
+    g "An android, going back to someone. Who do you have?"
+
+menu:
  "My owner":
    jump owner5 
  "My lover":
