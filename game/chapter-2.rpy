@@ -138,9 +138,10 @@ menu:
 label accept:
     gu "Very well! You have made a good decision. I would have blasted you to shreds otherwise, heheh."
     gu "As an Ex Machina I expect you to know a thing or two about Linux, the operating system that powers our very core."
-    gu "First question: Which of the following signal cannot be handled or ignored?"
 
     menu:
+        gu "First question: Which of the following signal cannot be handled or ignored?"
+
         "SIGINT":
             p "The answer is SIGINT."
         "SIGCHLD":
