@@ -3,25 +3,35 @@ label Chapter5:
  scene wasteland
  play music "x.mp3"
  image far_girl= "farawaygirl.gif"
- show far_girl
+ show far_girl at right
 
  p "(Does she know the building where Shin lives?)"
  
  image close_girl = "closegirl.gif"
  hide far_girl
- show close_girl
-
+ show close_girl at right
+ show waifu at left
+ 
  p "Hello"    
  g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
  p "No"
  
  hide close_girl
  image bored_girl = "boredgirl.gif"
- show bored_girl
-
+ show bored_girl at left
+ 
  g "Good for you. Now what do you want from me?"
+ 
+ hide waifu
+ image confused_waifu = "confusedwaifu.gif"
+ show waifu_confused
+ 
  "..."
  g "No one just approaches for a friendly chat these days. Go on."
+ 
+ hide waifu_confused
+ show waifu at left
+ 
  p "...Do you know how to get to the Midtown Tower to from here?"
  g "What for? It's the same everywhere. Same crumbling buildings, same desolate land." 
  p "I need to get back to someone."
@@ -35,7 +45,7 @@ menu:
 label owner5:
  hide bored_girl
  image amused_girl = "amusedgirl.gif"
- show amused_girl
+ show amused_girl at right
 
  g "You androids, always programmed to go back."
  g "Well, at least you have a purpose"
@@ -47,7 +57,7 @@ label owner5:
 label lover5:
  image laugh_girl = "laughinggirl.gif"
  hide bored_girl
- show laugh_girl
+ show laugh_girl at right
  
  g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
  g "Hah, I haven't laughed in a long time."
@@ -67,21 +77,22 @@ label Chapter5mid:
  start music "messyroom.mp3"
  hide amused_girl
  image girl = "girl.gif"
- show girl
+ show girl at right
+ show waifu at left
+ 
  
  g "I have not met another person, or anything moving for a long long time"
  g "It gets lonely sometimes"
  g "But I'm used to it"
  p "..."
  g "You androids are smart. Smarter than me, at least."
- 
- hide girl
- 
  g "So you should know how to transfer these files to my computer right?"
  p "Yes"
  
  image screenstart = "computerstartscreen.png"
  scene screenstart
+ hide waifu
+ hide girl
  
  g "Get to it, then."
  g "..."
@@ -218,7 +229,8 @@ label successcomputer5:
  image computersuccess5 = "copied.png"
  scene computersuccess5
  image girl_relieved = "relievedgirl.gif"
- show girl_relieved
+ show girl_relieved at right
+ show waifu at left 
 
  p "It's done."
  g "...Thank you.Thank you kindly."
@@ -250,7 +262,8 @@ label successcomputer5:
    
 label real5:
  hide girl_relieved 
- show girl_amused
+ show girl_amused at right
+ show waifu at left
  
  g "Hah, never knew an android could think of that."
  g "Does it matter if the feelings are real or not?"
@@ -261,7 +274,8 @@ label real5:
  
 label nothing5:
  hide girl_relieved
- show girl
+ show girl at right
+ show waifu at left
  
  g "...Hold on to that care."
  g "Don't let it slip away like I did."
@@ -270,6 +284,7 @@ label nothing5:
  
 label chapter5ending:
  hide girl_relieved
+ hide waifu
  stop music "end.mp3"
  start music "chap5end.mp3"
  scene wasteland
