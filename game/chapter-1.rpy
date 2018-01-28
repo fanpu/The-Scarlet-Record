@@ -1,71 +1,32 @@
 label chapter_1:
-    image bg_house_exterior = im.Scale("images/bg house exterior.png", 1920, 1080)
-    scene bg_house_exterior
+    image bg_black = im.Scale("images/black.jpg", 1920, 1080)
+    scene bg_black
+
 
 label scene_start:
-    "It was a day just like any other."
-    "It is the year 2037, and we live in a world where sentient machines live alongside humans."
-    "Well, not exactly alongside - we are still machines, after all."
-    "We are designed and programmed to serve the needs of our owners. Whatever it may be"
-    "For me, I am a wifebot. I provide companionship and love to the lonely and abandoned."
-    jump home
-
-label home:
+    "*TIME CHECK: 7.39A.M.*"
+    "*BOOT UP SEQUENCE INITIATED. COMMENCING IN 3….2….1…*"
+    #change to room interior
     image bg_livingroom = im.Scale("images/bg livingroom day.jpg", 1920, 1080)
     scene bg_livingroom
-    with dissolve
-    show owner smiling at left
-    o "[bot_name], I'm back!"
-    show owner at right
-    p "[owner_name], I've missed you! How was your day?"
-    o "As usual. Nothing changes every day, except a little more of the world disappears."
-    o "The Jeffersons have vanished, and the tough shrub just outside this house has turned to dust."
-    o "This new Earth is taking things from us, one by one."
-    p "...I won't ever disspear, would I?"
-    o "...No, you won't. I will not allow that to happen."
-    o "The world can strip everything from me, and you will still remain."
-    "[owner_name] and I have been close ever since I was created and he booted me up."
-    "It was comforting to always have him by my side - he gave my existence purpose and filled my life with joy."
-    "I would like to think I have the same effect on him too."
-    o "Have you seen the news... precious metal prices are skyrocketing yet again!"
-    o "The past few decades of unchecked mining has stripped the Earth to its core..."
-    o "Gold, silver, platinum, palladium, rhodium, ruthenium, iridium and osmium - all these precious metals used in complex circuit chips are in severe short supply."
-    o "I could only imagine how this would impact the future of our society that is so reliant androids like you."
-    p "You don't have to worry about that, you already have me, you don't need more."
-    p "We'll be together for as long as you live."
-    o "You don't understand..."
-    o "It seems like I say this all the time, but I am really worried for you."
-    p "W-why? We have been through many hardships. With you at my side, what do I have to be afraid of?"
-    o "You are built with the treasures of this Earth - the exact ones that people would do anything to obtain."
-    o "I worry for your safety, [bot_name]."
-    o "I am only a weak man. I have my limits."
-    o "I-I cannot protect you against all dangers, [bot_name]"
-    o "..."
-    o "Promise me..."
-    o "Promise me that you will be safe."
+    with fade
 
-    p "..."
-    "[owner_name] steps forward and embraces me."
-menu:
-    "I promise.":
-        jump promise
+    "Light floods my vision. As standard protocol dictates, I look around myself to ascertain my positon."
+    "To my right, stood a dust-covered bookshelf; yellowed volumes, cobwebs and spiders covered its surfaces."
+    "Next to that was an equally dilapidated worktable, with various damaged writing instruments scattered across the table face."
+    "Straight ahead, a shattered glass window showed the view of a bombed-out city, and beyond that, a bright shining sun rising above grimy dessert horizon."
+    "A dilapidated room in a dilapidated city, in a dilapidated world."
+    "*SNOOOOOOOOOOOORE*"
+    "Finally, on my left, Master lay fast asleep on a bamboo mat. Time to rouse him, as he instructed."
 
-    "I...I don't know.":
-        jump dont_know
+    p "Master, master, it’s time to wake up."
+    "As I continued my attempts to awaken Master, his peaceful expressions slowly morphed into an annoyed one."
+    o "Mgnnnn……mgnya!"
+    "Suddenly, Master broke free from is seemingly everlasting slumber, and groggily sat up. As he  looked around groggily, his gaze fell upon me. A wide smile spread across his face."
 
-label promise:
-    p "I...I promise, [owner_name]."
-    o "Thank you, [bot_name]."
-    o "You don't know how much this means to me."
-    jump chapter_1_end
+    o "Ah, good morning, Darling."
+    p "Good morning to you too, Master. Also, I have a name, it’s [bot_name]. not \"Darling\". Such relationships are impossible, you are a Human, I am an Ex Machina. I am a mass produced machine created to serve you, my Master. You falling for me is equivalent to the weaboos of centuries past, going on and on with their imaginary \"waifus\". It is unsightly, please be careful not to do this again."
+    o "Ehhhh~ [bot_name], why are you always this serious. Sheesh, I must’ve messed up somewhere when I tried to fix you back when I first found you. I heard that back before the Great War, Ex Machinas were your dream robot that is tailored to the owners wants and needs. They’d be your maid, your wife, your lover, whatever you want them to be!"
+    o "Ah well, not that it matters. Your deadpanned responses are cute too~"
 
-label dont_know:
-    p "I...I don't know, [owner_name]."
-    o "I understand."
-    p "Androids never make a promise they can't keep...it goes against our programming."
-    jump chapter_1_end
-
-label chapter_1_end:
-    "We break our embrace."
-    "I hope that our happy days together will continue on forever, just like this...with me at his side. I could not ask for more."
-    jump chapter_2
+    p "*Sighs* It is getting late, Master. We still have a long day ahead of us, shall we pack up and go?"
