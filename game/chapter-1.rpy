@@ -6,7 +6,6 @@ label chapter_1:
 label scene_start:
     "*TIME CHECK: 7.39A.M.*"
     "*BOOT UP SEQUENCE INITIATED. COMMENCING IN 3….2….1…*"
-
     #change to room interior
     image bg_livingroom = im.Scale("images/bg livingroom day.jpg", 1920, 1080)
     scene bg_livingroom
@@ -32,4 +31,3 @@ label scene_start:
     o "Ah well, not that it matters. Your deadpanned responses are cute too~"
 
     p "*Sighs* It is getting late, Master. We still have a long day ahead of us, shall we pack up and go?"
-    jump chapter_2
