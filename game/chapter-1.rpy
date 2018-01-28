@@ -24,8 +24,7 @@ label scene_start:
     p "(It's not the safest area, but I have faith in his abilities.)"
     
     "*DOOR OPENS*"
-    image owner = "owner.png"
-    show owner at right
+    show owner neutral at right
     image waifu happy = "waifu happy.png"
     show waifu happy
     p "You're back!"
@@ -36,8 +35,6 @@ label scene_start:
     hide waifu sad
     show waifu at left
     p "You always worry me so much..."
-    hide owner
-    show owner serious at right
     o "Don't. I'll be fine. I'm more than able to take care of myself."
     o "So don't worry, ok?"
     p "..."
@@ -59,16 +56,14 @@ label scene_start:
     show waifu confused
     p "W-why? Do you not trust me?"
     hide owner
-    show owner smiling at right
+    show owner happy at right
     o "No no, nothing like that. Just that...this Earth isn't friendly to anything, not even something as sweet as you."
     hide waifu confused
     show waifu at left
     p "With you at my side, I'm not afraid of anything. You don't have to worry, [owner's name]."
-    hide owner smiling
-    show owner laughing at right
     o "Haha, you always know the right thing to say."
-    hide owner laughing
-    show owner at right
+    hide owner
+    show owner neutral at right
     o "Alright, just promise me."
     hide owner
     show owner sad at right
@@ -90,7 +85,7 @@ label promise:
 label nopromise:
     show waifu sad at left
     p "I'm sorry, I can't. Androids, we don't take promises lightly."
-    show owner sad at right
+    show owner thinking at right
     o "...I understand."  
     jump chapter_2
     
