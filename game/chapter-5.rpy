@@ -103,10 +103,10 @@ label Chapter5mid:
 
 label filetransfer:
     menu:
-    "Perform scp transfer":
-        jump failcomputer3
-    "Find Hard drive name":
-        jump successcomputer3
+        "Perform scp transfer":
+            jump failcomputer3
+        "Find Hard drive name":
+            jump successcomputer3
 
 label failcomputer3:
     image computerfail3 = "failedfiles.png"
@@ -186,13 +186,13 @@ label successcomputer2:
 label decryption:
     scene screen start
 
-     menu:
-         "Decrypt base64":
-             jump failcomputer
-         "Decrypt MD5":
-             jump successcomputer
-         "Decrypt SHA-384":
-             jump failcomputer
+    menu:
+        "Decrypt base64":
+            jump failcomputer
+        "Decrypt MD5":
+            jump successcomputer
+        "Decrypt SHA-384":
+            jump failcomputer
 
 label failcomputer:
     image failedcom = "computerfailed.png"
@@ -224,7 +224,7 @@ label successcomputer:
      g "Humans are the only creatures who question life. Ask whether it's worth living."
      menu:
         "Copy files":
-        jump successcomputer5
+            jump successcomputer5
 
 label successcomputer5:
      #stop music "filetransfer.mp3"
