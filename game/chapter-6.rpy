@@ -7,7 +7,7 @@ label chapter_6:
     p "(No, it doesn't make sense. I must be lost.)"
     p "(...what now?)"
     
-    image man = "man.gif"
+    image man = "man.png"
     image man at right
 
     p "!"
