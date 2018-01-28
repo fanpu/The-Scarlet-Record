@@ -27,7 +27,7 @@ label chapter_4:
 label ch4start:
 
     show p neutral
-    p "That poor <insert waifubot name>... "
+    p "Poor [other_bot_name]... "
     show p sad
 
     p "Never mind, I should worry more about myself. Just where am I?"
@@ -200,7 +200,7 @@ label networkQuiz:
         "transport layer":
             p "transport layer"
         "network layer":
-            p "network layer"    
+            p "network layer"
         "None of the above":
             p "None of the above"
 
@@ -216,7 +216,7 @@ label ch4end:
     show p happy at left
     show po smile at right
     po "You... you are more capable than I thought. As I am truly a man of my word, what can I help you with? Ask and you shall receive."
-    p "Yes.. Then, do you know how to get to <insert address here>?"
+    p "Yes.. Then, do you know how to get to [home_address]?"
     po "By my vast knowledge of the pre-crisis era, the location that you ask for is the North-East direction!"
 
     p "Well, thanks..."
@@ -232,5 +232,5 @@ label ch4end:
     show p neutral
     p "I hope I can return back to Shin soon..."
 
-    "And so, <Insert player name> continues her journey to look for Shin."
+    "And so, [bot_name] continues her journey to look for Shin."
     jump chapter_5
