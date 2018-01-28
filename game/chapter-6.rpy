@@ -83,8 +83,8 @@ label Chapter6mid:
  m "No android, we are desperate to stay. To live a life similar to that before the likes of you existed."
  m "Desperate to be truly human again."
  
- stop music "motorcyclesounds.mp3"
- play music "factorysounds.mp3"
+ stop music "motorcycle.mp3"
+ play music "factory_original.mp3"
 
  image factory2 = "factory.jpg"
  scene factory2
@@ -144,7 +144,7 @@ label Chapter6mid2:
 
  image computerroom = "computerroom.jpng"
  scene computerroom
- stop music "factorysounds.mp3"
+ stop music "factory_original.mp3"
  start music "computerroom.mp3"
  
  m "Here are the computers, connected to the server or whatever they call it."
@@ -326,13 +326,16 @@ label moneytransfer:
  stop music "computerroom.mp3"
  start music "factorysounds.mp3"
  show man at right
-  
+ show waifu at left
+ 
  m "...So you succeeded, eh?"
  m "Knew it, you droids do everything better than us."
  m "Midtown Tower is straight South. You should reach within a day, at most two."
  m "...now scram, before I beat you to a pulp."
  p "..."
  
+ hide waifu
+ hide man
  scene wastelandsquare
  
  p "(Are humans usually that irrational and contradictory?)"
