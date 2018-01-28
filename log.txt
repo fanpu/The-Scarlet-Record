@@ -1,4 +1,4 @@
-Sun Jan 28 16:06:15 2018
+Sun Jan 28 18:52:39 2018
 Linux-4.14.14-1-zen-x86_64-with-glibc2.2.5
 Ren'Py 6.99.14.3135
  
@@ -6,59 +6,39 @@ Ren'Py 6.99.14.3135
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.70s
-Loading script took 1.01s
-Loading save slot metadata. took 0.23s
+Loading error handling took 0.01s
+Loading script took 0.15s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
-
-File "game/chapter-3.rpy", line 121: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        w "Come on, Kosuke. Didn't you miss of the times we had?
-
-File "game/chapter-5.rpy", line 284: Tab characters are not allowed in Ren'Py scripts.
-
-File "game/chapter-6.rpy", line 1: expected ':' not found.
-    label Chapter 6:
-                  ^
-
-File "game/chapter-6.rpy", line 74: expected end of line
-    stop music "wastelandsqaure.mp3"
-               ^
-
-File "game/chapter-6.rpy", line 85: expected end of line
-    stop music "motorcyclesounds.mp3"
-               ^
-
-File "game/chapter-6.rpy", line 146: expected end of line
-    stop music "factorysounds.mp3"
-               ^
-
-File "game/chapter-6.rpy", line 183: expected ':' not found.
-    label netcatip;
-                  ^
-
-File "game/chapter-6.rpy", line 195: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "nmap"
-          ^
-
-File "game/chapter-6.rpy", line 325: expected end of line
-    stop music "computerroom.mp3"
-               ^
-
-File "game/chapter-7.rpy", line 15: expected statement.
-    fade sad_waifu
-                  ^
-
-File "game/chapter-7.rpy", line 24: expected statement.
-    fade exhausted_waifu
-                        ^
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.06s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/home/fanpu/.renpy/backups/The Scarlet Record':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Interface start took 0.22s
+Creating interface object took 0.07s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.05s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.02s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Fullscreen mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'GeForce GTX 1060/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 387.34'
@@ -451,15 +431,69 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.39524507523s
+Total time until interface ready: 0.751118898392s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.001628 seconds.
+- Frame drawn at 0.015122 seconds.
+- Frame drawn at 0.028295 seconds.
+- Frame drawn at 0.048928 seconds.
+- 0.048928 seconds to render 5 frames.
 
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 920) drawable=(1920, 920)
-The window was minimized.
-The window was restored.
-The window was minimized.
-The window was restored.
-The window was minimized.
-The window was restored.
+Full traceback:
+  File "game/chapter-6.rpy", line 15, in script
+    p "!"
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/ast.py", line 643, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/exports.py", line 1175, in say
+    who(what, *args, **kwargs)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/character.py", line 1013, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/character.py", line 817, in do_display
+    **display_args)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/character.py", line 566, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/core.py", line 2620, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/core.py", line 3022, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/core.py", line 2034, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 475, in renpy.display.render.render_screen
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "accelerator.pyx", line 108, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/image.py", line 398, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/image.py", line 213, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/im.py", line 504, in render
+    texture = cache.get(self, texture=True)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/im.py", line 213, in get
+    surf = image.load()
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/display/im.py", line 554, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "/home/fanpu/Downloads/renpy-6.99.14-sdk/renpy/loader.py", line 548, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'manonbicycle.jpg'.
+
+While loading <'Image' u'manonbicycle.jpg'>:
+  File "game/chapter-6.rpy", line 15, in script
+    p "!"
+IOError: Couldn't find file 'manonbicycle.jpg'.

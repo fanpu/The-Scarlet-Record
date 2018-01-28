@@ -1,45 +1,45 @@
 label chapter_6:
- image wastelandsquare = "wastelandsquare.jpg"
- scene wastelandsqaure
- #stop music "chapter5end.mp3"
- #play music "nofountain.mp3"
- 
- p "(Where is the fountain?)"
- p "(...did she lie to me?)"
- p "(No, it doesn't make sense. I must be lost.)"
- p "(...what now?)"
- 
- image man_bicycle = "manonbicycle.jpg"
- show man_bicycle
- 
- p "!"
- 
- hide man_bicycle
- image man = "man.gif"
- show man at right
- show waifu at left
- 
- m "What's an android doing out here?"
- p "Do you know how to get to Midtown Tower from here?"
- 
- hide man
- image man_thinking = "thinkingman.jpg"
- show man_thinking at right
- 
- m "I do...but you androids are good at computer stuff right?"
- p "...Yes."
- 
- hide man_thinking
- image man_happy = "happyman.jpg"
- show man_happy at right
- 
- m "Just what I was looking for! Can you do me a favour? In exchange for information?"
- 
- menu:
-  "No":
-   jump no6
-  "Fine":
-   jump yes6
+    image wastelandsquare = im.Scale("wastelandsquare.jpg", 1920, 1080)
+    scene wastelandsquare
+    #stop music "chapter5end.mp3"
+    #play music "nofountain.mp3"
+
+    p "(Where is the fountain?)"
+    p "(...did she lie to me?)"
+    p "(No, it doesn't make sense. I must be lost.)"
+    p "(...what now?)"
+
+    image man_bicycle = "manonbicycle.jpg"
+    show man_bicycle
+
+    p "!"
+
+    hide man_bicycle
+    image man = "man.gif"
+    show man at right
+    show waifu at left
+
+    m "What's an android doing out here?"
+    p "Do you know how to get to Midtown Tower from here?"
+
+    hide man
+    image man_thinking = "thinkingman.jpg"
+    show man_thinking at right
+
+    m "I do...but you androids are good at computer stuff right?"
+    p "...Yes."
+
+    hide man_thinking
+    image man_happy = "happyman.jpg"
+    show man_happy at right
+
+    m "Just what I was looking for! Can you do me a favour? In exchange for information?"
+
+    menu:
+        "No":
+            jump no6
+        "Fine":
+            jump yes6
 
 label no6:
  hide man_happy

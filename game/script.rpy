@@ -9,5 +9,7 @@ define m = Character("Man")
 define pov = Character("[povname]")
 define bot_name = "Üc207Pr4f57t9"
 define owner_name = "Shin"
+define other_bot_name = "Lily"
+define home_address = "Akihabara"
 label start:
-    jump chapter_1
+    jump chapter_6
