@@ -1,6 +1,6 @@
 transform depressed_downsize:
-    yoffset 900.0
-    size 2
+    yoffset 1500.0
+    zoom 0.2
 
 label chapter_5:
     image C5 = im.Scale("images/C5.png", 1920, 1080)
