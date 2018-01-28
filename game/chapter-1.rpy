@@ -2,6 +2,7 @@ transform owner_transform:
     zoom 2
 
 label chapter_1:
+    play music "music/ch1.flac"
     image bg_black = im.Scale("images/black.jpg", 1920, 1080)
     scene bg_black
 
