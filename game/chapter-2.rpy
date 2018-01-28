@@ -151,7 +151,7 @@ label accept:
         "SIGCHLD":
             p "The answer is SIGCHLD."
             jump q1_wrong
-            "SIGKILL":
+        "SIGKILL":
             p "The answer is SIGKILL."
             gu "Good! Very good!"
             jump q1_exp
@@ -168,12 +168,57 @@ label q1_exp:
     gu "SIGKILL, for one, is sent to a process to force it to terminate immediately."
 
 menu:
-    gu "Next question: What niceness value for a process among the following indicate most favorable scheduling by the kernel?"
+    gu "Next question: What niceness value for a process among the following indicate most favorable scheduling by the kernel? I will give you a hint: the name \"niceness\" stems from the idea that a process with a higher niceness value is \"nicer\" to other processes in the system."
 
     "0":
         p "The answer is 0."
+        jump q2_wrong
     "19":
         p "The answer is 19."
+        jump q2_wrong
     "5":
         p "The answer is 5."
+        jump q2_wrong
+    "-20":
+        p "The answer is -20."
+        gu "That's correct!"
+        jump q2_exp
 
+label q2_wrong:
+    gu "That's wrong!"
+    gu "I see you are starting to sweat now, heh!"
+    jump q2_exp
+
+label q2_exp:
+    gu "When processes are spawned, they are assigned a priority based on their \"nice value\"."
+    gu "There are 40 niceness values, with -20 being the one with the highests priority and 19 being the one with the lowest."
+    gu "The default niceness value is zero, and a child processes inherits the niceness value of their parents."
+
+
+menu:
+    gu "Last question for you - how do you get out of the Vim editor? If you don't answer this correctly, you're not getting out of here either!"
+
+    ":w":
+        p "I would enter :w."
+        jump q3_wrong
+    ":q":
+        p "I would enter :q."
+        gu "Heh, glad to know that you are not completely clueless."
+        jump q3_exp
+    ":e":
+        p "I would enter :e."
+        jump q3_wrong
+    ":$":
+        p "I would enter :$"
+        jump q3_wrong
+
+label q3_wrong:
+    gu "Wrong, wrong, wrong!!!"
+
+label q3_exp:
+    gu ":w writes the buffer opened into memory."
+    gu ":e allows you to revert a particular buffer which may have been modified by an external program, allowing you to start from the latest copy."
+    gu ":$ moves the cursor to the last line in the file."
+    gu "So yes, the correct to exit Vim is :q!"
+
+    
