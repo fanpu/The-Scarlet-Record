@@ -1,8 +1,12 @@
+transform depressed_downsize:
+    yoffset 900.0
+    size 2
+
 label chapter_5:
     image wasteland = im.Scale("wasteland3.jpg", 1920, 1080)
     scene wasteland
 #    play music "x.mp3"
-    show depressed default at right
+    show depressed default at depressed_downsize, right
 
     p "(Does she know the building where Shin lives?)"
 
