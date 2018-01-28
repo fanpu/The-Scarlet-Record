@@ -50,7 +50,7 @@ label scene_start:
     hide waifu
     image waifu confused = "waifu confused.png"
     show waifu confused
-    p 'W-why? Do you not trust me?"
+    p "W-why? Do you not trust me?"
     hide owner
     show owner smiling at  right
     o "No no, nothing like that. Just that...this Earth isn't friendly to anything, not even something as sweet as you."
