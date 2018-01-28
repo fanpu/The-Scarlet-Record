@@ -52,7 +52,7 @@ label scene_start:
     show waifu confused
     p "W-why? Do you not trust me?"
     hide owner
-    show owner smiling at  right
+    show owner smiling at right
     o "No no, nothing like that. Just that...this Earth isn't friendly to anything, not even something as sweet as you."
     hide waifu confused
     show waifu at left
