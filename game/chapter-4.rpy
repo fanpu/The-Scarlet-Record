@@ -10,10 +10,8 @@ label ch4start:
     p "That poor <insert waifubot name>... "
 
     p "Never mind, I should worry more about myself. Just where am I?"
-    p "After the incident with <waifubot> I continued walking aimlessly, hoping to find something. However, it was futile."
+    p "After the incident with the other bot, all I can do is wander."
 
-    #Wandering
-    
     hide sad_waifu
     show waifu
 
@@ -23,15 +21,16 @@ label ch4start:
     po "Over many a quaint and curious volume of forgotten lore—"
 
     p "Excuse me?"
-
-    po "Impossible! You are just but a figment of my imagination! See!"
+    po "Gah! Stay away from me! Do not tempt me with your inferal lies!"
+    po "You are just but a figment of my imagination! See!"
 
     #poet walks into the player only to realize she is real
 
     p "Well, if that helps you to recognize that I'm real..."
 
-    po "No! You exist but do not exist! I am the Chosen One! I am the only one left on this world! There cannot be anyone else! The sensation that is you is just a false sensation!"
-
+    po "No! You exist but do not exist! I am the Chosen One! I am the only one left on this world! There cannot be anyone else! Stop lying to me!"
+    po "The gods of the old Earth chose me! They chose me to deliever this forsaken land!"
+    
     hide waifu
     show confused_waifu
     
@@ -187,21 +186,23 @@ label networkQuiz:
         jump networkQuiz
 
 label ch4end:
-    po "You... you are more capable than I thought. As I am truly a man of my word, what can I help you with? Ask and you shall receive."
+    po "That-that's quite impressive."
+    po "You... you are more capable than I thought. You are one of the few that deserve a new place on a new Earth."
+    po "I am truly a man of my word, what can I help you with? Ask and you shall receive."
     p "Yes.. Then, do you know how to get to Midtown Tower?"
-    po "By my vast knowledge of the pre-crisis era, the location that you ask for is right to the North!"
+    po "By my vast knowledge of old Earth, the location that you ask for is right towards the sun!"
 
     hide waifu
     show happy_waifu
     
     p "Thank you so much!"
 
-    po "No worries! For it is my duty as the Chosen Human! For that is my Noblesse Oblige!"
+    po "No worries! For it is my duty as the Chosen Human! For that is my Noblesse Oblige! I shall herald the beginning of a new Earth, better than ever before!"
 
     #po disappear, out of scene
 
     hide happy_waifu
     show waifu
     
-    p "That wasn’t very useful.. But at the very least that’s the first lead I’ve gotten."
-    p "I hope I can return back to Shin soon...the people here are crazy"
+    p "(That wasn’t very useful.. But at the very least that’s the first lead I’ve gotten.)"
+    p "(I hope I can return back to Shin soon...the people here are crazy)"
