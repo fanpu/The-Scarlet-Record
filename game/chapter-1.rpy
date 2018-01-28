@@ -68,29 +68,3 @@ label chapter_1_end:
     "We break our embrace."
     "I hope that our happy days together will continue on forever, just like this..."
     jump chapter_2
-
-python:
-    player = renpy.input("What is your name?")
-    player = player.strip()
-
-label test:
-    p "hello [player]"
-    
-    p "Why don't you visit {a=https://renpy.org}Ren'Py's home page{/a}?"
-
-    p "Or {a=jump:more_text}here for more info{/a}."
-    p "[botname]"
-    return
-
-label more_text:
-
-    p "In Hot Springs, Arkansas, there's a statue of Al Capone you can take a picture with."
-
-    p "That's more info, but not the kind you wanted, is it?"
-
-    return
-
-
-#renpy.input(prompt, default='', allow=None, exclude='{}', length=None, with_none=None, pixel_width=None) link
-"And so, we become a visual novel creating duo."
-pov "My name is [player]!"
