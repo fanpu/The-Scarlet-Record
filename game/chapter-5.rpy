@@ -38,156 +38,154 @@ label chapter_5:
     g "An android, going back to someone. Who do you have?"
 
 menu:
- "My owner":
-   jump owner5 
- "My lover":
-   jump lover5
+    "My owner":
+        jump owner5
+    "My lover":
+       jump lover5
 
 label owner5:
- hide bored_girl
- image amused_girl = "amusedgirl.gif"
- show amused_girl at right
+    hide bored_girl
+    image amused_girl = "amusedgirl.gif"
+    show amused_girl at right
 
- g "You androids, always programmed to go back."
- g "Well, at least you have a purpose"
- g "..."
- g "You know what, I'll help you, if you help me. Something simple. What'd you say to that?"
- p "...I'll help."
- jump Chapter5mid
-  
+    g "You androids, always programmed to go back."
+    g "Well, at least you have a purpose"
+    g "..."
+    g "You know what, I'll help you, if you help me. Something simple. What'd you say to that?"
+    p "...I'll help."
+    jump Chapter5mid
+
 label lover5:
- image laugh_girl = "laughinggirl.gif"
- hide bored_girl
- show laugh_girl at right
- 
- g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
- g "Hah, I haven't laughed in a long time."
- 
- hide laugh_girl
- show amused_girl
- 
- g "I suppose I should help you in return."
- g "Come with me, I have a task for you first."
- p "...Fine."
- jump Chapter5mid
- 
+    image laugh_girl = "laughinggirl.gif"
+    hide bored_girl
+    show laugh_girl at right
+
+    g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
+    g "Hah, I haven't laughed in a long time."
+
+    hide laugh_girl
+    show amused_girl
+
+    g "I suppose I should help you in return."
+    g "Come with me, I have a task for you first."
+    p "...Fine."
+    jump Chapter5mid
+
 label Chapter5mid:
- image messyroom = "messyroom.jpg"
- scene messyroom
- #stop music "wasteland.mp3"
- #start music "messyroom.mp3"
- hide amused_girl
- image girl = "girl.gif"
- show girl at right
- show waifu at left
- 
- 
- g "I have not met another person, or anything moving for a long long time"
- g "It gets lonely sometimes"
- g "But I'm used to it"
- p "..."
- g "You androids are smart. Smarter than me, at least."
- g "So you should know how to transfer these files to my computer right?"
- p "Yes"
- 
- image screen start = "computer startscreen.png"
- scene screen start
- hide waifu
- hide girl
- 
- g "Get to it, then."
- g "..."
- g "..."
- g "I wonder how I lived through the bombs."
- g "Is it my curse to watch the world die around me as I waste away?"
- g "without the courage to just end it all?"
- 
+    image messyroom = "messyroom.jpg"
+    scene messyroom
+    #stop music "wasteland.mp3"
+    #start music "messyroom.mp3"
+    hide amused_girl
+    image girl = "girl.gif"
+    show girl at right
+    show waifu at left
+
+    g "I have not met another person, or anything moving for a long long time"
+    g "It gets lonely sometimes"
+    g "But I'm used to it"
+    p "..."
+    g "You androids are smart. Smarter than me, at least."
+    g "So you should know how to transfer these files to my computer right?"
+    p "Yes"
+
+    image screen start = "computer startscreen.png"
+    scene screen start
+    hide waifu
+    hide girl
+
+    g "Get to it, then."
+    g "..."
+    g "..."
+    g "I wonder how I lived through the bombs."
+    g "Is it my curse to watch the world die around me as I waste away?"
+    g "without the courage to just end it all?"
+
 label filetransfer:
- menu:
-  "Perform scp transfer":
-   jump failcomputer3
-  "Find Hard drive name":
-   jump successcomputer3
-    
+    menu:
+    "Perform scp transfer":
+        jump failcomputer3
+    "Find Hard drive name":
+        jump successcomputer3
+
 label failcomputer3:
- image computerfail3 = "failedfiles.png"
- scene computerfail3
- g "...I assume it didn't work."
- p "Yes"
- g "It's okay, I'm used to things not working."
- p "(I really should be more careful, lest I am unable to make it back)"
- jump filetransfer
- 
-label successcomputer3:
- image computersuccess3 = "nameofsystem.png"
- scene successcomputer3
- g "It's succeeding?"
- p "Yes."
- jump mount
+    image computerfail3 = "failedfiles.png"
+    scene computerfail3
+    g "...I assume it didn't work."
+    p "Yes"
+    g "It's okay, I'm used to things not working."
+    p "(I really should be more careful, lest I am unable to make it back)"
+    jump filetransfer
+
+    label successcomputer3:
+    image computersuccess3 = "nameofsystem.png"
+    scene successcomputer3
+    g "It's succeeding?"
+    p "Yes."
+    jump mount
 
 label mount:
- menu:
-  "Mount drive":
-   jump successcomputer4
-  "Copy files":
-   jump failcomputer4
-   
+    menu:
+        "Mount drive":
+            jump successcomputer4
+        "Copy files":
+            jump failcomputer4
+
 label failcomputer4:
- image computerfail4 = "failedfiles.png"
- scene computerfail4
- g "No! Is it not working?"
- p "I just did something in the wrong order."
- p "(I better be more careful...)"
- jump mount
- 
+    image computerfail4 = "failedfiles.png"
+    scene computerfail4
+    g "No! Is it not working?"
+    p "I just did something in the wrong order."
+    p "(I better be more careful...)"
+    jump mount
+
 label successcomputer4:
- image computersuccess4 = "mounted.png"
- scene computersuccess4
- g "The hard drive, we can see it now? Am I finally saved?"
- p "Yes."
- image insidefolder = "insidefolder.png"
- scene insidefolder
- g "What? It's empty? How is it possible?"
- p "Not exactly."
- 
+     image computersuccess4 = "mounted.png"
+     scene computersuccess4
+     g "The hard drive, we can see it now? Am I finally saved?"
+     p "Yes."
+     image insidefolder = "insidefolder.png"
+     scene insidefolder
+     g "What? It's empty? How is it possible?"
+     p "Not exactly."
+
 label recovery:
- menu: 
-  "Initiate file recovery":
-   jump successcomputer2
-  "Search for hidden files":
-   jump failcomputer2
-   
+    menu:
+        "Initiate file recovery":
+            jump successcomputer2
+         "Search for hidden files":
+             jump failcomputer2
+
 label failcomputer2:
- 
- image computerfail2 = "filesfailed.png"
- scene computerfail2
- 
- p "No, this must be a mistake."
- g "It better be."
- jump recovery
- 
+    image computerfail2 = "filesfailed.png"
+    scene computerfail2
+
+    p "No, this must be a mistake."
+    g "It better be."
+    jump recovery
+
 label successcomputer2:
- image computersuccess2 ="filesappeared.png"
- scene computersuccess2
- 
- g "..Thank you. I still have a chance."
- p "...Why don't you leave Earth, if you think this place offers nothing?"
- g "You think I don't want to? Interplanetary travel isn't cheap, and I can never afford it even if I live to 80. You actually think anyone would voluntarily stay in this godforsaken land?"
- p "..."
- g "This land is dead. It's inhabitants are withering, abandoned. The population dwindles every year. Soon, there will be nothing left."
- g "We will all return to dust as Earth dies."
- g "..."
- g "What now?"
- p "I need to decrypt the files."
- g "So it will work?"
- p "Almost garuanteed."
- g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
- g "Everyday the hard drive is just there, taunting me with memories of a happier time."
- g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
+    image computersuccess2 ="filesappeared.png"
+    scene computersuccess2
+
+    g "..Thank you. I still have a chance."
+    p "...Why don't you leave Earth, if you think this place offers nothing?"
+    g "You think I don't want to? Interplanetary travel isn't cheap, and I can never afford it even if I live to 80. You actually think anyone would voluntarily stay in this godforsaken land?"
+    p "..."
+    g "This land is dead. It's inhabitants are withering, abandoned. The population dwindles every year. Soon, there will be nothing left."
+    g "We will all return to dust as Earth dies."
+    g "..."
+    g "What now?"
+    p "I need to decrypt the files."
+    g "So it will work?"
+    p "Almost garuanteed."
+    g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
+    g "Everyday the hard drive is just there, taunting me with memories of a happier time."
+    g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
 
 label decryption:
- scene screen start
- 
+    scene screen start
+    
  menu: 
   "Decrypt base64":
    jump failcomputer
