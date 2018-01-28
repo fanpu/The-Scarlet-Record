@@ -11,5 +11,6 @@ define bot_name = "Üc207Pr4f57t9"
 define owner_name = "Shin"
 define other_bot_name = "Lily"
 define home_address = "Akihabara"
+define bot_model = "Model 3.4"
 label start:
-    jump chapter_6
+    jump chapter_5
