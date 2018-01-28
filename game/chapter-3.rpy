@@ -82,11 +82,97 @@ label chapter_3_fixing:
     
     p "(The soundbytes are corrupted, but it should be easy to download new ones.)"
     w "<ERROR, SPEECH.MP3 NOT FOUND>"
-    p "(There are radiowaves here...)"
+    p "(Before I start working on fixing the error, I should recall some my knowledge.)"
+    jump exclusion
+    
+label exclusion:
+    p "(If a process is executing in its critical section, then no other processes can be executing in their critical section. This condition is called...)"
     menu:
-        jump chapter_3_scene_2
+        "mutual exclusion":
+            jump exclusionright
+        "critical exclusion":
+            jump exclusionwrong
+        "synchronous exclusion":
+            jump exclusionwrong
+        "asynchronous exclusion":
+            jump exclusionwrong
+
+label exclusionright:
+    p "(Yes, I recall now, mutual exclusion is the right answer. Turns out I have not forgotten everything yet)"
+    p "(Just to be sure, I should recall another property.)"
+    jump aging
+
+label exclusionwrong:
+    p "(No, that's definitely not the right answer. I should quickly recall the right property before I lose more time.)"
+    jump exclusion
+
+label aging:
+    p "('Aging' is...)"
+    menu:
+        "keeping track of cache contents":
+            jump agingwrong
+        "keeping track of what pages are currently residing in memory":
+            jump agingwrong
+        "keeping track of how many times a given page is referenced":
+            jump agingwrong
+        "increasing the priority of jobs to ensure termination in a finite time":
+            jump agingright
+
+label agingright:
+    p "(Yes, I remember what Aging is. Now I can confidently fix the error.)"
+    p "(The CPU doesn't seem to be fetching instructions correctly.)"
+    jump fetch
+
+label agingwrong:
+    p "(No, that's not the answer. I don't have much time to waste, I need to quickly recall my knowledge so that I can solve the problem.)"
+    jump aging
+    
+label fetch:
+    p "(Instead, it should fetch the instruction from memory according to the value of...)"
+    menu:
+        "program counter":
+            jump fetchright
+        "status register":
+            jump fetchwrong
+        "instruction register":
+            jump fetchwrong
+        "program status word":
+            jump fetchwrong
+    
+label fetchright:
+    p "(Let me try this...)"
+    p "(It works! The CPU is now fetching information correctly.)"
+    p "(But even after that, the problem still persists. It could be due to a long time for communication between the CPU and the communication module.)"
+    jump scheduling
+
+label fetchwrong:
+    p "(Let me try this...)"
+    p "(That didn't work, the CPU is still fetching information incorrectly.)"
+    p "(I cannot make too many errors, if not I might run out of time.)"
+    jump fetch
+    
+label scheduling:
+    p "(Which algorithm should I implement in the robot to have the minimum average waiting time for communication?)"
+    menu:
+        "First Come, First Served":
+            jump schedulingwrong
+        "Shortest Job First":
+            jump schedulingright
+        "Round-robin":
+            jump schedulingwrong
+        "Priority":
+            jump schedulingwrong
+           
+label schedulingright:
+    p "(Let me try implementing this algorithm...)"
+    p "(It worked, communication time has been reduced significantly.)"
+    jump chapter_3_scene_2
     
 label chapter_3_scene_2:
+    image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
+    scene wasteland
+    with Dissolve(.5)
+    
     hide waifu
     show happy_waifu
     
