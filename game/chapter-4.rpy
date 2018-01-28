@@ -188,8 +188,8 @@ label networkQuiz:
 
 label ch4end:
     po "You... you are more capable than I thought. As I am truly a man of my word, what can I help you with? Ask and you shall receive."
-    p "Yes.. Then, do you know how to get to <insert address here>?"
-    po "By my vast knowledge of the pre-crisis era, the location that you ask for is <insert something>"
+    p "Yes.. Then, do you know how to get to Midtown Tower?"
+    po "By my vast knowledge of the pre-crisis era, the location that you ask for is right to the North!"
 
     hide waifu
     show happy_waifu
@@ -204,6 +204,4 @@ label ch4end:
     show waifu
     
     p "That wasn’t very useful.. But at the very least that’s the first lead I’ve gotten."
-    p "I hope I can return back to Shin soon..."
-
-    "<Insert player name> continues her journey to look for her master walking towards <insert random landmark/direc>"
+    p "I hope I can return back to Shin soon...the people here are crazy"
