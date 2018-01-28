@@ -240,7 +240,7 @@ label ch4end:
     p "(He's totally bonkers)"
     p "Yes, right after I run an errand. I need to get to [home_address], and after that I'll be right back."
     p "However, I need directions"
-    po 'Ah ah ah! So this is the start of our official partnership!"
+    po "Ah ah ah! So this is the start of our official partnership!"
     po "Let's see..."
     po "By my vast knowledge of the pre-crisis era, the location that you ask for is the North-East direction!"
 
