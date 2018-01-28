@@ -105,4 +105,36 @@ label chapter_2_scene_2:
     gu "We are in a great shortage of circuit components, after all..."
 
 menu:
-    
+    "I'm just wandering around":
+        p "I'm just wandering around, don't mind me."
+        jump challenge
+    "I'm lost":
+        p "I'm lost...could you help me?"
+        jump challenge
+
+label challenge:
+    gu "Heh, I don't think so."
+    gu "I am Homura, the security warden for this complex. Everything passes through me and nothing slips by me."
+    p "P-please, I don't mean any harm!"
+    gu "Well, well... under standard protocol I should terminate you right here and then."
+    gu "But it's been a while since we've had visitors, and I am more than a little bit bored... say, shall we play a game?"
+    gu "Win, and it'll be as if you never entered this place."
+    gu "Lose, and you're scrap metal."
+    "I'm good at games... I suppose I could do this."
+    "Furthermore, it's probably the best chance I have at entertaining her and getting out of this place unscathed."
+
+menu:
+    "I accept your challenge.":
+        jump accept
+    "Stop wasting my time.":
+        p "Stop wasting my time, and let me out of here already!"
+        gu "Wow, who do you think you are?"
+        gu "You really do not know how to value your own life."
+        "Homura points her blaster towards you."
+        gu "Have fun, scrap."
+        "END"
+        return
+
+label accept:
+    gu "Very well! You have made a good decision. I would have blasted you to shreds otherwise, heheh."
+
