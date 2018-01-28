@@ -10,7 +10,7 @@ label scene_start:
     #change to room interior
     image bg_livingroom = im.Scale("images/bg livingroom day.jpg", 1920, 1080)
     scene bg_livingroom
-    with zoomout
+    with fade
 
     "Light floods my vision. As standard protocol dictates, I look around myself to ascertain my positon."
     "To my right, stood a dust-covered bookshelf; yellowed volumes, cobwebs and spiders covered its surfaces."
@@ -32,3 +32,4 @@ label scene_start:
     o "Ah well, not that it matters. Your deadpanned responses are cute too~"
 
     p "*Sighs* It is getting late, Master. We still have a long day ahead of us, shall we pack up and go?"
+    jump chapter_2
