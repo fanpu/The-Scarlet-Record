@@ -32,7 +32,7 @@ label scene_start:
     image waifu sad = "waifu sad.png"
     show waifu sad
     o "Oh come on, it isn't that bad. I'm fine here, you see?"
-    hide waifu sad
+    hide waifu 
     show waifu at left
     p "You always worry me so much..."
     o "Don't. I'll be fine. I'm more than able to take care of myself."
@@ -58,7 +58,7 @@ label scene_start:
     hide owner
     show owner happy at right
     o "No no, nothing like that. Just that...this Earth isn't friendly to anything, not even something as sweet as you."
-    hide waifu confused
+    hide waifu
     show waifu at left
     p "With you at my side, I'm not afraid of anything. You don't have to worry, [owner's name]."
     o "Haha, you always know the right thing to say."
