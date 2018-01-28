@@ -120,6 +120,9 @@ label failcomputer3:
 label successcomputer3:
  image computersuccess3 = "nameofsystem.png"
  scene successcomputer3
+ g "It's succeeding?"
+ p "Yes."
+ jump mount
 
 label mount:
  menu:
@@ -139,6 +142,8 @@ label failcomputer4:
 label successcomputer4:
  image computersuccess4 = "mounted.png"
  scene computersuccess4
+ g "The hard drive, we can see it now? Am I finally saved?"
+ p "Yes."
  image insidefolder = "insidefolder.png"
  scene insidefolder
  g "What? It's empty? How is it possible?"
@@ -158,7 +163,6 @@ label failcomputer2:
  
  p "No, this must be a mistake."
  g "It better be."
- p "(My battery is limited, I cannot risk wasting it on dead ends)"
  jump recovery
  
 label successcomputer2:
