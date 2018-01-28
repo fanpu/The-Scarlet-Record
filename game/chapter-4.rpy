@@ -21,7 +21,11 @@ image po veryangry = "poet very angry.png"
 image po worried = "poet worried.png"
 
 label chapter_4:
+    image C4 = im.Scale("images/C4.png", 1920, 1080)
+    scene C4
+    with Dissolve(1)
     scene bg_chap4
+    with Dissolve(1)
     jump ch4start
 
 label ch4start:
