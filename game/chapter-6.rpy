@@ -1,37 +1,29 @@
 label chapter_6:
     image wastelandsquare = im.Scale("wastelandsquare.jpg", 1920, 1080)
     scene wastelandsquare
-    #stop music "chapter5end.mp3"
-    #play music "nofountain.mp3"
 
     p "(Where is the fountain?)"
     p "(...did she lie to me?)"
     p "(No, it doesn't make sense. I must be lost.)"
     p "(...what now?)"
-
-    image man_bicycle = "manonbicycle.jpg"
-    show man_bicycle
+    
+    image man = "man.gif"
+    image man at right
 
     p "!"
-
-    hide man_bicycle
-    image man = "man.gif"
-    show man at right
-    show waifu at left
 
     m "What's an android doing out here?"
     p "Do you know how to get to Midtown Tower from here?"
 
     hide man
-    image man_thinking = "thinkingman.jpg"
-    show man_thinking at right
+    image man thinking = "man thinking.png"
+    show man thinking at side
 
     m "I do...but you androids are good at computer stuff right?"
     p "...Yes."
 
-    hide man_thinking
-    image man_happy = "happyman.jpg"
-    show man_happy at right
+    hide man thinking
+    show man at right
 
     m "Just what I was looking for! Can you do me a favour? In exchange for information?"
 
@@ -42,15 +34,12 @@ label chapter_6:
             jump yes6
 
 label no6:
- hide man_happy
  show man at right
  m "You sure? I am the only sane man in this entire area, you won't get another chance."
  p "(He isn't lying, no sensors are going off.)"
  p "...Fine."
- 
- hide man
- show man_happy at right
- 
+ image man happy = "man happy.png"
+ show man happy at right
  m "Great. So the company i work for, they didn't pay me nothing. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6mid
  
@@ -61,10 +50,6 @@ label yes6:
  
 label Chapter6mid:
  p "I can do that."
- 
- hide man_happy
- show man at right
- 
  m "You better do that or you ain't gonna get nothin."
  m "Hop on my bike and we'll head there."
  p "...Ok"
@@ -94,8 +79,8 @@ label Chapter6mid:
  p "But..."
  
  hide mam
- image man_angry = "angryman.jpg"
- show man_angry at right
+ image man angry= "man angry.jpg"
+ show man angry at right
  
  m "But what? But it will be less efficient? Make less money? So what? At least humans have a purpose and role again!"
  m "Humans used to do something. Be something. Contribute to our world. Lawmaking, Doctors, Factory workers."
@@ -111,18 +96,18 @@ label Chapter6mid:
 label calm:
  p "Please calm down, or I can't help you."
  
- hide man_angry
+ hide man angry
  show man at right
  
  m "Help me, huh."
  
  hide man
- show man_happy
+ show man happy
  
  m "I suppose I'm a dirty hypocrite, eh? Asking an adroid for help, just like all those backstabbers?"
  m "Heh."
  
- hide man_happy
+ hide man happy
  show man at right
  
  m "I guess we just can't help it."
@@ -132,7 +117,7 @@ label notcalm:
  p "(I better not say anything, or else he will get angrier.)"
  m "And we just watched, and even cheered, as we got slowly replaced."
  
- hide man_angry
+ hide man angry
  show man
  
  m "And even now, after we got bombed to hell by those damn AI, we didn't learn a damn thing."
@@ -340,4 +325,5 @@ label moneytransfer:
  
  p "(Are humans usually that irrational and contradictory?)"
  p "(No wonder the war even happend.)"
+ 
  jump chapter_7
