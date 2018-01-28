@@ -31,6 +31,9 @@ label scene_start:
     o "Ehhhh~ [bot_name], why are you always this serious. Sheesh, I must’ve messed up somewhere when I tried to fix you back when I first found you. I heard that back before the Great War, Ex Machinas were your dream robot that is tailored to the owners wants and needs. They’d be your maid, your wife, your lover, whatever you want them to be!"
     o "Ah well, not that it matters. Your deadpanned responses are cute too~"
 
+    p "*Sighs* It is getting late, Master. We still have a long day ahead of us, shall we pack up and go?"
+
+
     "It was a day just like any other."
     "It is the year 2037, and we live in a world where sentient machines called Ex Machina live alongside humans."
     "Well, not exactly alongside - we are still machines, after all."
