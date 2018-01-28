@@ -1,4 +1,4 @@
-label Chapter5:
+label chapter_5:
  image wasteland = "wasteland3.jpg"
  scene wasteland
  play music "x.mp3"
@@ -294,6 +294,4 @@ label chapter5ending:
  scene wasteland
  
  p "(I would wish her all the best, but I feel that wish will be wasted)"
-                 
-    
-return
+ jump chapter_6

@@ -340,3 +340,4 @@ label moneytransfer:
  
  p "(Are humans usually that irrational and contradictory?)"
  p "(No wonder the war even happend.)"
+ jump chapter_7

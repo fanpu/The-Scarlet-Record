@@ -76,3 +76,4 @@ label chapter_7:
 
     show p sadbuthappy
     p "You aren't just the other half that completes me. You're simply everything to me..."
+    jump chapter_8

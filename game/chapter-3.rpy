@@ -9,8 +9,8 @@ label chapter_3:
     "I sometimes wondered what was outside. What the world was like. But it was fleeting. That wasn't important to me, and I made no effort to find out."
     "But now..."
     
-    image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
-    scene wasteland
+    image wasteland_chap3 = im.Scale("images/wasteland.png", 1920, 1080)
+    scene wasteland_chap3
     with Dissolve(.5)
     
     show waifu neutral
@@ -43,7 +43,7 @@ label choice_3_1b:
 label choice_3_1done:
     scene black
     with Dissolve(.5)
-    scene wasteland
+    scene wasteland_chap3
     with Dissolve(.5)
     
     if choice_3_1:
@@ -91,15 +91,16 @@ label chapter_3_fixing:
     image circuitboard = im.Scale("images/circuitboard.jpg", 1920, 1080)
     scene circuitboard
     with Dissolve(.5)
-    
+
     p "(The soundbytes are corrupted, but it should be easy to download new ones.)"
     w "<ERROR, SPEECH.MP3 NOT FOUND>"
     p "(Before I start working on fixing the error, I should recall some my knowledge.)"
     jump exclusion
-    
+
 label exclusion:
-    p "(If a process is executing in its critical section, then no other processes can be executing in their critical section. This condition is called...)"
     menu:
+        p "(If a process is executing in its critical section, then no other processes can be executing in their critical section. This condition is called...)"
+
         "mutual exclusion":
             jump exclusionright
         "critical exclusion":
@@ -119,8 +120,9 @@ label exclusionwrong:
     jump exclusion
 
 label aging:
-    p "('Aging' is...)"
     menu:
+        p "('Aging' is...)"
+
         "keeping track of cache contents":
             jump agingwrong
         "keeping track of what pages are currently residing in memory":
@@ -140,8 +142,9 @@ label agingwrong:
     jump aging
     
 label fetch:
-    p "(Instead, it should fetch the instruction from memory according to the value of...)"
     menu:
+        p "(Instead, it should fetch the instruction from memory according to the value of...)"
+
         "program counter":
             jump fetchright
         "status register":
@@ -162,10 +165,11 @@ label fetchwrong:
     p "(That didn't work, the CPU is still fetching information incorrectly.)"
     p "(I cannot make too many errors, if not I might run out of time.)"
     jump fetch
-    
+
 label scheduling:
-    p "(Which algorithm should I implement in the robot to have the minimum average waiting time for communication?)"
     menu:
+        p "(Which algorithm should I implement in the robot to have the minimum average waiting time for communication?)"
+
         "First Come, First Served":
             jump schedulingwrong
         "Shortest Job First":
@@ -186,8 +190,7 @@ label schedulingwrong:
     jump scheduling
     
 label chapter_3_scene_2:
-    image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
-    scene wasteland
+    scene wasteland_chap3
     with Dissolve(.5)
     
     hide waifu neutral
@@ -276,3 +279,4 @@ label chapter_3_scene_3:
     p "(My feelings for Shin, they are manufactured, aren't they?)"
     p "(...)"
     p "(I...I want to go back.)"
+    jump chapter_4

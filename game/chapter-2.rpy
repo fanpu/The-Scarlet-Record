@@ -219,3 +219,4 @@ label q3_exp:
     gu ":e allows you to revert a particular buffer which may have been modified by an external program, allowing you to start from the latest copy."
     gu ":$ moves the cursor to the last line in the file."
     gu "So yes, the correct to exit Vim is :q!"
+    jump chapter_3

@@ -1,4 +1,4 @@
-image bg = im.Scale("wasteland2.jpg", 1280, 720)
+image bg_chap4 = im.Scale("wasteland2.jpg", 1920, 1080)
 define p = Character("Player")
 define po = Character("Poet")
 
@@ -21,11 +21,11 @@ image po veryangry = "poet very angry.png"
 image po worried = "poet worried.png"
 
 label chapter_4:
-    scene bg
+    scene bg_chap4
     jump ch4start
-    
+
 label ch4start:
-    
+
     show p neutral
     p "That poor <insert waifubot name>... "
     show p sad
@@ -233,3 +233,4 @@ label ch4end:
     p "I hope I can return back to Shin soon..."
 
     "And so, <Insert player name> continues her journey to look for Shin."
+    jump chapter_5
