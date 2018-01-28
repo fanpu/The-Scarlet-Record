@@ -118,7 +118,7 @@ label chapter_3_scene_2:
     p "..."
     w "Don't you miss me?"
     p "(She's broken...beyond repair. Likely a motherboard malfunction.)"
-    w "Come on, Kosuke. Didn't you miss of the times we had?
+    w "Come on, Kosuke. Didn't you miss of the times we had?"
     
     hide waifu confused
     show waifu normal
