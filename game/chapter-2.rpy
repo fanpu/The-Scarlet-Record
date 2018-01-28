@@ -1,6 +1,10 @@
 label chapter_2:
+    image C2 = im.Scale("images/C2.png", 1920, 1080)
+    scene C2
+    with Dissolve(1)
     image bg_livingroom_night = im.Scale("images/bg livingroom night.jpg", 1920, 1080)
     scene bg_livingroom_night
+    with Dissolve(1)
     jump chapter_2_scene_1
 
 label chapter_2_scene_1:
