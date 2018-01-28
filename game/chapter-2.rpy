@@ -138,17 +138,42 @@ menu:
 label accept:
     gu "Very well! You have made a good decision. I would have blasted you to shreds otherwise, heheh."
     gu "As an Ex Machina I expect you to know a thing or two about Linux, the operating system that powers our very core."
+    gu "So as you know, you can send Linux processes the standard POSIX signals."
+    gu "These signals help to transmit events and allows processes and threads to communicate with one another in a standard way."
+    gu "They interrupt a program's normal execution flow and causes its signal handler to take over."
 
     menu:
-        gu "First question: Which of the following signal cannot be handled or ignored?"
+        gu "Well now! First question: Which of the following signal cannot be handled or ignored?"
 
         "SIGINT":
             p "The answer is SIGINT."
+            jump q1_wrong
         "SIGCHLD":
             p "The answer is SIGCHLD."
-        "SIGKILL":
+            jump q1_wrong
+            "SIGKILL":
             p "The answer is SIGKILL."
+            gu "Good! Very good!"
+            jump q1_exp
         "SIGALRM":
             p "The answer is SIGALRM."
+            jump q1_wrong
 
-    gu "Next question: How do you search for a blank line in a file?"
+label q1_wrong:
+    gu "Wrong! The correct answer is SIGKILL"
+    jump q1_exp
+
+label q1_exp:
+    gu "The two signals that cannot be intercepted and handled are SIGKILL and SIGSTOP."
+    gu "SIGKILL, for one, is sent to a process to force it to terminate immediately."
+
+menu:
+    gu "Next question: What niceness value for a process among the following indicate most favorable scheduling by the kernel?"
+
+    "0":
+        p "The answer is 0."
+    "19":
+        p "The answer is 19."
+    "5":
+        p "The answer is 5."
+
