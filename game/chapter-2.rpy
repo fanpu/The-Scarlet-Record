@@ -93,4 +93,16 @@ label chapter_2_scene_2:
     "I decide to explore this place and see if I can get out of here."
     "In the distance, I notice a figure-"
 
+    show angry at right
+    gu "Ahh, welcome to the Industrial Extractor Works!"
+    gu "I haven't seen you around here before, are you new?"
+    show waifu at left
+    p "Uhh..."
+    gu "Wait a moment..."
+    gu "*[[SELECT COUNT(*) FROM employees WHERE name=[bot_name]]*"
+    gu "No, you don't belong here."
+    gu "Are you an Ex-Machina meant to be condemned?"
+    gu "We are in a great shortage of circuit components, after all..."
+
+menu:
     
