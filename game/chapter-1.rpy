@@ -1,5 +1,5 @@
 transform owner_transform:
-    zoom 2
+    zoom 1.5
 
 label chapter_1:
     play music "music/ch1.flac"
@@ -34,7 +34,7 @@ label scene_start:
     show waifu at left
     p "You always worry me so much..."
     hide owner
-    show owner serious at right
+    show owner serious at owner_transform, right
     o "Don't. I'll be fine. I'm more than able to take care of myself."
     o "So don't worry, ok?"
     p "..."

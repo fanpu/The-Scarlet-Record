@@ -6,9 +6,8 @@ label chapter_6:
     p "(...did she lie to me?)"
     p "(No, it doesn't make sense. I must be lost.)"
     p "(...what now?)"
-    
-    image man = "MS4-default.png"
-    image man at right
+
+    show man at right
 
     p "!"
     m "What's an android doing out here?"
