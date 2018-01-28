@@ -7,24 +7,14 @@ label chapter_6:
     p "(No, it doesn't make sense. I must be lost.)"
     p "(...what now?)"
     
-    image man = "man.png"
+    image man = "MS4-default.png"
     image man at right
 
     p "!"
-
     m "What's an android doing out here?"
     p "Do you know how to get to Midtown Tower from here?"
-
-    hide man
-    image man thinking = "man thinking.png"
-    show man thinking at side
-
     m "I do...but you androids are good at computer stuff right?"
     p "...Yes."
-
-    hide man thinking
-    show man at right
-
     m "Just what I was looking for! Can you do me a favour? In exchange for information?"
 
     menu:
@@ -38,7 +28,7 @@ label no6:
  m "You sure? I am the only sane man in this entire area, you won't get another chance."
  p "(He isn't lying, no sensors are going off.)"
  p "...Fine."
- image man happy = "man happy.png"
+ image man happy = "MS4-smile7.png"
  show man happy at right
  m "Great. So the company i work for, they didn't pay me nothing. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6mid
@@ -79,7 +69,7 @@ label Chapter6mid:
  p "But..."
  
  hide mam
- image man angry= "man angry.jpg"
+ image man angry= "MS4-angry2.png"
  show man angry at right
  
  m "But what? But it will be less efficient? Make less money? So what? At least humans have a purpose and role again!"
