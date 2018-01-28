@@ -3,8 +3,12 @@ transform depressed_downsize:
     size 2
 
 label chapter_5:
+    image C5 = im.Scale("images/C5.png", 1920, 1080)
+    scene C5
+    with Dissolve(1)
     image wasteland = im.Scale("wasteland3.jpg", 1920, 1080)
     scene wasteland
+    with Dissolve(1)
     play music "music/ch5.flac"
     show depressed default at depressed_downsize, right
 
