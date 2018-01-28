@@ -63,7 +63,24 @@ label shot:
     k "Keep quiet, or there will be more for you to worry about."
     p "You will...*[[TERMINAL SEQUENCE REACHED]*...regret...*[[SYSTEM DOWN]*..."
     "[bot_name] collapses on the living room floor"
+    hide waifu
+    hide kidnapper
+    image bg_black = im.Scale("images/black.jpg", 1920, 1080)
+    scene bg_black
+    with fade
     jump chapter_2_scene_2
 
 label chapter_2_scene_2:
+    "What on earth..."
+    "How long has it been?"
     "I open my eyes"
+    image bg_factory = im.Scale("images/bg factory.jpg", 1920, 1080)
+    scene bg_factory
+    "I see the ruins of a large old factory around me"
+    "Where am I...?"
+    "And most importantly, what happened that night?"
+    "What should I do..."
+menu:
+    "Initiate full system check":
+        jump system_check
+    ""
