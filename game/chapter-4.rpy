@@ -129,11 +129,12 @@ label ch4mid:
     po "And I thought I was the one graced by the heavens, the one blessed with the gift of this very cursed world..."
 
     show po veryangry at right
-    po "HOWEVER! You are but a robot! A being to mirror Humans! Show me that you deserve the help of the Chosen Human!"
+    po "WAIT! Yes! It makes total sense! I AM the chosen human, and YOU are the chosen android! The ying to my yang! The logic to my emotions! Together, we shall birth a grand new world!"
 
-    p "So she still believes that she is \"the chosen one\". Sigh.."
+    p "(He's crazy. Totally crazy. Trying to rope me into his msaterplan too?)"
 
-    po "Complete this quiz and show me that you are worthy of help from me."
+    po "BUT, I cannot just let any robot to be my partner, my right-hand man-er android."
+    po "Complete this quiz and show me that you are worthy of standing shoulder to shoulder with the Chosen One!"
     
     jump networkQuiz
 
@@ -215,19 +216,23 @@ label networkQuiz:
 label ch4end:
     show p happy at left
     show po smile at right
-    po "You... you are more capable than I thought. As I am truly a man of my word, what can I help you with? Ask and you shall receive."
-    p "Yes.. Then, do you know how to get to [home_address]?"
+    po "You... you are more capable than I thought. I finally found my equal! Step into the light and join me!"
+    p "(He's totally bonkers)"
+    p "Yes, right after I run an errand. I need to get to [home_address], and after that I'll be right back."
+    p "However, I need directions"
+    po 'Ah ah ah! So this is the start of our official partnership!"
+    po "Let's see..."
     po "By my vast knowledge of the pre-crisis era, the location that you ask for is the North-East direction!"
 
     p "Well, thanks..."
 
     show po happy at right
-    po "No worries! For it is my duty as the Chosen Human! For that is my Noblesse Oblige!"
+    po "No worries! When you return, we shall start the herald of a brave new world!"
     hide po
     #po disappear, out of scene
 
-    show p angry
-    p "That wasn’t very useful... But at the very least that’s the first lead I’ve gotten."
+    show p relieved
+    p "Whew, he has more than a few screws loose... But at the very least that’s the first lead I’ve gotten."
 
     show p neutral
     p "I hope I can return back to Shin soon..."
