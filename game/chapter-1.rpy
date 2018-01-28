@@ -1,8 +1,11 @@
 label chapter_1:
-    play music "music/ch1.flac"
+    image C1 = im.Scale("images/C1.png", 1920, 1080)
+    scene C1
+    with Dissolve(1)
     image bg_black = im.Scale("images/black.jpg", 1920, 1080)
     scene bg_black
-
+    with Dissolve(1)
+    play music "music/ch1.flac"
 
 label scene_start:
     "*TIME CHECK: 7.39A.M.*"
