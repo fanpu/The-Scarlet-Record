@@ -2,17 +2,18 @@ label chapter_5:
     image wasteland = "wasteland3.jpg"
     scene wasteland
     play music "x.mp3"
-    image far_girl= "farawaygirl.gif"
-    show far_girl at right
+    image depressed_girl_default= "depressed default.png"
+    show depressed_girl_default at right
 
     p "(Does she know the building where Shin lives?)"
 
-    image close_girl = "closegirl.gif"
-    hide far_girl
-    show close_girl at right
-    show waifu at left
-
     p "Hello"
+
+    image depressed_girl_shock1 = "depressed shock1.png"
+    hide depressed_girl_default
+    show waifu at left
+    show depressed_girl_shock1 at right
+
     g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
     p "No"
 
