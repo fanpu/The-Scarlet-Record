@@ -137,4 +137,25 @@ menu:
 
 label accept:
     gu "Very well! You have made a good decision. I would have blasted you to shreds otherwise, heheh."
+    gu "As an Ex Machina I expect you to know a thing or two about Linux, the operating system that powers our very core."
 
+    screen choice(items):
+
+    window:
+        style "menu_window"
+
+        vbox:
+            style "menu"
+
+            for i in items:
+
+                if i.action:
+
+                    button:
+                        action i.action
+                        style "menu_choice_button"
+
+                        text i.caption style "menu_choice"
+
+                else:
+                    text i.caption style "menu_caption"
