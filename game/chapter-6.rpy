@@ -1,7 +1,7 @@
-label Chapter 6:
+label chapter_6:
  image wastelandsquare = "wastelandsquare.jpg"
  scene wastelandsqaure
- stop music "chapter5end.mp3"
+ #stop music "chapter5end.mp3"
  start music "nofountain.mp3"
  
  p "(Where is the fountain?)"
@@ -72,8 +72,8 @@ label Chapter6mid:
  hide man
  image blurredroad = "movingroad.jpg"
  scene blurredroad
- stop music "wastelandsqaure.mp3"
- play music "motorcyclesounds.mp3"
+# #stop music "wastelandsquare.mp3"
+# #play music "motorcyclesounds.mp3"
  
  m "You never answered my first question, android. What are you doing in here of all places?"
  p "I'm lost."
@@ -82,9 +82,9 @@ label Chapter6mid:
  m "HOHOHOHO, those are the ones who are truly hopeless and abandoned. Given up all hope, desperate for nothing"
  m "No android, we are desperate to stay. To live a life similar to that before the likes of you existed."
  m "Desperate to be truly human again."
- 
- stop music "motorcycle.mp3"
- play music "factory_original.mp3"
+
+ #stop music "motorcycle.mp3"
+ #play music "factory_original.mp3"
 
  image factory2 = "factory.jpg"
  scene factory2
@@ -144,7 +144,7 @@ label Chapter6mid2:
 
  image computerroom = "computerroom.jpng"
  scene computerroom
- stop music "factory_original.mp3"
+ #stop music "factory_original.mp3"
  start music "computerroom.mp3"
  
  m "Here are the computers, connected to the server or whatever they call it."
@@ -181,7 +181,7 @@ label whoisip:
  p "(I can't afford to forget all of it.)"
  jump findingip
 
-label netcatip;
+label netcatip:
  image ip_fail2 = "netcatip.png"
  scene ip_fail2
  p "(This is not what I need. I must have forgotten. It was so long ago.)"
@@ -192,11 +192,11 @@ label findingports:
  p "(I got the ip address, now I need to find the open ports...)"
  menu:
   "dig":
-   jump failport
-  "nmap"
-   jump successport
-  "netcat"
-   jump failport
+     jump failport
+  "nmap":
+     jump successport
+  "netcat":
+     jump failport
 
 label failport:
  image port_fail = "failport.jpg"
@@ -323,8 +323,8 @@ label moneytransfer:
  p "And done."
   
  scene factory2
- stop music "computerroom.mp3"
- start music "factorysounds.mp3"
+# #stop music "computerroom.mp3"
+# start music "factorysounds.mp3"
  show man at right
  show waifu at left
  
@@ -340,7 +340,3 @@ label moneytransfer:
  
  p "(Are humans usually that irrational and contradictory?)"
  p "(No wonder the war even happend.)"
- 
- 
-  
- 

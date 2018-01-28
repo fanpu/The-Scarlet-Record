@@ -11,7 +11,7 @@ image p sad = "waifu sad.png"
 image p thinking = "waifu thinking.png"
 image p verysad = "waifu very sad.png"
 
-label start:
+label chapter_7:
     scene bg
     play music "music/ch7.flac"
 

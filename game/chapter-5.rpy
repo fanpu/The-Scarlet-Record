@@ -11,8 +11,8 @@ label Chapter5:
  hide far_girl
  show close_girl at right
  show waifu at left
- 
- p "Hello"    
+
+ p "Hello"
  g "Oh, a model 3.4. Were you abandoned? Thrown away for the latest model?"
  p "No"
  
@@ -73,8 +73,8 @@ label lover5:
 label Chapter5mid:
  image messyroom = "messyroom.jpg"
  scene messyroom
- stop music "wasteland.mp3"
- start music "messyroom.mp3"
+ #stop music "wasteland.mp3"
+ #start music "messyroom.mp3"
  hide amused_girl
  image girl = "girl.gif"
  show girl at right
@@ -89,8 +89,8 @@ label Chapter5mid:
  g "So you should know how to transfer these files to my computer right?"
  p "Yes"
  
- image screenstart = "computerstartscreen.png"
- scene screenstart
+ image screen start = "computer startscreen.png"
+ scene screen start
  hide waifu
  hide girl
  
@@ -185,7 +185,7 @@ label successcomputer2:
  g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
 
 label decryption:
- scene screenstart
+ scene screen start
  
  menu: 
   "Decrypt base64":
@@ -228,8 +228,8 @@ label successcomputer:
    jump successcomputer5
    
 label successcomputer5: 
- stop music "filetransfer.mp3"
- start music "done.mp3"
+ #stop music "filetransfer.mp3"
+ #start music "done.mp3"
  image computersuccess5 = "copied.png"
  scene computersuccess5
  image girl_relieved = "relievedgirl.gif"
@@ -289,17 +289,11 @@ label nothing5:
 label chapter5ending:
  hide girl_relieved
  hide waifu
- stop music "end.mp3"
- start music "chap5end.mp3"
+ #stop music "end.mp3"
+ #start music "chap5end.mp3"
  scene wasteland
  
  p "(I would wish her all the best, but I feel that wish will be wasted)"
                  
     
 return
- 
-
-
-	      
-        
-       

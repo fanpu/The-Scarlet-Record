@@ -20,7 +20,7 @@ image po smile = "poet smile.png"
 image po veryangry = "poet very angry.png"
 image po worried = "poet worried.png"
 
-label start:
+label chapter_4:
     scene bg
     jump ch4start
     
