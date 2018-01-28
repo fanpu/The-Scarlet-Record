@@ -79,8 +79,18 @@ label chapter_2_scene_2:
     "I see the ruins of a large old factory around me"
     "Where am I...?"
     "And most importantly, what happened that night?"
-    "What should I do..."
-menu:
-    "Initiate full system check":
-        jump system_check
-    ""
+
+#    "What should I do..."
+# TODO: let player select choices
+# menu:
+#     "Initiate full system check":
+#         jump system_check
+#     "Explore the area":
+#         jump explore
+#     "Try to recall what happened":
+#         jump recall
+
+    "I decide to explore this place and see if I can get out of here."
+    "In the distance, I notice a figure-"
+
+    
