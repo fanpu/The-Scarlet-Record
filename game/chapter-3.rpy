@@ -13,7 +13,7 @@ label chapter_3:
     scene wasteland
     with Dissolve(.5)
     
-    show waifu
+    show waifu neutral
     
     "After getting out, all I see a wasteland with nothing nearby apart from the facility."
     "That was not particularly surprising, due to the apparent war making Earth inhabitable. Shin has talked about it at length"
@@ -43,14 +43,14 @@ label choice_3_1b:
 label choice_3_1done:
     if choice_3_1:
     
-    hide waifu
-    show sad_waifu
+    hide waifu neutral
+    show waifu sad
     
         "It has been 3 hours, but there is not a single person to be found."
     else:
     
-    hide waifu
-    show sad_waifu
+    hide waifu neutral
+    show waifu sad
     
         "It has been 3 hours, but there are still no clues to be found, not even a lead."
     jump chapter_3_scene_1
@@ -59,8 +59,8 @@ label chapter_3_scene_1:
     p "Maybe I should turn back, this might be the wrong direction."
     "The world is a wasteland, but I should have found something by now."
     
-    hide sad_waifu
-    show waifu
+    hide waifu sad
+    show waifu neutral
     
     p "Hold on, what is that?"
     "It was very far away, but I can definitely see a person walking in my direction."
@@ -87,19 +87,19 @@ label chapter_3_fixing:
     jump chapter_3_scene_2
     
 label chapter_3_scene_2:
-    hide waifu
-    show happy_waifu
+    hide waifu neutral
+    show waifu happy
     
     p "It's fixed. Or at least that's what I hope."
     
-    hide happy_waifu
-    show waifu
+    hide waifu happy
+    show waifu thinking
     
     "...She still doesn't seem...right."
     w "Kosuke, you're back!"
     
-    hide waifu
-    show confused_waifu
+    hide waifu thinking
+    show waifu confused
     
     p "I'm not-"
     w "I've missed you so much!"
@@ -120,8 +120,8 @@ label chapter_3_scene_2:
     p "(She's broken...beyond repair. Likely a motherboard malfunction.)"
     w "Come on, Kosuke. Didn't you miss of the times we had?
     
-    hide confused_waifu
-    show waifu
+    hide waifu confused
+    show waifu normal
     
     p "(Should I...)"
     
@@ -133,16 +133,16 @@ menu:
 
 label choice_3_2a:
     
-    hide waifu
-    show sad_waifu
+    hide waifu normal
+    show waifu sad
     
     "..."
     jump chapter_3_scene_3
            
 label choice_3_2b:
     
-    hide waifu
-    show sad_waifu
+    hide waifu normal
+    show waifu sad
     
     "(...I can't do anything for her)"
     jump chapter_3_scene_3
