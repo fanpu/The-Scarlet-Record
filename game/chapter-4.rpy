@@ -1,46 +1,71 @@
+image bg = im.Scale("wasteland2.jpg", 1280, 720)
+define p = Character("Player")
+define po = Character("Poet")
+
+image p angry = "waifu angry.png"
+image p confused = "waifu confused.png"
+image p sadbuthappy = "waifu crying but happy.png"
+image p exhausted = "waifu exhausted.png"
+image p happy = "waifu happy.png"
+image p neutral = "waifu neutral.png"
+image p relieved = "waifu relieved.png"
+image p sad = "waifu sad.png"
+image p thinking = "waifu thinking.png"
+image p verysad = "waifu very sad.png"
+
+image po happy = "poet happy.png"
+image po slightlyangry = "poet slightly angry.png"
+image po slightlyworried = "poet slightly worried.png"
+image po smile = "poet smile.png"
+image po veryangry = "poet very angry.png"
+image po worried = "poet worried.png"
+
 label start:
-    image wasteland2 = im.Scale("images/wasteland2.png", 1920, 1080)
-    scene wasteland2
+    scene bg
     jump ch4start
     
 label ch4start:
     
-    show sad_waifu
-
+    show p neutral
     p "That poor <insert waifubot name>... "
+    show p sad
 
     p "Never mind, I should worry more about myself. Just where am I?"
-    p "After the incident with the other bot, all I can do is wander."
+    show p confused at left
 
-    hide sad_waifu
-    show waifu
+    #Wandering
 
-    p "Is that someone in the distance? Hopefully he will know the way back to Shin’s place..."
+    p "Is that someone in the distance? Hopefully she will know the way back to Shin’s place..."
 
+    show po slightlyworried at right
     po "Once upon a midnight dreary, while I pondered, weak and weary,"
     po "Over many a quaint and curious volume of forgotten lore—"
 
+    show p neutral at left
+
     p "Excuse me?"
-    po "Gah! Stay away from me! Do not tempt me with your inferal lies!"
-    po "You are just but a figment of my imagination! See!"
+    po "Impossible! You are just but a figment of my imagination! See!"
+
+    show po slightlyangry:
+        xpos 1100
+        linear 2.0 xpos 500
 
     #poet walks into the player only to realize she is real
 
+    show p confused at left
     p "Well, if that helps you to recognize that I'm real..."
 
-    po "No! You exist but do not exist! I am the Chosen One! I am the only one left on this world! There cannot be anyone else! Stop lying to me!"
-    po "The gods of the old Earth chose me! They chose me to deliever this forsaken land!"
-    
-    hide waifu
-    show confused_waifu
-    
+    show po slightlyangry:
+        xpos 500
+        linear 1.5 xpos 1000
+
+    show po veryangry at right
+    po "No! You exist but do not exist! I am the Chosen One! I am the only one left on this world! There cannot be anyone else! The sensation that is you is just a false sensation!"
     p "Umm.. Okay... But could you help me for a bit?"
-
     po "Such a situation is impossible! After all, I am the chosen talent residing in this gift of a planet! I am the representation of God and His will!"
-
     p "Then what would it take for me to convince you that I am here, and I am me?"
-
-    po "Hm… Then answer the question from the Gods!"
+    show po slightlyangry at right
+    po "Hm... Then answer the question from the Gods!"
     
     jump feelingQuiz
 
@@ -99,13 +124,15 @@ label feelingQuiz:
         jump feelingQuiz
 
 label ch4mid:
+    show p neutral at left
     po "Wait so you are actually real.. I can’t believe it..."
     po "And I thought I was the one graced by the heavens, the one blessed with the gift of this very cursed world..."
+
+    show po veryangry at right
     po "HOWEVER! You are but a robot! A being to mirror Humans! Show me that you deserve the help of the Chosen Human!"
 
-    hide confused_waifu
-    show waifu
-    p "So he still believes that he is a \"chosen one\". Sigh.."
+    p "So she still believes that she is \"the chosen one\". Sigh.."
+
     po "Complete this quiz and show me that you are worthy of help from me."
     
     jump networkQuiz
@@ -186,23 +213,23 @@ label networkQuiz:
         jump networkQuiz
 
 label ch4end:
-    po "That-that's quite impressive."
-    po "You... you are more capable than I thought. You are one of the few that deserve a new place on a new Earth."
-    po "I am truly a man of my word, what can I help you with? Ask and you shall receive."
-    p "Yes.. Then, do you know how to get to Midtown Tower?"
-    po "By my vast knowledge of old Earth, the location that you ask for is right towards the sun!"
+    show p happy at left
+    show po smile at right
+    po "You... you are more capable than I thought. As I am truly a man of my word, what can I help you with? Ask and you shall receive."
+    p "Yes.. Then, do you know how to get to <insert address here>?"
+    po "By my vast knowledge of the pre-crisis era, the location that you ask for is the North-East direction!"
 
-    hide waifu
-    show happy_waifu
-    
-    p "Thank you so much!"
+    p "Well, thanks..."
 
-    po "No worries! For it is my duty as the Chosen Human! For that is my Noblesse Oblige! I shall herald the beginning of a new Earth, better than ever before!"
-
+    show po happy at right
+    po "No worries! For it is my duty as the Chosen Human! For that is my Noblesse Oblige!"
+    hide po
     #po disappear, out of scene
 
-    hide happy_waifu
-    show waifu
-    
-    p "(That wasn’t very useful.. But at the very least that’s the first lead I’ve gotten.)"
-    p "(I hope I can return back to Shin soon...the people here are crazy)"
+    show p angry
+    p "That wasn’t very useful... But at the very least that’s the first lead I’ve gotten."
+
+    show p neutral
+    p "I hope I can return back to Shin soon..."
+
+    "And so, <Insert player name> continues her journey to look for Shin."
