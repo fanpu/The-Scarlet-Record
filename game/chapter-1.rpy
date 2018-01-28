@@ -66,10 +66,25 @@ label scene_start:
     hide owner
     show owner sad at right
     o "Please."
-    hide waifu
-    show waifu happy at right 
+    menu: 
+     "I promise":
+      jump to promise
+     "I can't":
+      jump to nopromise
+
+label promise:
+    show waifu happy
     p "Alright, I promise!"
+    show owner happy at right
+    o "Thank you! You don't know how much it means to me."
+    p "With you, what do I have to worry about?"
+    jump chapter_2
     
+label nopromise:
+    show waifu sad at left
+    p "I'm sorry, I can't. Androids, we don't take promises lightly."
+    show owner sad at right
+    o "...I understand."  
     jump chapter_2
     
     
