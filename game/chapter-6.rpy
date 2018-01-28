@@ -15,22 +15,23 @@ label Chapter 6:
  p "!"
  
  hide man_bicycle
- image man = "man.jpg"
- show man
+ image man = "man.gif"
+ show man at right
+ show waifu at left
  
  m "What's an android doing out here?"
  p "Do you know how to get to Midtown Tower from here?"
  
  hide man
  image man_thinking = "thinkingman.jpg"
- show man_thinking
+ show man_thinking at right
  
  m "I do...but you androids are good at computer stuff right?"
  p "...Yes."
  
  hide man_thinking
  image man_happy = "happyman.jpg"
- show man_happy
+ show man_happy at right
  
  m "Just what I was looking for! Can you do me a favour? In exchange for information?"
  
@@ -42,13 +43,13 @@ label Chapter 6:
 
 label no6:
  hide man_happy
- show man
+ show man at right
  m "You sure? I am the only sane man in this entire area, you won't get another chance."
  p "(He isn't lying, no sensors are going off.)"
  p "...Fine."
  
  hide man
- show man_happy
+ show man_happy at right
  
  m "Great. So the company i work for, they didn't pay me nothing. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6mid
@@ -62,7 +63,7 @@ label Chapter6mid:
  p "I can do that."
  
  hide man_happy
- show man
+ show man at right
  
  m "You better do that or you ain't gonna get nothin."
  m "Hop on my bike and we'll head there."
@@ -87,14 +88,14 @@ label Chapter6mid:
 
  image factory2 = "factory.jpg"
  scene factory2
- show man
+ show man at right
  
  m "This factory is the last of its kind. Producing androids like you, but with human labour instead of robots."
  p "But..."
  
  hide mam
  image man_angry = "angryman.jpg"
- show man_angry
+ show man_angry at right
  
  m "But what? But it will be less efficient? Make less money? So what? At least humans have a purpose and role again!"
  m "Humans used to do something. Be something. Contribute to our world. Lawmaking, Doctors, Factory workers."
@@ -111,7 +112,7 @@ label calm:
  p "Please calm down, or I can't help you."
  
  hide man_angry
- show man
+ show man at right
  
  m "Help me, huh."
  
@@ -122,7 +123,7 @@ label calm:
  m "Heh."
  
  hide man_happy
- show man
+ show man at right
  
  m "I guess we just can't help it."
  jump Chapter6mid2
@@ -324,7 +325,7 @@ label moneytransfer:
  scene factory2
  stop music "computerroom.mp3"
  start music "factorysounds.mp3"
- show man
+ show man at right
   
  m "...So you succeeded, eh?"
  m "Knew it, you droids do everything better than us."
