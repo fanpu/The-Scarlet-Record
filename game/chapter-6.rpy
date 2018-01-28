@@ -2,7 +2,7 @@ label chapter_6:
  image wastelandsquare = "wastelandsquare.jpg"
  scene wastelandsqaure
  #stop music "chapter5end.mp3"
- #start music "nofountain.mp3"
+ #play music "nofountain.mp3"
  
  p "(Where is the fountain?)"
  p "(...did she lie to me?)"
@@ -145,7 +145,7 @@ label Chapter6mid2:
  image computerroom = "computerroom.jpng"
  scene computerroom
  #stop music "factory_original.mp3"
- #start music "computerroom.mp3"
+ #play music "computerroom.mp3"
  
  m "Here are the computers, connected to the server or whatever they call it."
  m "Don't let me down, now. I need the cash."
@@ -324,7 +324,7 @@ label moneytransfer:
   
  scene factory2
 # #stop music "computerroom.mp3"
-# start music "factorysounds.mp3"
+# play music "factorysounds.mp3"
  show man at right
  show waifu at left
  
