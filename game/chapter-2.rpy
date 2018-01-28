@@ -138,24 +138,16 @@ menu:
 label accept:
     gu "Very well! You have made a good decision. I would have blasted you to shreds otherwise, heheh."
     gu "As an Ex Machina I expect you to know a thing or two about Linux, the operating system that powers our very core."
+    gu "First question: Which of the following signal cannot be handled or ignored?"
 
-    screen choice(items):
+    menu:
+        "SIGINT":
+            p "The answer is SIGINT."
+        "SIGCHLD":
+            p "The answer is SIGCHLD."
+        "SIGKILL":
+            p "The answer is SIGKILL."
+        "SIGALRM":
+            p "The answer is SIGALRM."
 
-    window:
-        style "menu_window"
-
-        vbox:
-            style "menu"
-
-            for i in items:
-
-                if i.action:
-
-                    button:
-                        action i.action
-                        style "menu_choice_button"
-
-                        text i.caption style "menu_choice"
-
-                else:
-                    text i.caption style "menu_caption"
+    gu "Next question: How do you search for a blank line in a file?"
