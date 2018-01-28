@@ -10,4 +10,4 @@ define pov = Character("[povname]")
 define bot_name = "Üc207Pr4f57t9"
 define owner_name = "Shin"
 label start:
-    jump chapter_2_scene_2
+    jump chapter_1
