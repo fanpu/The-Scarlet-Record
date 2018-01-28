@@ -71,9 +71,9 @@ label scene_start:
     o "Please."
     menu: 
      "I promise":
-      jump to promise
+          jump promise
      "I can't":
-      jump to nopromise
+          jump nopromise
 
 label promise:
     show waifu happy
