@@ -1,5 +1,9 @@
 label chapter_3:
+    image C3 = im.Scale("images/C3.png", 1920, 1080)
+    scene C3
+    with Dissolve(1)
     scene black
+    with Dissolve(1)
     
     "\"You and I will live together from now on.\""
     "A smile, the same smile that I would come to love."

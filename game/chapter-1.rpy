@@ -2,10 +2,13 @@ transform owner_transform:
     zoom 1.5
 
 label chapter_1:
-    play music "music/ch1.flac"
+    image C1 = im.Scale("images/C1.png", 1920, 1080)
+    scene C1
+    with Dissolve(1)
     image bg_black = im.Scale("images/black.jpg", 1920, 1080)
     scene bg_black
-
+    with Dissolve(1)
+    play music "music/ch1.flac"
 
 label scene_start:
     "*TIME CHECK: 7.39A.M.*"
@@ -25,23 +28,27 @@ label scene_start:
 
     "*DOOR OPENS*"
     show owner at owner_transform, right
+
+    show owner neutral at owner_transform, right
+    image waifu happy = "waifu happy.png"
     show waifu happy
     p "You're back!"
     o "Gathering supplies outside was hell, as usual."
     show waifu sad
     o "Oh come on, it isn't that bad. I'm fine here, you see?"
-    hide waifu sad
+    hide waifu
     show waifu at left
     p "You always worry me so much..."
     hide owner
     show owner serious at owner_transform, right
+
     o "Don't. I'll be fine. I'm more than able to take care of myself."
     o "So don't worry, ok?"
     p "..."
     p "...I can't not worry about you, [owner_name]"
     o "...Let's watch the sunset together, [bot_name]."
-    
-    image wastelandsunset = "wastelandsunset.jpg"
+
+    image wastelandsunset = im.Scale("wastelandsunset.jpg", 1920, 1080)
     scene wastelandsunset
     o "..."
     p "..."
@@ -56,21 +63,19 @@ label scene_start:
     show waifu confused
     p "W-why? Do you not trust me?"
     hide owner
-    show owner smiling at right
+    show owner happy at owner_transform, right
     o "No no, nothing like that. Just that...this Earth isn't friendly to anything, not even something as sweet as you."
-    hide waifu confused
+    hide waifu
     show waifu at left
-    p "With you at my side, I'm not afraid of anything. You don't have to worry, [owner's name]."
-    hide owner smiling
-    show owner laughing at right
+    p "With you at my side, I'm not afraid of anything. You don't have to worry, [owner_name]."
     o "Haha, you always know the right thing to say."
-    hide owner laughing
-    show owner at right
+    hide owner
+    show owner neutral at owner_transform, right
     o "Alright, just promise me."
     hide owner
-    show owner sad at right
+    show owner sad at owner_transform, right
     o "Please."
-    menu: 
+    menu:
      "I promise":
           jump promise
      "I can't":
@@ -79,7 +84,7 @@ label scene_start:
 label promise:
     show waifu happy
     p "Alright, I promise!"
-    show owner happy at right
+    show owner happy at owner_transform, right
     o "Thank you! You don't know how much it means to me."
     p "With you, what do I have to worry about?"
     jump chapter_2
@@ -87,6 +92,6 @@ label promise:
 label nopromise:
     show waifu sad at left
     p "I'm sorry, I can't. Androids, we don't take promises lightly."
-    show owner sad at right
+    show owner sad at owner_transform, right
     o "...I understand."
     jump chapter_2

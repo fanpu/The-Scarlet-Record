@@ -1,6 +1,10 @@
 label chapter_8:
+    image C8 = im.Scale("images/C8.png", 1920, 1080)
+    scene C8
+    with Dissolve(1)
     image bg home dusk = im.Scale("images/bg home dusk.jpg", 1920, 1080)
     scene bg home dusk
+    with Dissolve(1)
 
     show waifu exhausted
 

@@ -12,7 +12,11 @@ image p thinking = "waifu thinking.png"
 image p verysad = "waifu very sad.png"
 
 label chapter_7:
+    image C7 = im.Scale("images/C7.png", 1920, 1080)
+    scene C7
+    with Dissolve(1)
     scene bg
+    with Dissolve(1)
     play music "music/ch7.flac"
 
     show p neutral

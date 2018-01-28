@@ -1,6 +1,13 @@
+transform kidnapper_transform:
+    zoom 0.7
+
 label chapter_2:
+    image C2 = im.Scale("images/C2.png", 1920, 1080)
+    scene C2
+    with Dissolve(1)
     image bg_livingroom_night = im.Scale("images/bg livingroom night.jpg", 1920, 1080)
     scene bg_livingroom_night
+    with Dissolve(1)
     jump chapter_2_scene_1
 
 label chapter_2_scene_1:
@@ -19,7 +26,7 @@ label chapter_2_scene_1:
     "*{i}knock knock{/i}*"
     "I wonder who it could be..."
     "I go to the door, and unlock it slowly."
-    show kidnapper smiling at right
+    show kidnapper smiling at kidnapper_transform, right
     k "I hope you're ready."
     k "*{i}raises EMP gun{/i}*"
     p "Wh-what!"
@@ -219,4 +226,11 @@ label q3_exp:
     gu ":e allows you to revert a particular buffer which may have been modified by an external program, allowing you to start from the latest copy."
     gu ":$ moves the cursor to the last line in the file."
     gu "So yes, the correct to exit Vim is :q!"
+
+    gu "Well, I guess you did ok."
+    gu "You certainly know quite a bt for a Ex Machina [bot_model]."
+    gu "You've certainly made my monotonous job here much more interesting as well."
+    gu "Well, you may go!"
+    p "T-thank you, Homura."
+    "With that, Homura led me out of the complex."
     jump chapter_3
