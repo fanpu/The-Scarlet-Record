@@ -1,3 +1,6 @@
+transform owner_transform:
+    zoom 2
+
 label chapter_1:
     image bg_black = im.Scale("images/black.jpg", 1920, 1080)
     scene bg_black
@@ -18,15 +21,12 @@ label scene_start:
     p "(And Owner is nowhere to be found.)"
     p "(He should be back home, soon, I hope.)"
     p "(It's not the safest area, but I have faith in his abilities.)"
-    
+
     "*DOOR OPENS*"
-    image owner = "owner.png"
-    show owner at right
-    image waifu happy = "waifu happy.png"
+    show owner at owner_transform, right
     show waifu happy
     p "You're back!"
     o "Gathering supplies outside was hell, as usual."
-    image waifu sad = "waifu sad.png"
     show waifu sad
     o "Oh come on, it isn't that bad. I'm fine here, you see?"
     hide waifu sad
@@ -82,13 +82,10 @@ label promise:
     o "Thank you! You don't know how much it means to me."
     p "With you, what do I have to worry about?"
     jump chapter_2
-    
+
 label nopromise:
     show waifu sad at left
     p "I'm sorry, I can't. Androids, we don't take promises lightly."
     show owner sad at right
-    o "...I understand."  
+    o "...I understand."
     jump chapter_2
-    
-    
-     
