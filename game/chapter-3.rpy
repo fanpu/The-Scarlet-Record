@@ -13,11 +13,11 @@ label chapter_3:
     scene wasteland
     with Dissolve(.5)
     
-    show waifu
+    show waifu neutral
     
     "After getting out, all I see a wasteland with nothing nearby apart from the facility."
-    "That was not particularly surprising, due to the apparent war making Earth inhabitable. Shin has talked about it at length"
-    "The destruction caused was already apparent back home through the grimy windows. But I never realized how bad it was, inside the house"
+    "That was not particularly surprising, due to the apparent war making Earth inhabitable. Shin has talked about it at length."
+    "The destruction caused was already apparent back home through the grimy windows. But I never realized how bad it was, inside the house."
     p "It is truly a miracle that there are still people surviving here, or any sign of life, machine or human."
     "What should I do? What can I do?"
     p "Shin would miss me, I should go back quickly so that he will stop worrying."
@@ -41,27 +41,32 @@ label choice_3_1b:
     jump choice_3_1done
     
 label choice_3_1done:
+    scene black
+    with Dissolve(.5)
+    scene wasteland
+    with Dissolve(.5)
+    
     if choice_3_1:
     
-        hide waifu
-        show sad_waifu
+        hide waifu neutral
+        show waifu sad
     
         "It has been 3 hours, but there is not a single person to be found."
     
     else:
     
-        hide waifu
-        show sad_waifu
+        hide waifu neutral
+        show waifu sad
     
-    "It has been 3 hours, but there are still no clues to be found, not even a lead."
+        "It has been 3 hours, but there are still no clues to be found, not even a lead."
     jump chapter_3_scene_1
 
 label chapter_3_scene_1:
     p "Maybe I should turn back, this might be the wrong direction."
     "The world is a wasteland, but I should have found something by now."
     
-    hide sad_waifu
-    show waifu
+    hide waifu sad
+    show waifu neutral
     
     p "Hold on, what is that?"
     "It was very far away, but I can definitely see a person walking in my direction."
@@ -69,10 +74,17 @@ label chapter_3_scene_1:
         p "Could he know where I am?"
     else:
         p "Could he know what I am?"
-  
+    
+    show waifu neutral:
+        xalign 0.25
+        yalign 1.0
+    show waifu2 neutral:
+        xalign 0.75
+        yalign 1.0
+    
     p "..Something is wrong."
     w "<ERROR COMMUNICATION SYSTEMS DOWN ERROR...>"
-    p "Communication system error. Won't be too hard to fix"
+    p "Communication system error. Won't be too hard to fix..."
     jump chapter_3_fixing
 
 label chapter_3_fixing:
@@ -167,25 +179,39 @@ label schedulingright:
     p "(Let me try implementing this algorithm...)"
     p "(It worked, communication time has been reduced significantly.)"
     jump chapter_3_scene_2
+
+label schedulingwrong:
+    p "(Let me try implementing this algorithm...)"
+    p "(It didn't work, the communication time is still the same as before. I can't waste time.)"
+    jump scheduling
     
 label chapter_3_scene_2:
     image wasteland = im.Scale("images/wasteland.png", 1920, 1080)
     scene wasteland
     with Dissolve(.5)
     
-    hide waifu
-    show happy_waifu
+    hide waifu neutral
+    show waifu happy:
+        xalign 0.25
+        yalign 1.0
+    show waifu2 happy:
+        xalign 0.75
+        yalign 1.0
     
     p "It's fixed. Or at least that's what I hope."
     
-    hide happy_waifu
-    show waifu
+    hide waifu happy
+    show waifu neutral:
+        xalign 0.25
+        yalign 1.0
     
     "...She still doesn't seem...right."
     w "Kosuke, you're back!"
     
-    hide waifu
-    show confused_waifu
+    hide waifu neutral
+    show waifu confused:
+        xalign 0.25
+        yalign 1.0
     
     p "I'm not-"
     w "I've missed you so much!"
@@ -195,7 +221,13 @@ label chapter_3_scene_2:
     w "Come on, why are you waiting? We do it all the time!"
     p "..."
     w "What's wrong. Do you have anyting on your mind? I'm here, don't worry, you can share."
-    P "(Her actions...are eerily similar to mine.)"
+    
+    hide waifu confused
+    show waifu thinking:
+        xalign 0.25
+        yalign 1.0
+    
+    p "(Her actions...are eerily similar to mine.)"
     w "Come on, Kosuke. Let's spend some time together. Don't you miss me?"
     p "..."
     p "...I'm not Kosuke."
@@ -203,12 +235,14 @@ label chapter_3_scene_2:
     w "Kosuke! You're back!"
     p "..."
     w "Don't you miss me?"
+    
+    hide waifu confused
+    show waifu sad:
+        xalign 0.25
+        yalign 1.0
+    
     p "(She's broken...beyond repair. Likely a motherboard malfunction.)"
     w "Come on, Kosuke. Didn't you miss of the times we had?"
-    
-    hide confused_waifu
-    show waifu
-    
     p "(Should I...)"
     
 menu:
@@ -219,24 +253,26 @@ menu:
 
 label choice_3_2a:
     
-    hide waifu
-    show sad_waifu
+    hide waifu2 happy
+    hide waifu neutral
+    show waifu sad
     
     "..."
     jump chapter_3_scene_3
            
 label choice_3_2b:
     
-    hide waifu
-    show sad_waifu
+    hide waifu2 happy
+    hide waifu neutral
+    show waifu sad
     
     "(...I can't do anything for her)"
     jump chapter_3_scene_3
 
-label chapter3_scene_3:
+label chapter_3_scene_3:
     p "(Is Kosuke her Shin?)"
     p "(Am I simply a clone of her?)"
     p "(...)"
     p "(My feelings for Shin, they are manufactured, aren't they?)"
     p "(...)"
-    P "(I...I want to go back.)"
+    p "(I...I want to go back.)"
