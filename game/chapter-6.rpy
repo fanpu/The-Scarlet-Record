@@ -1,6 +1,10 @@
 label chapter_6:
+    image C6 = im.Scale("images/C6.png", 1920, 1080)
+    scene C6
+    with Dissolve(1)
     image wastelandsquare = im.Scale("wastelandsquare.jpg", 1920, 1080)
     scene wastelandsquare
+    with Dissolve(1)
 
     p "(Where is the fountain?)"
     p "(...did she lie to me?)"
