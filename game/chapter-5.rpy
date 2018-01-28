@@ -153,8 +153,8 @@ label recovery:
     menu:
         "Initiate file recovery":
             jump successcomputer2
-         "Search for hidden files":
-             jump failcomputer2
+        "Search for hidden files":
+            jump failcomputer2
 
 label failcomputer2:
     image computerfail2 = "filesfailed.png"
@@ -185,112 +185,112 @@ label successcomputer2:
 
 label decryption:
     scene screen start
-    
- menu: 
-  "Decrypt base64":
-   jump failcomputer
-  "Decrypt MD5":
-   jump successcomputer
-  "Decrypt SHA-384":
-   jump failcomputer
-   
-label failcomputer: 
- image failedcom = "computerfailed.png"
- scene failedcom
- 
- g "Is it all lost?"
- p "I must have guessed wrong."
- g "I want to feel truly happy again instead of wallowing in a pit of apathy. I was only ever happy in old Earth."
- p "..."
- g "Please succeed."
- jump retrycomputer
- 
+
+     menu:
+         "Decrypt base64":
+             jump failcomputer
+         "Decrypt MD5":
+             jump successcomputer
+         "Decrypt SHA-384":
+             jump failcomputer
+
+label failcomputer:
+    image failedcom = "computerfailed.png"
+    scene failedcom
+
+    g "Is it all lost?"
+    p "I must have guessed wrong."
+    g "I want to feel truly happy again instead of wallowing in a pit of apathy. I was only ever happy in old Earth."
+    p "..."
+    g "Please succeed."
+    jump retrycomputer
+
 label retrycomputer:
- p "(That took some energy, I better not fail again)"
- jump decryption
+     p "(That took some energy, I better not fail again)"
+     jump decryption
 
 label successcomputer:
- image successcom = "computersuccess.png"
- scene successcom
+     image successcom = "computersuccess.png"
+     scene successcom
 
- p "It's almost done."
- g "...I don't know what to feel."
- p "Happy? You get to experience your best memories again."
- g "It rings so hollow. Masquerading and pretending the world we live in doesn't exist, escaping into past happier times."
- g "...I always wanted to ask an android, do you ever feel like shutting down...forever?"
- p "No, androids do not have such a function."
- g "...Must be great being an android."
- p "Only humans 'shut down' in such great quantities because of their feelings. Other creatures, they usually want to survive. Why?"
- g "Humans are the only creatures who question life. Ask whether it's worth living."
- menu:
-  "Copy files":
-   jump successcomputer5
-   
-label successcomputer5: 
- #stop music "filetransfer.mp3"
- #start music "done.mp3"
- image computersuccess5 = "copied.png"
- scene computersuccess5
- image girl_relieved = "relievedgirl.gif"
- show girl_relieved at right
- show waifu at left 
+     p "It's almost done."
+     g "...I don't know what to feel."
+     p "Happy? You get to experience your best memories again."
+     g "It rings so hollow. Masquerading and pretending the world we live in doesn't exist, escaping into past happier times."
+     g "...I always wanted to ask an android, do you ever feel like shutting down...forever?"
+     p "No, androids do not have such a function."
+     g "...Must be great being an android."
+     p "Only humans 'shut down' in such great quantities because of their feelings. Other creatures, they usually want to survive. Why?"
+     g "Humans are the only creatures who question life. Ask whether it's worth living."
+     menu:
+        "Copy files":
+        jump successcomputer5
 
- p "It's done."
- g "...Thank you.Thank you kindly."
- g "Ah, my old photos."
- g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
- g "Have you ever tried so hard to feel something? Feel something real?"
- p "...No"
- g "...Of course, an android will not know."
- g "Do you even know what Earth was like?"
- p "No"
- g "It wasn't perfect, but it was real. It was warm. It was alive."
- g "Nothing like what the world is now."
- p "..."
- g "..."
- g "So...the directions to Midtown Tower, am I right?"
- p "Yes."
- g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
- p "Thank you"
- p "...Those photos...will they make your life worth living?"
- g "No. No for long."
- p "What will?"
- g "Something real to care about. Like you, you care about your owner right?"
- p "But..."
- menu:
-  "It might not be real":
-   jump real5
-  "Nothing.":
-   jump nothing5
-   
+label successcomputer5:
+     #stop music "filetransfer.mp3"
+     #start music "done.mp3"
+     image computersuccess5 = "copied.png"
+     scene computersuccess5
+     image girl_relieved = "relievedgirl.gif"
+     show girl_relieved at right
+     show waifu at left
+
+     p "It's done."
+     g "...Thank you.Thank you kindly."
+     g "Ah, my old photos."
+     g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
+     g "Have you ever tried so hard to feel something? Feel something real?"
+     p "...No"
+     g "...Of course, an android will not know."
+     g "Do you even know what Earth was like?"
+     p "No"
+     g "It wasn't perfect, but it was real. It was warm. It was alive."
+     g "Nothing like what the world is now."
+     p "..."
+     g "..."
+     g "So...the directions to Midtown Tower, am I right?"
+     p "Yes."
+     g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
+     p "Thank you"
+     p "...Those photos...will they make your life worth living?"
+     g "No. No for long."
+     p "What will?"
+     g "Something real to care about. Like you, you care about your owner right?"
+     p "But..."
+     menu:
+         "It might not be real":
+             jump real5
+         "Nothing.":
+             jump nothing5
+
 label real5:
- hide girl_relieved 
- show girl_amused at right
- show waifu at left
- 
- g "Hah, never knew an android could think of that."
- g "Does it matter if the feelings are real or not?"
- p "..."
- g "At least you do feel care, feel for something real and tangible."
- g "I wish I could do that"
- jump chapter5ending
- 
+    hide girl_relieved
+    show girl_amused at right
+    show waifu at left
+
+    g "Hah, never knew an android could think of that."
+    g "Does it matter if the feelings are real or not?"
+    p "..."
+    g "At least you do feel care, feel for something real and tangible."
+    g "I wish I could do that"
+    jump chapter5ending
+
 label nothing5:
- hide girl_relieved
- show girl at right
- show waifu at left
- 
- g "...Hold on to that care."
- g "Don't let it slip away like I did."
- g "It makes all the difference."
- jump chapter5ending
- 
+     hide girl_relieved
+     show girl at right
+     show waifu at left
+
+     g "...Hold on to that care."
+     g "Don't let it slip away like I did."
+     g "It makes all the difference."
+     jump chapter5ending
+
 label chapter5ending:
- hide girl_relieved
- hide waifu
- #stop music "end.mp3"
- #start music "chap5end.mp3"
- scene wasteland
- 
- p "(I would wish her all the best, but I feel that wish will be wasted)"
- jump chapter_6
+     hide girl_relieved
+     hide waifu
+     #stop music "end.mp3"
+     #start music "chap5end.mp3"
+     scene wasteland
+
+     p "(I would wish her all the best, but I feel that wish will be wasted)"
+     jump chapter_6
