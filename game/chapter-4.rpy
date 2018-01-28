@@ -140,6 +140,7 @@ label ch4mid:
 
 label networkQuiz:
     $ quiz_score = 0
+    $ correct = False
     
     # Question 1
     po "Which of the following protocols uses both TCP and UDP?"
@@ -153,9 +154,15 @@ label networkQuiz:
             p "Telnet"
         "DNS":
             p "DNS"
-            $ quiz_score += 1
+            $ correct = True
         "None of the above":
             p "None of the above"
+
+    if correct == False:
+        "DNS uses TCP for zone exchanges between servers and UDP when a client is trying to resolve a hostname to an IP address."
+    else:    
+        $ quiz_score += 1
+        $ correct = False
 
     # Question 2
     po "What protocol is used to find the hardware address of a local device?"
@@ -165,13 +172,19 @@ label networkQuiz:
             p "RARP"
         "ARP":
             p "ARP"
-            $ quiz_score += 1
+            $ correct = True
         "IP":
             p "IP"
         "ICMP":
             p "ICMP"
         "None of the above":
             p "None of the above"
+
+    if correct == False:
+        "Address Resolution Protocol (ARP) is used to find the hardware address from a known IP address."
+    else:    
+        $ quiz_score += 1
+        $ correct = False
 
     # Question 3
     po "A device that links two homogeneous packet-broadcast local networks, is a"
@@ -183,11 +196,20 @@ label networkQuiz:
             p "repeater"
         "bridge":
             p "bridge"
-            $ quiz_score += 1
+            $ correct = True
         "hub":
             p "hub"    
         "None of the above":
             p "None of the above"
+
+    if correct == False:
+        "A gateway is a node (router) in a computer network, a key stopping point for data on its way to or from other networks."
+        "A repeater is a network device used to regenerate or replicate a signal."
+        "A hub is the most basic networking device that connects multiple computers or other network devices together."
+        "By elimination, the answer is bridge."
+    else:
+        $ quiz_score += 1
+        $ correct = False
 
     # Question 4
     po "Layer one of the OSI model is the"
@@ -195,23 +217,21 @@ label networkQuiz:
         "Layer one of the OSI model is the"
         "physical layer":
             p "physical layer"
-            $ quiz_score += 1
+            $ correct = True
         "link layer":
             p "link layer"
         "transport layer":
             p "transport layer"
         "network layer":
-            p "network layer"
+            p "network layer"    
         "None of the above":
             p "None of the above"
 
-    if quiz_score == 4:
-        "Congratulations!"
-        jump ch4end
+    if correct == False:
+        "Layer one of the OSI model describes the most fundamental layer, which is the physical layer."
     else:
-        "You got [quiz_score] out of 4 questions correct."
-        "Try again!"
-        jump networkQuiz
+        $ quiz_score += 1
+        $ correct = False
 
 label ch4end:
     show p happy at left
