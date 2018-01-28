@@ -58,7 +58,7 @@ label shot:
     p "No..."
     p "This can't be happening..."
     k "There's nothing you can do now."
-    p "Whatever you do...please don't hurt [owner_name]!!"
+    p "Whatever you do...please don't hurt [owner_name]!"
     p "[owner_name], I'm sorry..."
     k "Keep quiet, or there will be more for you to worry about."
     p "You will...*[[TERMINAL SEQUENCE REACHED]*...regret...*[[SYSTEM DOWN]*..."
@@ -90,8 +90,8 @@ label chapter_2_scene_2:
 #     "Try to recall what happened":
 #         jump recall
 
-    "I decide to explore this place and see if I can get out of here."
-    "In the distance, I notice a figure-"
+    "(I decide to explore this place and see if I can get out of here)."
+    "(Is that a figure in the distance?)"
 
     show angry at right
     gu "Ahh, welcome to the Industrial Extractor Works!"
@@ -101,7 +101,7 @@ label chapter_2_scene_2:
     gu "Wait a moment..."
     gu "*[[SELECT COUNT(*) FROM employees WHERE name=[bot_name]]*"
     gu "No, you don't belong here."
-    gu "Are you an Ex-Machina meant to be condemned?"
+    gu "Are you an android meant to be condemned?"
     gu "We are in a great shortage of circuit components, after all..."
 
 menu:
@@ -130,7 +130,6 @@ menu:
         p "Stop wasting my time, and let me out of here already!"
         gu "Wow, who do you think you are?"
         gu "You really do not know how to value your own life."
-        "Homura points her blaster towards you."
         gu "Have fun, scrap."
         "END"
         return
