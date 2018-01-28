@@ -25,7 +25,7 @@ label scene_start:
     image waifu happy = "waifu happy.png"
     show waifu happy
     p "You're back!"
-    o "Work was hell, as usual."
+    o "Gathering supplies outside was hell, as usual."
     image waifu sad = "waifu sad.png"
     show waifu sad
     o "Oh come on, it isn't that bad. I'm fine here, you see?"
@@ -39,6 +39,9 @@ label scene_start:
     p "..."
     p "...I can't not worry about you, [owner_name]"
     o "...Let's watch the sunset together, [bot_name]."
+    
+    image wastelandsunset = "wastelandsunset.jpg"
+    scene wastelandsunset
     o "..."
     p "..."
     o "Do you know the sunset used to be more orange than red?"
