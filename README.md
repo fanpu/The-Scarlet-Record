@@ -15,14 +15,17 @@ Embark on a journey through a dystopian world as Aoi, a sentient Ex Machina in s
 (TODO)
 
 ## Deployment
-Work on
+(TODO)
 
 ## Built With
 * [Python](https://www.python.org/)
 * [Ren'Py](https://www.renpy.org/) - Visual novel engine written in Python
 
 ## Contributing
-Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+* Work-in-progress and experimental features should be done on your own `feature\your-feature` branch.
+* Submit a pull request to merge your changes into develop branch
+* Releases are done on a release branch and are tagged and back-merged into develop and master
+Please read [CONTRIBUTING.md]() for full details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/fanpu/irs-vn/tags). 
