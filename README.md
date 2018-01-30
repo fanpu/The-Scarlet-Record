@@ -1,6 +1,8 @@
 # The Scarlet Record
 > As the world goes dimmer, you glow brighter...
-![poster]("https://github.com/fanpu/irs-vn/blob/develop/game/gui/main_menu.png")
+
+![poster](/game/gui/main_menu.png "poster")
+
 Embark on a journey through a dystopian world as Aoi, a sentient Ex Machina in search of her human master. 
 
 ## Getting Started
