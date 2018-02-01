@@ -106,7 +106,7 @@ label filetransfer:
             jump successcomputer3
 
 label failcomputer3:
-    image computerfail3 = "failedfiles.png"
+    image computerfail3 = im.Scale("filesfailed.png", 1920, 1080)
     scene computerfail3
     g "...I assume it didn't work."
     p "Yes"
@@ -115,7 +115,7 @@ label failcomputer3:
     jump filetransfer
 
     label successcomputer3:
-    image computersuccess3 = "nameofsystem.png"
+    image computersuccess3 = im.Scale("nameofsystem.png", 1920, 1080)
     scene successcomputer3
     g "It's succeeding?"
     p "Yes."
@@ -129,7 +129,7 @@ label mount:
             jump failcomputer4
 
 label failcomputer4:
-    image computerfail4 = "failedfiles.png"
+    image computerfail4 = im.Scale("filesfailed.png", 1920, 1080)
     scene computerfail4
     g "No! Is it not working?"
     p "I just did something in the wrong order."
@@ -137,11 +137,11 @@ label failcomputer4:
     jump mount
 
 label successcomputer4:
-     image computersuccess4 = "mounted.png"
+     image computersuccess4 = im.Scale("mounted.png", 1920, 1080)
      scene computersuccess4
      g "The hard drive, we can see it now? Am I finally saved?"
      p "Yes."
-     image insidefolder = "insidefolder.png"
+     image insidefolder = im.Scale("insidefolder.png", 1920, 1080)
      scene insidefolder
      g "What? It's empty? How is it possible?"
      p "Not exactly."
@@ -192,7 +192,7 @@ label decryption:
             jump failcomputer
 
 label failcomputer:
-    image failedcom = "computerfailed.png"
+    image failedcom = im.Scale("computerfailed.png", 1920, 1080)
     scene failedcom
 
     g "Is it all lost?"
@@ -207,7 +207,7 @@ label retrycomputer:
      jump decryption
 
 label successcomputer:
-     image successcom = "computersuccess.png"
+     image successcom = im.Scale("computersuccess.png", 1920, 1080)
      scene successcom
 
      p "It's almost done."
@@ -226,9 +226,9 @@ label successcomputer:
 label successcomputer5:
      #stop music "filetransfer.mp3"
      #start music "done.mp3"
-     image computersuccess5 = "copied.png"
+     image computersuccess5 = im.Scale("copied.png", 1920, 1080)
      scene computersuccess5
-     image girl_relieved = "relievedgirl.gif"
+     image girl_relieved = "depressed girl/depressed relieved1.png"
      show girl_relieved at right
      show waifu at left
 
@@ -237,7 +237,7 @@ label successcomputer5:
      g "Ah, my old photos."
      g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
      g "Have you ever tried so hard to feel something? Feel something real?"
-     p "...No"
+     p "...No."
      g "...Of course, an android will not know."
      g "Do you even know what Earth was like?"
      p "No"
@@ -248,7 +248,7 @@ label successcomputer5:
      g "So...the directions to Midtown Tower, am I right?"
      p "Yes."
      g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
-     p "Thank you"
+     p "Thank you."
      p "...Those photos...will they make your life worth living?"
      g "No. No for long."
      p "What will?"
