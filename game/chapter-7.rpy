@@ -1,4 +1,4 @@
-image bg = im.Scale("ch7.jpg", 1280, 720)
+image bg = im.Scale("ch7.jpg", 1920, 1080)
 
 image p angry = "waifu angry.png"
 image p confused = "waifu confused.png"
