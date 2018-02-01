@@ -35,7 +35,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Wei Seng** - *Code, music* - [quad1801](https://github.com/quad1801)
 * **Chen Xin** - *Code, storyline* - [ZChenxin](https://github.com/ZChenxin)
 * **Ian** - *Code, graphics* - [shuvi302](https://github.com/shuvi302)
-* **Xin Lei** - *Narration* - [Macsquared](https://github.com/Macsquared)
+* **Xin Lei** - *Storyline* - [Macsquared](https://github.com/Macsquared)
 
 ## License
 
