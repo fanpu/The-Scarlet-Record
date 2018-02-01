@@ -86,7 +86,7 @@ label Chapter5mid:
     g "So you should know how to transfer these files to my computer right?"
     p "Yes."
 
-    image screen start = "computer startscreen.png"
+    image screen start = im.Scale("computerstartscreen.png", 1920, 1080)
     scene screen start
     hide waifu
     hide depressed default
@@ -154,7 +154,7 @@ label recovery:
             jump failcomputer2
 
 label failcomputer2:
-    image computerfail2 = "filesfailed.png"
+    image computerfail2 = im.Scale("filesfailed.png", 1920, 1080)
     scene computerfail2
 
     p "No, this must be a mistake."
@@ -162,7 +162,7 @@ label failcomputer2:
     jump recovery
 
 label successcomputer2:
-    image computersuccess2 ="filesappeared.png"
+    image computersuccess2 = im.Scale("filesappeared.png", 1920, 1080)
     scene computersuccess2
 
     g "..Thank you. I still have a chance."
