@@ -31,7 +31,7 @@ label no6:
  m "You sure? I am the only sane man in this entire area, you won't get another chance."
  p "(He isn't lying, no sensors are going off.)"
  p "...Fine."
- image man happy = "MS4-smile7.png"
+ image man happy = "Spriteset - Male Student 4/MS4-smile7.png"
  show man happy at right
  m "Great. So the company i work for, they didn't pay me nothing. I need you to go there, hack into the servers, and transfer my pay to me."
  jump Chapter6mid
@@ -64,7 +64,7 @@ label Chapter6mid:
  #stop music "motorcycle.mp3"
  #play music "factory_original.mp3"
 
- image factory2 = "factory.jpg"
+ image factory2 = im.Scale("factory.jpg", 1920, 1080)
  scene factory2
  show man at right
  
@@ -72,7 +72,7 @@ label Chapter6mid:
  p "But..."
  
  hide mam
- image man angry= "MS4-angry2.png"
+ image man angry= "Spriteset - Male Student 4/MS4-angry2.png"
  show man angry at right
  
  m "But what? But it will be less efficient? Make less money? So what? At least humans have a purpose and role again!"
@@ -120,7 +120,7 @@ label notcalm:
 label Chapter6mid2:
  m "...So, you go do your thing. My account number is 144, don't mess it up eh?"
 
- image computerroom = "computerroom.jpng"
+ image computerroom = im.Scale("computerroom.png", 1920, 1080)
  scene computerroom
  #stop music "factory_original.mp3"
  #play music "computerroom.mp3"
@@ -129,7 +129,7 @@ label Chapter6mid2:
  m "Don't let me down, now. I need the cash."
  p "..."
  
- image hack = "hackscreen.png"
+ image hack = im.Scale("hackscreen.png", 1920, 1080)
  scene hack
  
  p "(Wow, this technology is really old.)"
@@ -145,22 +145,22 @@ label findingip:
    jump whoisip
  
 label successip:
- image ip_ok = "successip.png"
- scene ip_okay
+ image ip_ok = im.Scale("successip.png", 1920, 1080)
+ scene ip_ok
  
  p "(Wait it's Axiom? Didn't they...make me?)"
  p "(...Maybe...I can find out more about myself)"
  jump findingports
  
 label whoisip:
- image ip_fail = "whois.png"
+ image ip_fail = im.Scale("whoisip.png", 1920, 1080)
  scene ip_fail
  p "(This is not what I need. I must have forgotten. It was so long ago.)"
  p "(I can't afford to forget all of it.)"
  jump findingip
 
 label netcatip:
- image ip_fail2 = "netcatip.png"
+ image ip_fail2 = im.Scale("netcatip.png", 1920, 1080)
  scene ip_fail2
  p "(This is not what I need. I must have forgotten. It was so long ago.)"
  p "(I can't afford to forget all of it.)"
@@ -177,14 +177,14 @@ label findingports:
      jump failport
 
 label failport:
- image port_fail = "failport.jpg"
+ image port_fail = im.Scale("failport.png", 1920, 1080)
  scene port_fail
  
  p "(It's in my memory, how can I forget?)"
  jump findingports
 
 label successport:
- image port_success = "portsuccess.png"
+ image port_success = im.Scale("portsuccess.png", 1920, 1080)
  scene port_success
  
  p "(Good, now time to prod the server)"
@@ -204,8 +204,8 @@ label failvuln:
  jump vulnscan
 
 label successvuln:
- image vuln_success = "vulnsuccess.png"
- scene vuln_succcess
+ image vuln_success = im.Scale("vulnsuccess.png", 1920, 1080)
+ scene vuln_success
  p "(Oh, a common vulnerabiltity. Should be easy)"
 label exploit:
  menu: 
@@ -221,7 +221,7 @@ label exploitfail:
  jump exploit
  
 label exploitsuccess:
- image exploit_success = "exploitsuccess.png"
+ image exploit_success = im.Scale("exploitsuccess.png", 1920, 1080)
  scene exploit_success
  p "(Meterpreter shell is set up. Time to obtain root.)"
 
@@ -235,18 +235,18 @@ label kill:
    jump rmrf
  
 label exploit2fail:
- image exploit2_fail = "killfail.png"
+ image exploit2_fail = im.Scale("killfail.png", 1920, 1080)
  scene exploit2_fail
  p "No, they have barriers set up"
  jump kill
  
 label rmrf:
- scene exploit_succeess
+ scene exploit_success
  p "(Are my circuits haywire?)"
  jump kill
  
 label exploit2success:
- image exploit2_success = "kill.png"
+ image exploit2_success = im.Scale("kill.png", 1920, 1080)
  scene exploit2_success
  p "(Protection is disabled.)"
 
@@ -260,7 +260,7 @@ label root:
    jump rootfail
 
 label rootsuccess:
- image root_success = "rootsuccess.jpg"
+ image root_success = im.Scale("rootsuccess.png", 1920, 1080)
  scene root_success
  p "(Good, I can now access all files without obstruction.)"
  p "(Should I...)"
@@ -275,7 +275,7 @@ label rootfail:
  jump root
 
 label sourcecode:
- image sourcefolder = "sourcefolder.png"
+ image sourcefolder = im.Scale("sourcefolder.png", 1920, 1080)
  scene sourcefolder
  p "(It's there. I am programmed to feel unconditional love towards my owner.)"
  p "(...)"
@@ -295,7 +295,7 @@ label nosourcecode:
 label moneytransfer: 
  p "(I better fulfil my promise quick.)"
  
- image transfermoney = "moneytransfer.pmg"
+ image transfermoney = im.Scale("moneytransfer.png", 1920, 1080)
  scene transfermoney
   
  p "And done."
