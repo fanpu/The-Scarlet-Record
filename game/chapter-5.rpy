@@ -14,7 +14,7 @@ label chapter_5:
 
     p "(Does she know the building where Shin lives?)"
 
-    p "Hello"
+    p "Hello."
 
 #    image depressed_girl_shock1 = "depressed girl/depressed shock1.png"
     hide depressed  default
@@ -22,7 +22,7 @@ label chapter_5:
     show depressed shock1 at right
 
     g "Oh, a [bot_model]. Were you abandoned? Thrown away for the latest model?"
-    p "No"
+    p "No..."
 
     g "Good for you. Now what do you want from me?"
 
@@ -41,9 +41,9 @@ label chapter_5:
     g "An android, going back to someone. Who do you have?"
 
 menu:
-    "My owner":
+    "My owner.":
         jump owner5
-    "My lover":
+    "My lover.":
        jump lover5
 
 label owner5:
@@ -51,7 +51,7 @@ label owner5:
     show depressed huh1 at right
 
     g "You androids, always programmed to go back."
-    g "Well, at least you have a purpose"
+    g "Well, at least you have a purpose..."
     g "..."
     g "You know what, I'll help you, if you help me. Something simple. What'd you say to that?"
     p "...I'll help."
@@ -71,7 +71,7 @@ label lover5:
     jump Chapter5mid
 
 label Chapter5mid:
-    image messyroom = "messyroom.jpg"
+    image messyroom = im.Scale("messyroom.jpg", 1920, 1080)
     scene messyroom
     #stop music "wasteland.mp3"
     #start music "messyroom.mp3"
@@ -79,13 +79,12 @@ label Chapter5mid:
     show depressed default at right
     show waifu at left
 
-    g "I have not met another person, or anything moving for a long long time"
-    g "It gets lonely sometimes"
-    g "But I'm used to it"
+    g "I have not met another person, or anything moving for a long long time."
+    g "It gets lonely sometimes, but I'm used to it"
     p "..."
     g "You androids are smart. Smarter than me, at least."
     g "So you should know how to transfer these files to my computer right?"
-    p "Yes"
+    p "Yes."
 
     image screen start = "computer startscreen.png"
     scene screen start
@@ -112,7 +111,7 @@ label failcomputer3:
     g "...I assume it didn't work."
     p "Yes"
     g "It's okay, I'm used to things not working."
-    p "(I really should be more careful, lest I am unable to make it back)"
+    p "(I really should be more careful, lest I am unable to make it back.)"
     jump filetransfer
 
     label successcomputer3:
@@ -176,7 +175,7 @@ label successcomputer2:
     g "What now?"
     p "I need to decrypt the files."
     g "So it will work?"
-    p "Almost garuanteed."
+    p "Almost guaranteed."
     g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
     g "Everyday the hard drive is just there, taunting me with memories of a happier time."
     g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
@@ -204,7 +203,7 @@ label failcomputer:
     jump retrycomputer
 
 label retrycomputer:
-     p "(That took some energy, I better not fail again)"
+     p "(That took some energy, I better not fail again.)"
      jump decryption
 
 label successcomputer:
@@ -256,7 +255,7 @@ label successcomputer5:
      g "Something real to care about. Like you, you care about your owner right?"
      p "But..."
      menu:
-         "It might not be real":
+         "It might not be real.":
              jump real5
          "Nothing.":
              jump nothing5
@@ -270,7 +269,7 @@ label real5:
     g "Does it matter if the feelings are real or not?"
     p "..."
     g "At least you do feel care, feel for something real and tangible."
-    g "I wish I could do that"
+    g "I wish I could do that..."
     jump chapter5ending
 
 label nothing5:
@@ -290,5 +289,5 @@ label chapter5ending:
      #start music "chap5end.mp3"
      scene wasteland
 
-     p "(I would wish her all the best, but I feel that wish will be wasted)"
+     p "(I would wish her all the best, but I feel that wish will be wasted.)"
      jump chapter_6
