@@ -116,7 +116,7 @@ label failcomputer3:
 
     label successcomputer3:
     image computersuccess3 = im.Scale("nameofsystem.png", 1920, 1080)
-    scene successcomputer3
+    scene computersuccess3
     g "It's succeeding?"
     p "Yes."
     jump mount
