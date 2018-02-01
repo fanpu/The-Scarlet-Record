@@ -9,3 +9,6 @@
 
 **Chapter 8**
  - bed scene
+
+**Pictures**
+ - All computer screen images do not have a nice scale to work with
