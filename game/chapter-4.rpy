@@ -78,46 +78,43 @@ label feelingQuiz:
     $ quiz_score = 0
     
     # Question 1
-    "Which of the following feelings best represents anger?"
     menu:
         "Which of the following feelings best represents anger?"
         "Sad":
-            p "Sad"
+            p "Sad."
         "Sleepy":
-            p "Sleepy"
+            p "Sleepy."
         "Bitter":
-            p "Bitter"
+            p "Bitter."
         "Furious":
-            p "Furious"
+            p "Furious."
             $ quiz_score += 1
 
     # Question 2
-    "Which of the following feelings best represents sadness?"
     menu:
         "Which of the following feelings best represents sadness?"    
         "Solemn":
-            p "Solemn"
+            p "Solemn."
         "Melancholy":
-            p "Melancholy"
+            p "Melancholy."
             $ quiz_score += 1
         "Sleepy":
-            p "Sleepy"
+            p "Sleepy."
         "Salty":
-            p "Salty"
+            p "Salty."
 
     # Question 3
-    "Which of the following feelings best represents happiness?"
     menu:
         "Which of the following feelings best represents happiness?"
         "Ecstatic":
-            p "Ecstatic"
+            p "Ecstatic."
             $ quiz_score += 1
         "Depression":
-            p "Depression"
+            p "Depression."
         "Sleepy":
-            p "Sleepy"
+            p "Sleepy."
         "Angry":
-            p "Angry"
+            p "Angry."
 
     if quiz_score == 3:
         "Congratulations!"
