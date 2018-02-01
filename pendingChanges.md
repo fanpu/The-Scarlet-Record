@@ -12,3 +12,4 @@
 
 **Pictures**
  - All computer screen images do not have a nice scale to work with
+ - Chapter transitions to be remade in 1920 x 1080
