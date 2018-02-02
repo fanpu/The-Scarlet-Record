@@ -37,6 +37,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Ian** - *Code, graphics* - [shuvi302](https://github.com/shuvi302)
 * **Xin Lei** - *Storyline* - [Macsquared](https://github.com/Macsquared)
 
+## Contributors
+* **Zhao Wei** - [zwliew](https://github.com/zwliew)
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
