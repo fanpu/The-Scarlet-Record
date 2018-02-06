@@ -1,6 +1,6 @@
 transform depressed_downsize:
-    yoffset 1500.0
-    zoom 0.2
+    zoom 0.63
+    yoffset 400
 
 label chapter_5:
     image C5 = im.Scale("images/C5.png", 1920, 1080)
@@ -17,9 +17,9 @@ label chapter_5:
     p "Hello."
 
 #    image depressed_girl_shock1 = "depressed girl/depressed shock1.png"
-    hide depressed  default
+    hide depressed default
     show waifu at left
-    show depressed shock1 at right
+    show depressed shock1 at depressed_downsize, right
 
     g "Oh, a [bot_model]. Were you abandoned? Thrown away for the latest model?"
     p "No..."
@@ -44,11 +44,11 @@ menu:
     "My owner.":
         jump owner5
     "My lover.":
-       jump lover5
+        jump lover5
 
 label owner5:
     hide depressed shock1
-    show depressed huh1 at right
+    show depressed huh1 at depressed_downsize, right
 
     g "You androids, always programmed to go back."
     g "Well, at least you have a purpose..."
@@ -58,9 +58,8 @@ label owner5:
     jump Chapter5mid
 
 label lover5:
-    image laugh_girl = "laughinggirl.gif"
     hide depressed huh1
-    show depressed smile2 at right
+    show depressed smile2 at depressed_downsize, right
 
     g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
     g "Hah, I haven't laughed in a long time."
@@ -73,10 +72,11 @@ label lover5:
 label Chapter5mid:
     image messyroom = im.Scale("messyroom.jpg", 1920, 1080)
     scene messyroom
+    with Dissolve(.5)
     #stop music "wasteland.mp3"
     #start music "messyroom.mp3"
     hide depressed smile2
-    show depressed default at right
+    show depressed default at depressed_downsize, right
     show waifu at left
 
     g "I have not met another person, or anything moving for a long long time."
@@ -88,6 +88,7 @@ label Chapter5mid:
 
     image screen start = im.Scale("computerstartscreen.png", 1920, 1080)
     scene screen start
+    with Dissolve(.5)
     hide waifu
     hide depressed default
 
@@ -228,8 +229,7 @@ label successcomputer5:
      #start music "done.mp3"
      image computersuccess5 = im.Scale("copied.png", 1920, 1080)
      scene computersuccess5
-     image girl_relieved = "depressed girl/depressed relieved1.png"
-     show girl_relieved at right
+     show depressed relieved1 at depressed_downsize, right
      show waifu at left
 
      p "It's done."
@@ -261,8 +261,8 @@ label successcomputer5:
              jump nothing5
 
 label real5:
-    hide girl_relieved
-    show girl_amused at right
+    hide depressed relieved1
+    show depressed smile2 at depressed_downsize, right
     show waifu at left
 
     g "Hah, never knew an android could think of that."
@@ -273,8 +273,8 @@ label real5:
     jump chapter5ending
 
 label nothing5:
-     hide girl_relieved
-     show girl at right
+     hide depressed relieved1
+     show depressed default at depressed_downsize, right
      show waifu at left
 
      g "...Hold on to that care."
@@ -283,11 +283,12 @@ label nothing5:
      jump chapter5ending
 
 label chapter5ending:
-     hide girl_relieved
+     hide depressed relieved1
      hide waifu
      #stop music "end.mp3"
      #start music "chap5end.mp3"
      scene wasteland
+     with Dissolve(.5)
 
      p "(I would wish her all the best, but I feel that wish will be wasted.)"
      jump chapter_6
