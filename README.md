@@ -8,7 +8,7 @@ Embark on a journey through a dystopian world as Aoi, a sentient Ex Machina in s
 ## Download
 - Windows: [Mirror 1](http://www17.zippyshare.com/v/p6KWhlvm/file.html), [Mirror 2](https://nofile.io/f/AKHv83msnnP/TheScarletRecord-1.0-pc.zip)
 - Mac: [Mirror 1](http://www35.zippyshare.com/v/ghyFgRdH/file.html), [Mirror 2](https://www.python.org/)
-- Linux: [Mirror 1](http://www117.zippyshare.com/v/ZkRVXy0q/file.html), [Mirror 2](https://www.python.org/)
+- Linux: [Mirror 1](http://www117.zippyshare.com/v/ZkRVXy0q/file.html), [Mirror 2](https://nofile.io/f/CcxfBxbabOj/TheScarletRecord-1.0-linux.tar.bz2)
 
 ## Instructions
 Extract the files.
