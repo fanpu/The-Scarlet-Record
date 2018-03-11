@@ -25,11 +25,11 @@ label chapter_2_scene_1:
     p "H-hello?"
     "Why would anyone come at this ungodly hour?"
     p "Is anyone there?"
-    play sound "music/knock.wav"
+    play sound "music/knock_once.mp3"
     "*{i}knock knock{/i}*"
     "I wonder who it could be..."
     "I go to the door, and unlock it slowly."
-    show ??? at kidnapper_transform, right
+    show Kidnapper at kidnapper_transform, right
     k "I hope you're ready."
     k "*{i}raises EMP gun{/i}*"
     p "Wh-what!"
@@ -88,6 +88,7 @@ label chapter_2_scene_2:
     "I open my eyes"
     image bg_factory = im.Scale("images/bg factory.jpg", 1920, 1080)
     scene bg_factory
+    play music "music/factory_original.mp3"
     "I see the ruins of a large old factory around me"
     "Where am I...?"
     "And most importantly, what happened that night?"
@@ -238,4 +239,5 @@ label q3_exp:
     gu "Well, you may go!"
     p "T-thank you, Homura."
     "With that, Homura led me out of the complex."
+    stop music
     jump chapter_3
