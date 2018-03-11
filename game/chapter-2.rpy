@@ -11,22 +11,25 @@ label chapter_2:
     jump chapter_2_scene_1
 
 label chapter_2_scene_1:
+    play music "music/night_crickets.mp3"
     "It is night time."
     "[owner_name] has already went to bed after a long day of collecting important supplies."
     "There are a few more things for me to tidy up, before heading to recharge my battery for the night."
     "..."
     "..."
     "..."
+    play sound "music/knock_once.mp3"
     "*{i}knock knock{/i}*"
     "What?!"
     show waifu smiling at left
     p "H-hello?"
     "Why would anyone come at this ungodly hour?"
     p "Is anyone there?"
+    play sound "music/knock_once.mp3"
     "*{i}knock knock{/i}*"
     "I wonder who it could be..."
     "I go to the door, and unlock it slowly."
-    show kidnapper smiling at kidnapper_transform, right
+    show Kidnapper at kidnapper_transform, right
     k "I hope you're ready."
     k "*{i}raises EMP gun{/i}*"
     p "Wh-what!"
@@ -42,6 +45,7 @@ label fight:
     "I decide to fight back."
     p "*[[WEAPONS INITIATED]*"
     p "You better think again about what you're trying to do!"
+    play sound "music/laser_gun_cannon_shot.mp3"
     k "*{i}fires EMP gun{/i}*"
     p "PKG-42 repeating gun, fire!"
     "It was too late."
@@ -72,6 +76,7 @@ label shot:
     "[bot_name] collapses on the living room floor"
     hide waifu
     hide kidnapper
+    stop music
     image bg_black = im.Scale("images/black.jpg", 1920, 1080)
     scene bg_black
     with fade
@@ -83,6 +88,7 @@ label chapter_2_scene_2:
     "I open my eyes"
     image bg_factory = im.Scale("images/bg factory.jpg", 1920, 1080)
     scene bg_factory
+    play music "music/factory_original.mp3"
     "I see the ruins of a large old factory around me"
     "Where am I...?"
     "And most importantly, what happened that night?"
@@ -233,4 +239,5 @@ label q3_exp:
     gu "Well, you may go!"
     p "T-thank you, Homura."
     "With that, Homura led me out of the complex."
+    stop music
     jump chapter_3
