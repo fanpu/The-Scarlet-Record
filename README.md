@@ -8,7 +8,7 @@ Embark on a journey through a dystopian world as Aoi, a sentient Ex Machina in s
 ## Download
 - Windows: [Mirror 1](http://www17.zippyshare.com/v/p6KWhlvm/file.html), [Mirror 2](https://www.python.org/)
 - Mac: [Mirror 1](https://www.python.org/), [Mirror 2](https://www.python.org/)
-- Linux: [Mirror 1](https://www.python.org/), [Mirror 2](https://www.python.org/)
+- Linux: [Mirror 1](http://www117.zippyshare.com/v/ZkRVXy0q/file.html), [Mirror 2](https://www.python.org/)
 
 ## Instructions
 Extract the files.
