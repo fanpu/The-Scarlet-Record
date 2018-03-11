@@ -6,7 +6,7 @@
 Embark on a journey through a dystopian world as Aoi, a sentient Ex Machina in search of her human master. 
 
 ## Download
-- Windows: [Mirror 1](https://www.python.org/), [Mirror 2](https://www.python.org/)
+- Windows: [Mirror 1](http://www17.zippyshare.com/v/p6KWhlvm/file.html), [Mirror 2](https://www.python.org/)
 - Mac: [Mirror 1](https://www.python.org/), [Mirror 2](https://www.python.org/)
 - Linux: [Mirror 1](https://www.python.org/), [Mirror 2](https://www.python.org/)
 
