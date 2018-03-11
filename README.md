@@ -22,7 +22,7 @@ Embark on a journey through a dystopian world as Aoi, a sentient Ex Machina in s
 * [Ren'Py](https://www.renpy.org/) - Visual novel engine written in Python
 
 ## Contributing
-* Work-in-progress and experimental features should be done on your own `feature\your-feature` branch.
+* Work-in-progress and experimental features should be done on your own `feature/your-feature` branch.
 * Submit a pull request to merge your changes into develop branch
 * Releases are done on a release branch and are tagged and back-merged into develop and master
 Please read [CONTRIBUTING.md]() for full details on our code of conduct, and the process for submitting pull requests to us.
