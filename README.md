@@ -26,15 +26,6 @@ cd ~/Downloads/TheScarletRecord-1.0-linux
 ./TheScarletRecord.sh
 ```
 
-### Prerequisites
-(TODO)
-
-### Installing
-(TODO)
-
-## Deployment
-(TODO)
-
 ## Built With
 * [Python](https://www.python.org/)
 * [Ren'Py](https://www.renpy.org/) - Visual novel engine written in Python
