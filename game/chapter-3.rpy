@@ -9,7 +9,7 @@ label chapter_3:
     "A smile, the same smile that I would come to love."
     "A gentle voice that I would never grow tired of."
     "----- That was 6 years ago. Since then, I have never once wished for something else. As long as I was around Shin, there would be nothing else that I would ever need."
-    "His smile, his voice... it was all perrfect to me. I needed nothing else."
+    "His smile, his voice... it was all perfect to me. I needed nothing else."
     "I sometimes wondered what was outside. What the world was like. But it was fleeting. That wasn't important to me, and I made no effort to find out."
     "But now..."
     

@@ -57,6 +57,7 @@ label scene_start:
     p "...It's still beautiful."
     o "Yes."
     "..."
+    stop music
     o "Can you promise me to stay safe?"
     hide waifu
     image waifu confused = "waifu confused.png"

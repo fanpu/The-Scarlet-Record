@@ -1,6 +1,6 @@
 transform depressed_downsize:
-    yoffset 1500.0
-    zoom 0.2
+    zoom 0.63
+    yoffset 400
 
 label chapter_5:
     image C5 = im.Scale("images/C5.png", 1920, 1080)
@@ -14,15 +14,15 @@ label chapter_5:
 
     p "(Does she know the building where Shin lives?)"
 
-    p "Hello"
+    p "Hello."
 
 #    image depressed_girl_shock1 = "depressed girl/depressed shock1.png"
-    hide depressed  default
+    hide depressed default
     show waifu at left
-    show depressed shock1 at right
+    show depressed shock1 at depressed_downsize, right
 
     g "Oh, a [bot_model]. Were you abandoned? Thrown away for the latest model?"
-    p "No"
+    p "No..."
 
     g "Good for you. Now what do you want from me?"
 
@@ -41,26 +41,25 @@ label chapter_5:
     g "An android, going back to someone. Who do you have?"
 
 menu:
-    "My owner":
+    "My owner.":
         jump owner5
-    "My lover":
-       jump lover5
+    "My lover.":
+        jump lover5
 
 label owner5:
     hide depressed shock1
-    show depressed huh1 at right
+    show depressed huh1 at depressed_downsize, right
 
     g "You androids, always programmed to go back."
-    g "Well, at least you have a purpose"
+    g "Well, at least you have a purpose..."
     g "..."
     g "You know what, I'll help you, if you help me. Something simple. What'd you say to that?"
     p "...I'll help."
     jump Chapter5mid
 
 label lover5:
-    image laugh_girl = "laughinggirl.gif"
     hide depressed huh1
-    show depressed smile2 at right
+    show depressed smile2 at depressed_downsize, right
 
     g "You androids are so cute! The unconditional love you feel for your owners is just adorable!"
     g "Hah, I haven't laughed in a long time."
@@ -71,24 +70,25 @@ label lover5:
     jump Chapter5mid
 
 label Chapter5mid:
-    image messyroom = "messyroom.jpg"
+    image messyroom = im.Scale("messyroom.jpg", 1920, 1080)
     scene messyroom
+    with Dissolve(.5)
     #stop music "wasteland.mp3"
     #start music "messyroom.mp3"
     hide depressed smile2
-    show depressed default at right
+    show depressed default at depressed_downsize, right
     show waifu at left
 
-    g "I have not met another person, or anything moving for a long long time"
-    g "It gets lonely sometimes"
-    g "But I'm used to it"
+    g "I have not met another person, or anything moving for a long long time."
+    g "It gets lonely sometimes, but I'm used to it"
     p "..."
     g "You androids are smart. Smarter than me, at least."
     g "So you should know how to transfer these files to my computer right?"
-    p "Yes"
+    p "Yes."
 
-    image screen start = "computer startscreen.png"
+    image screen start = im.Scale("computerstartscreen.png", 1920, 1080)
     scene screen start
+    with Dissolve(.5)
     hide waifu
     hide depressed default
 
@@ -107,17 +107,17 @@ label filetransfer:
             jump successcomputer3
 
 label failcomputer3:
-    image computerfail3 = "failedfiles.png"
+    image computerfail3 = im.Scale("filesfailed.png", 1920, 1080)
     scene computerfail3
     g "...I assume it didn't work."
     p "Yes"
     g "It's okay, I'm used to things not working."
-    p "(I really should be more careful, lest I am unable to make it back)"
+    p "(I really should be more careful, lest I am unable to make it back.)"
     jump filetransfer
 
     label successcomputer3:
-    image computersuccess3 = "nameofsystem.png"
-    scene successcomputer3
+    image computersuccess3 = im.Scale("nameofsystem.png", 1920, 1080)
+    scene computersuccess3
     g "It's succeeding?"
     p "Yes."
     jump mount
@@ -130,7 +130,7 @@ label mount:
             jump failcomputer4
 
 label failcomputer4:
-    image computerfail4 = "failedfiles.png"
+    image computerfail4 = im.Scale("filesfailed.png", 1920, 1080)
     scene computerfail4
     g "No! Is it not working?"
     p "I just did something in the wrong order."
@@ -138,11 +138,11 @@ label failcomputer4:
     jump mount
 
 label successcomputer4:
-     image computersuccess4 = "mounted.png"
+     image computersuccess4 = im.Scale("mounted.png", 1920, 1080)
      scene computersuccess4
      g "The hard drive, we can see it now? Am I finally saved?"
      p "Yes."
-     image insidefolder = "insidefolder.png"
+     image insidefolder = im.Scale("insidefolder.png", 1920, 1080)
      scene insidefolder
      g "What? It's empty? How is it possible?"
      p "Not exactly."
@@ -155,7 +155,7 @@ label recovery:
             jump failcomputer2
 
 label failcomputer2:
-    image computerfail2 = "filesfailed.png"
+    image computerfail2 = im.Scale("filesfailed.png", 1920, 1080)
     scene computerfail2
 
     p "No, this must be a mistake."
@@ -163,7 +163,7 @@ label failcomputer2:
     jump recovery
 
 label successcomputer2:
-    image computersuccess2 ="filesappeared.png"
+    image computersuccess2 = im.Scale("filesappeared.png", 1920, 1080)
     scene computersuccess2
 
     g "..Thank you. I still have a chance."
@@ -176,7 +176,7 @@ label successcomputer2:
     g "What now?"
     p "I need to decrypt the files."
     g "So it will work?"
-    p "Almost garuanteed."
+    p "Almost guaranteed."
     g "...You know how torturous it is, knowing the key to your happiness is locked behind something you cannot access?"
     g "Everyday the hard drive is just there, taunting me with memories of a happier time."
     g "...I would have gone crazy if I never learnt not to care, to surpress my desires and emotions."
@@ -193,7 +193,7 @@ label decryption:
             jump failcomputer
 
 label failcomputer:
-    image failedcom = "computerfailed.png"
+    image failedcom = im.Scale("computerfailed.png", 1920, 1080)
     scene failedcom
 
     g "Is it all lost?"
@@ -204,11 +204,11 @@ label failcomputer:
     jump retrycomputer
 
 label retrycomputer:
-     p "(That took some energy, I better not fail again)"
+     p "(That took some energy, I better not fail again.)"
      jump decryption
 
 label successcomputer:
-     image successcom = "computersuccess.png"
+     image successcom = im.Scale("computersuccess.png", 1920, 1080)
      scene successcom
 
      p "It's almost done."
@@ -227,10 +227,9 @@ label successcomputer:
 label successcomputer5:
      #stop music "filetransfer.mp3"
      #start music "done.mp3"
-     image computersuccess5 = "copied.png"
+     image computersuccess5 = im.Scale("copied.png", 1920, 1080)
      scene computersuccess5
-     image girl_relieved = "relievedgirl.gif"
-     show girl_relieved at right
+     show depressed relieved1 at depressed_downsize, right
      show waifu at left
 
      p "It's done."
@@ -238,7 +237,7 @@ label successcomputer5:
      g "Ah, my old photos."
      g "They are all I have now. My only way to escape the chasm of apathy I had fallen in."
      g "Have you ever tried so hard to feel something? Feel something real?"
-     p "...No"
+     p "...No."
      g "...Of course, an android will not know."
      g "Do you even know what Earth was like?"
      p "No"
@@ -249,33 +248,33 @@ label successcomputer5:
      g "So...the directions to Midtown Tower, am I right?"
      p "Yes."
      g "Go straight north until you see the giant fountain, you can't miss it. There, turn right. You should reach the building within two days."
-     p "Thank you"
+     p "Thank you."
      p "...Those photos...will they make your life worth living?"
      g "No. No for long."
      p "What will?"
      g "Something real to care about. Like you, you care about your owner right?"
      p "But..."
      menu:
-         "It might not be real":
+         "It might not be real.":
              jump real5
          "Nothing.":
              jump nothing5
 
 label real5:
-    hide girl_relieved
-    show girl_amused at right
+    hide depressed relieved1
+    show depressed smile2 at depressed_downsize, right
     show waifu at left
 
     g "Hah, never knew an android could think of that."
     g "Does it matter if the feelings are real or not?"
     p "..."
     g "At least you do feel care, feel for something real and tangible."
-    g "I wish I could do that"
+    g "I wish I could do that..."
     jump chapter5ending
 
 label nothing5:
-     hide girl_relieved
-     show girl at right
+     hide depressed relieved1
+     show depressed default at depressed_downsize, right
      show waifu at left
 
      g "...Hold on to that care."
@@ -284,11 +283,12 @@ label nothing5:
      jump chapter5ending
 
 label chapter5ending:
-     hide girl_relieved
+     hide depressed relieved1
      hide waifu
      #stop music "end.mp3"
      #start music "chap5end.mp3"
      scene wasteland
+     with Dissolve(.5)
 
-     p "(I would wish her all the best, but I feel that wish will be wasted)"
+     p "(I would wish her all the best, but I feel that wish will be wasted.)"
      jump chapter_6

@@ -1,4 +1,4 @@
-image bg = im.Scale("ch7.jpg", 1280, 720)
+image bg = im.Scale("ch7.jpg", 1920, 1080)
 
 image p angry = "waifu angry.png"
 image p confused = "waifu confused.png"
@@ -75,9 +75,10 @@ label chapter_7:
     p "I miss your handsome smile - I'll do anything to see it again..."
     stop sound
 
-    play sound "music/running.mp3"
+    play music "music/running.mp3"
     p "Every second without you feels like an eternity."
 
     show p sadbuthappy
     p "You aren't just the other half that completes me. You're simply everything to me..."
+    stop music
     jump chapter_8

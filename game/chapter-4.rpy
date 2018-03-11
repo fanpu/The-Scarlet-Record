@@ -78,46 +78,43 @@ label feelingQuiz:
     $ quiz_score = 0
     
     # Question 1
-    "Which of the following feelings best represents anger?"
     menu:
         "Which of the following feelings best represents anger?"
         "Sad":
-            p "Sad"
+            p "Sad."
         "Sleepy":
-            p "Sleepy"
+            p "Sleepy."
         "Bitter":
-            p "Bitter"
+            p "Bitter."
         "Furious":
-            p "Furious"
+            p "Furious."
             $ quiz_score += 1
 
     # Question 2
-    "Which of the following feelings best represents sadness?"
     menu:
         "Which of the following feelings best represents sadness?"    
         "Solemn":
-            p "Solemn"
+            p "Solemn."
         "Melancholy":
-            p "Melancholy"
+            p "Melancholy."
             $ quiz_score += 1
         "Sleepy":
-            p "Sleepy"
+            p "Sleepy."
         "Salty":
-            p "Salty"
+            p "Salty."
 
     # Question 3
-    "Which of the following feelings best represents happiness?"
     menu:
         "Which of the following feelings best represents happiness?"
         "Ecstatic":
-            p "Ecstatic"
+            p "Ecstatic."
             $ quiz_score += 1
         "Depression":
-            p "Depression"
+            p "Depression."
         "Sleepy":
-            p "Sleepy"
+            p "Sleepy."
         "Angry":
-            p "Angry"
+            p "Angry."
 
     if quiz_score == 3:
         "Congratulations!"
@@ -135,7 +132,7 @@ label ch4mid:
     show po veryangry at right
     po "WAIT! Yes! It makes total sense! I AM the chosen human, and YOU are the chosen android! The ying to my yang! The logic to my emotions! Together, we shall birth a grand new world!"
 
-    p "(He's crazy. Totally crazy. Trying to rope me into his msaterplan too?)"
+    p "(She's crazy. Totally crazy. Trying to rope me into her msaterplan too?)"
 
     po "BUT, I cannot just let any robot to be my partner, my right-hand man-er android."
     po "Complete this quiz and show me that you are worthy of standing shoulder to shoulder with the Chosen One!"
@@ -241,7 +238,7 @@ label ch4end:
     show p happy at left
     show po smile at right
     po "You... you are more capable than I thought. I finally found my equal! Step into the light and join me!"
-    p "(He's totally bonkers)"
+    p "(She's totally bonkers)"
     p "Yes, right after I run an errand. I need to get to [home_address], and after that I'll be right back."
     p "However, I need directions"
     po "Ah ah ah! So this is the start of our official partnership!"
@@ -256,7 +253,7 @@ label ch4end:
     #po disappear, out of scene
 
     show p relieved
-    p "Whew, he has more than a few screws loose... But at the very least that’s the first lead I’ve gotten."
+    p "Whew, she has more than a few screws loose... But at the very least that’s the first lead I’ve gotten."
 
     show p neutral
     p "I hope I can return back to Shin soon..."
