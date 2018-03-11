@@ -18,16 +18,18 @@ label chapter_2_scene_1:
     "..."
     "..."
     "..."
+    play sound "music/knock_once.mp3"
     "*{i}knock knock{/i}*"
     "What?!"
     show waifu smiling at left
     p "H-hello?"
     "Why would anyone come at this ungodly hour?"
     p "Is anyone there?"
+    play sound "music/knock.wav"
     "*{i}knock knock{/i}*"
     "I wonder who it could be..."
     "I go to the door, and unlock it slowly."
-    show kidnapper smiling at kidnapper_transform, right
+    show ??? at kidnapper_transform, right
     k "I hope you're ready."
     k "*{i}raises EMP gun{/i}*"
     p "Wh-what!"
@@ -43,6 +45,7 @@ label fight:
     "I decide to fight back."
     p "*[[WEAPONS INITIATED]*"
     p "You better think again about what you're trying to do!"
+    play sound "music/laser_gun_cannon_shot.mp3"
     k "*{i}fires EMP gun{/i}*"
     p "PKG-42 repeating gun, fire!"
     "It was too late."
@@ -73,6 +76,7 @@ label shot:
     "[bot_name] collapses on the living room floor"
     hide waifu
     hide kidnapper
+    stop music
     image bg_black = im.Scale("images/black.jpg", 1920, 1080)
     scene bg_black
     with fade
